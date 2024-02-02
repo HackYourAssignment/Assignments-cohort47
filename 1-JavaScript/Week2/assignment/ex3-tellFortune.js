@@ -7,6 +7,7 @@ Why pay a fortune teller when you can just program your fortune yourself?
 1. Create four arrays, `numKids`, `partnerNames`, `locations` and `jobTitles`. 
    Give each array five random values that have to do with the name of 
    the variable.
+ 
 
 2. Complete the function `selectRandomly`. This function should take an array 
    as a parameter and return a randomly selected element as its return value.
@@ -22,6 +23,7 @@ Why pay a fortune teller when you can just program your fortune yourself?
      the arrays.
    - It should return a string: "You will be a `jobTitle` in `location`, 
     married to `partnerName` with `numKids` kids."
+    
 
 4. Call the function three times, passing the arrays as arguments. Use `
    console.log` to display the results.
@@ -33,28 +35,32 @@ body, this code is now written once only in a separated function.
 
 // This function should take an array as its parameter and return
 // a randomly selected element as its return value.
-function selectRandomly(/* TODO parameter(s) go here */) {
+function selectRandomly(arr) {
+   return (arr)[Math.floor(Math.random() * arr.length)];
   // TODO complete this function
 }
 
-function tellFortune(/* TODO add parameter(s) here */) {
-  // TODO complete this function
-}
+
+ 
+    function tellFortune(numKids, partnerNames, locations, jobTitles) {
+        
+        return `You will be a ${selectRandomly(jobTitles)} in ${selectRandomly(locations)}, married to ${selectRandomly(partnerNames)} with ${selectRandomly(numKids)} kids.`;
+      }
 
 function main() {
-  const numKids = [
+  const numKids = [13,4,5,2,7
     // TODO add elements here
   ];
 
-  const partnerNames = [
+  const partnerNames = ['Flower Man', 'Sponge Bob', 'Michelangelo', 'Bob the Builder', 'Lucky Luke'
     // TODO add elements here
   ];
 
-  const locations = [
+  const locations = ['Ethiopia', 'Eritrea', 'USA', 'Spain', 'Netherlands'
     // TODO add elements here
   ];
 
-  const jobTitles = [
+  const jobTitles = ['Senior Web Developer', 'FrontEnd dev', 'BackEnd dev', 'FullStack dev', 'Millionaire'
     // TODO add elements here
   ];
 
