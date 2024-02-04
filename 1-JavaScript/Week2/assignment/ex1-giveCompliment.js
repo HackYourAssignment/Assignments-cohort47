@@ -1,4 +1,7 @@
 'use strict';
+
+const { random } = require('lodash');
+
 /* -----------------------------------------------------------------------------
 Full description at: https://github.com/HackYourFuture/Homework/tree/main/1-JavaScript/Week3#exercise-1-you-are-amazing
 
@@ -18,13 +21,29 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/1-Java
    Use `console.log` each time to display the return value of the
    `giveCompliment` function to the console.
 -----------------------------------------------------------------------------*/
-function giveCompliment(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+function giveCompliment(name) {
+  const compliments = [
+    'great',
+    'awesome',
+    'remarkable',
+    'creative',
+    'excellent',
+    'you should be proud of yourself',
+    'well done',
+    'perfect',
+    'wonderful',
+    'terrific',
+  ];
+  const indexSelector = Math.floor((Math.random() * compliments.length) | 0);
+  console.log(indexSelector);
+  const selectedCompliment = `You are ${compliments[indexSelector]} ${name} !`;
+
+  return selectedCompliment;
 }
 
 function main() {
   // TODO substitute your own name for "HackYourFuture"
-  const myName = 'HackYourFuture';
+  const myName = 'Ahmet';
 
   console.log(giveCompliment(myName));
   console.log(giveCompliment(myName));

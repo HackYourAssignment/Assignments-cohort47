@@ -1,4 +1,7 @@
 'use strict';
+
+const { forEach } = require('lodash');
+
 /*------------------------------------------------------------------------------
 Full description at: https://github.com/HackYourFuture/Assignments/tree/main/1-JavaScript/Week3#exercise-7-mind-the-privacy
 
@@ -29,14 +32,22 @@ const employeeRecords = [
   },
 ];
 
-// ! Function under test
-function filterPrivateData(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+function filterPrivateData(employeeRecords) {
+  if (employeeRecords !== null) {
+    const newList = [];
+    for (let index = 0; index < employeeRecords.length; index++) {
+      const { gender, salary, ...nonPriveteProp } = employeeRecords[index];
+      newList.push(nonPriveteProp);
+    }
+    return newList;
+  } else {
+    //nothing to do
+  }
 }
 
-// ! Test functions (plain vanilla JavaScript)
 function test1() {
   console.log('Test 1: filterPrivateData should take one parameters');
+  filterPrivateData(null);
   console.assert(filterPrivateData.length === 1);
 }
 

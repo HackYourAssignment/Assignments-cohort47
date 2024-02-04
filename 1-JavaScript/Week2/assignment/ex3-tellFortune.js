@@ -33,30 +33,108 @@ body, this code is now written once only in a separated function.
 
 // This function should take an array as its parameter and return
 // a randomly selected element as its return value.
-function selectRandomly(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+function selectRandomly(numOfKid, location, name, job) {
+  if (numOfKid !== null) {
+    const numChild = numOfKid[Math.floor(Math.random() * 5) | 0];
+
+    return numChild;
+  }
+  if (location !== null) {
+    const place = location[Math.floor(Math.random() * 5) | 0];
+
+    return place;
+  }
+  if (name !== null) {
+    const partner = name[Math.floor(Math.random() * 5) | 0];
+
+    return partner;
+  }
+  if (job !== null) {
+    const jobTitle = job[Math.floor(Math.random() * 5) | 0];
+
+    return jobTitle;
+  }
 }
 
-function tellFortune(/* TODO add parameter(s) here */) {
-  // TODO complete this function
+function tellFortune(kidsNum, namesPartner, locationP, titlesJob) {
+  const result = `You will be a ${selectRandomly(
+    null,
+    null,
+    null,
+    titlesJob
+  )} in ${selectRandomly(null, locationP, null, null)}, 
+  married to ${selectRandomly(
+    null,
+    null,
+    namesPartner,
+    null
+  )} with  ${selectRandomly(kidsNum, null, null, null)} kids.`;
+
+  return result;
+}
+
+function createLists(numKids, partnerNames, locations, jobTitles) {
+  const partnerNamesList = [
+    'Kai',
+    'Eliana',
+    'Jaden',
+    'Ezra',
+    'Luca',
+    'Rowan',
+    'Nova',
+    'Amara',
+    'Aaliyah',
+    'Finn',
+  ];
+
+  const locationsList = [
+    'Istanbul',
+    'Amsterdam',
+    'Nijmegen',
+    'Arnhem',
+    'Madrid',
+    'Utrecht',
+    'Groningen',
+    'Kayseri',
+    'Ankara',
+    'Berlin',
+  ];
+
+  const jobTitlesList = [
+    'Doctor',
+    'Software Developer',
+    'Teacher',
+    'Engineer',
+    'Astranout',
+    'Nurse',
+    'Taxi Driver',
+    'Worker',
+    'Accounter',
+    'Lawyer',
+  ];
+  for (let index = 0; index < 5; index++) {
+    numKids.push(Math.floor(Math.random() * 10));
+    partnerNames.push(
+      partnerNamesList[
+        Math.floor((Math.random() * partnerNamesList.length) | 0)
+      ]
+    );
+    locations.push(
+      locationsList[Math.floor(Math.random() * locationsList.length) | 0]
+    );
+    jobTitles.push(
+      jobTitlesList[Math.floor((Math.random() * jobTitlesList.length) | 0)]
+    );
+  }
 }
 
 function main() {
-  const numKids = [
-    // TODO add elements here
-  ];
+  const numKids = [];
+  const partnerNames = [];
+  const locations = [];
+  const jobTitles = [];
 
-  const partnerNames = [
-    // TODO add elements here
-  ];
-
-  const locations = [
-    // TODO add elements here
-  ];
-
-  const jobTitles = [
-    // TODO add elements here
-  ];
+  createLists(numKids, partnerNames, locations, jobTitles);
 
   console.log(tellFortune(numKids, partnerNames, locations, jobTitles));
   console.log(tellFortune(numKids, partnerNames, locations, jobTitles));
