@@ -19,7 +19,7 @@ const employeeRecords = [
     gender: 'M',
     email: 'john.doe@somewhere.net',
     salary: 50000,
-  },
+  }, 
   {
     name: 'Jane',
     occupation: 'manager',
