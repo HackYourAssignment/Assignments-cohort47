@@ -16,8 +16,19 @@ it pure. Do the following:
 5. Confirm that you function passes the provided unit tests.
 ------------------------------------------------------------------------------*/
 // ! Function under test
-function addToShoppingCart(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+function addToShoppingCart(initialCart, newItem) {
+  if (newItem) {
+    const shoppingCart = [...initialCart, newItem];
+    //remove the first item if length > 3
+    if (shoppingCart.length > 3) {
+      shoppingCart.shift();
+    }
+    return shoppingCart;
+  } else {
+    // if there is no newItem parameter given, we don't want to add anything. or else it pushes undefined into the array
+    // used spread operator instead of directly returning the initialCart, so it is a "new" array (second instruction)
+    return [...initialCart];
+  }
 }
 
 // ! Test functions (plain vanilla JavaScript)

@@ -33,29 +33,44 @@ body, this code is now written once only in a separated function.
 
 // This function should take an array as its parameter and return
 // a randomly selected element as its return value.
-function selectRandomly(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+function selectRandomly(arr) {
+  return arr[parseInt(Math.random() * arr.length)];
 }
 
-function tellFortune(/* TODO add parameter(s) here */) {
-  // TODO complete this function
+function tellFortune(numKids, partnerNames, locations, jobTitles) {
+  return `You will be a ${selectRandomly(jobTitles)} in ${selectRandomly(
+    locations
+  )}, married to ${selectRandomly(partnerNames)} with ${selectRandomly(
+    numKids
+  )} kids.`; //test failure: Forgot to put '.' at the end...
+  // I have absolutely no idea why prettier formats this string literal like this...
 }
 
 function main() {
-  const numKids = [
-    // TODO add elements here
-  ];
+  const numKids = [0, 1, 0, 2, 0];
 
   const partnerNames = [
-    // TODO add elements here
+    'Blandine Simon',
+    'Vitaliya Hermans',
+    'Andrii Lyon',
+    'Albin Beulen',
+    'Fabianus Van Middlesworth',
   ];
 
   const locations = [
-    // TODO add elements here
+    'Springfield',
+    'Elbaf',
+    'Seymours Bay',
+    'Omashu',
+    'Amsterdam',
   ];
 
   const jobTitles = [
-    // TODO add elements here
+    'Accountant',
+    'Software Engineer',
+    'Marketing manager',
+    'Registered Nurse',
+    'Sales representative',
   ];
 
   console.log(tellFortune(numKids, partnerNames, locations, jobTitles));
