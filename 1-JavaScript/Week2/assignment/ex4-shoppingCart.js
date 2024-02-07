@@ -33,10 +33,6 @@ function addToShoppingCart(grocery) {
   return `You bought ${shoppingCart}!`;
 }
 
-addToShoppingCart('coconut');
-addToShoppingCart('bread');
-addToShoppingCart('butter');
-
 // ! Test functions (plain vanilla JavaScript)
 function test1() {
   console.log(
