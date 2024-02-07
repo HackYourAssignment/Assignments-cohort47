@@ -21,22 +21,54 @@ instead!
 3. Complete the unit test functions and verify that all is working as expected.
 -----------------------------------------------------------------------------*/
 const cartForParty = {
-  // TODO complete this object
+  beers: 1.75,
+  cola: 0.99,
+  apples: 2.5,
+  bread: 1.2,
+  cake: 12.99,
 };
 
-function calculateTotalPrice(/* TODO parameter(s) go here */) {
-  // TODO replace this comment with your code
+function calculateTotalPrice(cart) {
+
+  // Initialize a variable to store the total price
+  let totalPrice = 0;
+
+  // Loop through the properties of the cart object
+  for (const item in cart) {
+    // Check if the property is not inherited from the prototype chain
+    if  (cart.hasOwnProperty(item)) {
+      // Add the value of the current property to the total price
+      totalPrice += cart[item];
+    }
+}
+return totalPrice;
 }
 
 // ! Test functions (plain vanilla JavaScript)
 function test1() {
   console.log('\nTest 1: calculateTotalPrice should take one parameter');
-  // TODO replace this comment with your code
+  // Check if calculateTotalPrice function takes one parameter
+  if (calculateTotalPrice.length === 1) {
+    console.log('Pass: calculateTotalPrice takes one parameter');
+  } else {
+    console.error('Fail: calculateTotalPrice does not take one parameter');
+  }
 }
 
 function test2() {
   console.log('\nTest 2: return correct output when passed cartForParty');
-  // TODO replace this comment with your code
+  // Expected total price for cartForParty object
+  const expectedTotalPrice = 1.75 + 0.99 + 2.5 + 1.2 + 12.99;
+
+  // Call calculateTotalPrice with cartForParty object
+  const actualTotalPrice = calculateTotalPrice(cartForParty);
+
+  // Check if the actual total price matches the expected total price
+  if (actualTotalPrice === expectedTotalPrice) {
+    console.log('Pass: Total price calculated correctly');
+  } else {
+    console.error('Fail: Total price calculation incorrect');
+  }
 }
 
 function test() {
