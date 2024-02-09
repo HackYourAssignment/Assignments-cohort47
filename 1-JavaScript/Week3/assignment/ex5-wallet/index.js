@@ -86,7 +86,7 @@ const quiz = {
       b: 'anonymous, transferInto', 
       c: 'transferInto, anonymous' 
     },
-    answer: 'b'
+    answer: ''
   },
   q3: {
     question: 'What tooltip appears when hovering over the third debug button?',
