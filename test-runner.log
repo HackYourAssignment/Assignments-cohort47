@@ -1,0 +1,8 @@
+2024-01-30 06:47:47 info: ----------------------------------------------
+2024-01-30 06:47:47 info: >>> Running Unit Test `ex1-giveCompliment` <<<
+2024-01-30 06:47:47 info: ----------------------------------------------
+2024-01-30 06:47:52 info: All unit tests passed.
+2024-01-30 06:47:59 error: *** Spell Checker Report ***
+
+d:/HYF/Assignments-cohort47/1-JavaScript/Week2/assignment/ex1-giveCompliment.js:38:19 - Unknown word (Gebreyohannes)
+
