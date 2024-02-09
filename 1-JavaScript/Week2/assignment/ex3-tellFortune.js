@@ -38,25 +38,12 @@ function selectRandomly(arr) {
 }
 
 function tellFortune(kids, name, location, job) {
-  return selectRandomly(kids) > 1
-    ? 'You will be a ' +
-        selectRandomly(job) +
-        ' in ' +
-        selectRandomly(location) +
-        ', married to ' +
-        selectRandomly(name) +
-        ' with ' +
-        selectRandomly(kids) +
-        ' kids.'
-    : 'You will be a ' +
-        selectRandomly(job) +
-        ' in ' +
-        selectRandomly(location) +
-        ', married to ' +
-        selectRandomly(name) +
-        ' with ' +
-        selectRandomly(kids) +
-        ' kid.';
+  let numberOfKids = selectRandomly(kids);
+  return `You will be a ${selectRandomly(job)} in ${selectRandomly(
+    location
+  )} married to ${selectRandomly(name)} with ${
+    numberOfKids > 1 ? numberOfKids + ' kids' : numberOfKids + ' kid'
+  }.`;
 }
 
 function main() {
