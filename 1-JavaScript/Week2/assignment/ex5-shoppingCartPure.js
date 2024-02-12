@@ -1,9 +1,9 @@
 
-function addToShoppingCart(items,item) {
+function addToShoppingCart(addItems,item) {
 
-  const newItems = [...items];
+  const newItems = [...addItems];
 
- if(newItems.length > 2) {
+ if(newItems.length > 2 ) {
    newItems.shift();
    newItems.push(item);
  }else{
