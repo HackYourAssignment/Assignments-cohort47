@@ -1,0 +1,12 @@
+{
+  "name": "1-javascript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jestnpm"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
