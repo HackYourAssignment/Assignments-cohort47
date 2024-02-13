@@ -16,10 +16,16 @@ it pure. Do the following:
 5. Confirm that you function passes the provided unit tests.
 ------------------------------------------------------------------------------*/
 // ! Function under test
-function addToShoppingCart(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+function addToShoppingCart(shoppingCart, item) {
+  if (item) {
+    const newShoppingCart = [...shoppingCart, item];
+    if (newShoppingCart.length > 3){
+    return newShoppingCart.slice(1)
+  }
+  return newShoppingCart
 }
-
+  return shoppingCart
+}
 // ! Test functions (plain vanilla JavaScript)
 function test1() {
   console.log('Test 1: addToShoppingCart should take two parameters');
