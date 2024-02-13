@@ -37,7 +37,15 @@ function computeEarnings(tasks, hourlyRate) {
 
   const totalEarnings = earnings.reduce((total, earnings) => total + earnings, 0);
 
-  return `€${(totalEarnings/60).toFixed(2)}` ;
+ /* return `€${(totalEarnings/60).toFixed(2)}` ; */
+
+ const formattedEarnings = new Intl.NumberFormat('en-US', {
+  style: 'currency',
+  currency: 'EUR'
+}).format(totalEarnings / 60); 
+
+return formattedEarnings;
+
  
 }
 // Test the function
