@@ -1,0 +1,100 @@
+2024-02-13 02:27:54 info: ------------------------------------------------------
+2024-02-13 02:27:54 info: >>> Running Unit Test `ex1-doubleEvenNumbers.test` <<<
+2024-02-13 02:27:54 info: ------------------------------------------------------
+2024-02-13 02:28:16 info: All unit tests passed.
+2024-02-13 02:29:10 info: All steps were completed successfully
+2024-02-13 03:18:49 info: ------------------------------------------------------
+2024-02-13 03:18:49 info: >>> Running Unit Test `ex1-doubleEvenNumbers.test` <<<
+2024-02-13 03:18:49 info: ------------------------------------------------------
+2024-02-13 03:19:12 info: All unit tests passed.
+2024-02-13 03:19:52 info: All steps were completed successfully
+2024-02-13 03:26:47 info: ------------------------------------------------------
+2024-02-13 03:26:47 info: >>> Running Unit Test `ex1-doubleEvenNumbers.test` <<<
+2024-02-13 03:26:47 info: ------------------------------------------------------
+2024-02-13 03:27:08 info: All unit tests passed.
+2024-02-13 03:27:47 info: All steps were completed successfully
+2024-02-13 04:04:24 info: -------------------------------------------------
+2024-02-13 04:04:24 info: >>> Running Unit Test `ex2-mondaysWorth.test` <<<
+2024-02-13 04:04:24 info: -------------------------------------------------
+2024-02-13 04:04:47 error: *** Unit Test Error Report ***
+
+console.log
+    €187.5
+
+      at Object.log (1-JavaScript/Week3/assignment/ex2-mondaysWorth.test.js:47:9)
+
+
+
+Command failed: npx jest ex2-mondaysWorth.test.js --colors
+ FAIL  1-JavaScript/Week3/assignment/ex2-mondaysWorth.test.js
+  computeEarnings
+    √ should take two parameters (20 ms)
+    × should compute the earnings as a formatted Euro amount (25 ms)
+
+  ● computeEarnings › should compute the earnings as a formatted Euro amount
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "€187.50"
+    Received: "€187.5"
+
+      59 |     const result = computeEarnings(mondayTasks, hourlyRate);
+      60 |     const expected = '€187.50';
+    > 61 |     expect(result).toBe(expected);
+         |                    ^
+      62 |   });
+      63 | });
+      64 |
+
+      at Object.toBe (1-JavaScript/Week3/assignment/ex2-mondaysWorth.test.js:61:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 passed, 2 total
+Snapshots:   0 total
+Time:        4.974 s
+Ran all test suites matching /ex2-mondaysWorth.test.js/i.
+2024-02-13 04:11:34 info: -------------------------------------------------
+2024-02-13 04:11:34 info: >>> Running Unit Test `ex2-mondaysWorth.test` <<<
+2024-02-13 04:11:34 info: -------------------------------------------------
+2024-02-13 04:11:59 error: *** Unit Test Error Report ***
+
+console.log
+    187.5
+
+      at Object.log (1-JavaScript/Week3/assignment/ex2-mondaysWorth.test.js:47:9)
+
+
+
+Command failed: npx jest ex2-mondaysWorth.test.js --colors
+ FAIL  1-JavaScript/Week3/assignment/ex2-mondaysWorth.test.js
+  computeEarnings
+    √ should take two parameters (20 ms)
+    × should compute the earnings as a formatted Euro amount (29 ms)
+
+  ● computeEarnings › should compute the earnings as a formatted Euro amount
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "€187.50"
+    Received: "187.5"
+
+      59 |     const result = computeEarnings(mondayTasks, hourlyRate);
+      60 |     const expected = '€187.50';
+    > 61 |     expect(result).toBe(expected);
+         |                    ^
+      62 |   });
+      63 | });
+      64 |
+
+      at Object.toBe (1-JavaScript/Week3/assignment/ex2-mondaysWorth.test.js:61:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 passed, 2 total
+Snapshots:   0 total
+Time:        5.152 s
+Ran all test suites matching /ex2-mondaysWorth.test.js/i.
+2024-02-13 04:14:03 info: -------------------------------------------------
+2024-02-13 04:14:03 info: >>> Running Unit Test `ex2-mondaysWorth.test` <<<
+2024-02-13 04:14:03 info: -------------------------------------------------
+2024-02-13 04:14:26 info: All unit tests passed.
+2024-02-13 04:15:09 info: All steps were completed successfully
