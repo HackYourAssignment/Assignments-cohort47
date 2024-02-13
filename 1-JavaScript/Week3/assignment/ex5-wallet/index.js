@@ -74,7 +74,7 @@ const quiz = {
     question: 'At line 26, which variables are in the scope marked Closure?',
     choices: { 
       a: 'There is no scope marked Closure', 
-      b: 'cash, name', 
+      undefined: 'cash, name', 
       c: 'amount, this, wallet'
     },
     answer: undefined,
@@ -84,7 +84,7 @@ const quiz = {
     choices: { 
       a: 'withdraw, anonymous', 
       b: 'anonymous, transferInto', 
-      c: 'transferInto, anonymous' 
+      undefined: 'transferInto, anonymous' 
     },
     answer: undefined,
   },
@@ -92,7 +92,7 @@ const quiz = {
     question: 'What tooltip appears when hovering over the third debug button?',
     choices: { 
       a: 'Step into next function call', 
-      b: 'Step out of current function', 
+      undefined: 'Step out of current function', 
       c: 'Step' 
     },
     answer: undefined,
@@ -101,7 +101,7 @@ const quiz = {
     question: 'What is displayed in the console?',
     choices: { 
       a: 'Transferring € 50,00 from Jack to Joe', 
-      b: 'Transferring € 50,00 from Jack to undefined', 
+      undefined: 'Transferring € 50,00 from Jack to undefined', 
       c: 'Transferring € 50,00 from Jack to Jane' 
     },
     answer: undefined,
@@ -109,7 +109,7 @@ const quiz = {
   q5: {
     question: 'The owner of the wallet with insufficient funds is:',
     choices: { 
-      a: 'Jack', 
+      undefined: 'Jack', 
       b: 'Joe', 
       c: 'Jane' 
     },
