@@ -31,18 +31,11 @@ const employeeRecords = [
 
 // ! Function under test
 function filterPrivateData(arr) {
-
-    const allFiltered = [];
-    for (const data of arr) {
-        const { name, occupation, email } = data;
-
-        const objectFiltered = {name, occupation, email};
-
-        allFiltered.push(objectFiltered);
+      return arr.map(employee => {
+        const { name, occupation, email } = employee;
+        return { name, occupation, email };
+      });
     }
-
-    return allFiltered;
-}
 
 
 
