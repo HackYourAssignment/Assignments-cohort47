@@ -98,3 +98,81 @@ Ran all test suites matching /ex2-mondaysWorth.test.js/i.
 2024-02-13 04:14:03 info: -------------------------------------------------
 2024-02-13 04:14:26 info: All unit tests passed.
 2024-02-13 04:15:09 info: All steps were completed successfully
+2024-02-13 05:27:50 info: -------------------------------------------------
+2024-02-13 05:27:50 info: >>> Running Unit Test `ex3-lemonAllergy.test` <<<
+2024-02-13 05:27:50 info: -------------------------------------------------
+2024-02-13 05:28:15 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-lemonAllergy.test.js --colors
+ FAIL  1-JavaScript/Week3/assignment/ex3-lemonAllergy.test.js
+  sanitizeFruitBasket
+    √ should take two parameters (31 ms)
+    × should not modify the original `fruitBasket` array (4 ms)
+    √ should return a new array that does not include the unwanted `lemon` (5 ms)
+
+  ● sanitizeFruitBasket › should not modify the original `fruitBasket` array
+
+    ReferenceError: eexpect is not defined
+
+      42 |     const originalFruitBasketContents = [...fruitBasket];
+      43 |     sanitizeFruitBasket(fruitBasket, 'lemon');
+    > 44 |     eexpect(fruitBasket).toEqual(originalFruitBasketContents);
+         |     ^
+      45 |
+      46 |   });
+      47 |
+
+      at Object.eexpect (1-JavaScript/Week3/assignment/ex3-lemonAllergy.test.js:44:5)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 2 passed, 3 total
+Snapshots:   0 total
+Time:        5.651 s
+Ran all test suites matching /ex3-lemonAllergy.test.js/i.
+2024-02-13 05:28:33 error: *** ESLint Report ***
+
+ex3-lemonAllergy.test.js
+  44:5  error  'eexpect' is not defined  no-undef
+
+✖ 1 problem (1 error, 0 warnings)
+
+
+2024-02-13 05:28:54 error: *** Spell Checker Report ***
+
+c:/Users/Hana/Assignments-cohort47/1-JavaScript/Week3/assignment/ex3-lemonAllergy.test.js:44:5 - Unknown word (eexpect)
+
+2024-02-13 05:33:43 info: -------------------------------------------------
+2024-02-13 05:33:43 info: >>> Running Unit Test `ex3-lemonAllergy.test` <<<
+2024-02-13 05:33:43 info: -------------------------------------------------
+2024-02-13 05:34:06 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-lemonAllergy.test.js --colors
+ FAIL  1-JavaScript/Week3/assignment/ex3-lemonAllergy.test.js
+  sanitizeFruitBasket
+    √ should take two parameters (20 ms)
+    × should not modify the original `fruitBasket` array (4 ms)
+    √ should return a new array that does not include the unwanted `lemon` (3 ms)
+
+  ● sanitizeFruitBasket › should not modify the original `fruitBasket` array
+
+    ReferenceError: eexpect is not defined
+
+      42 |     const originalFruitBasketContents = [...fruitBasket];
+      43 |     sanitizeFruitBasket(fruitBasket, 'lemon');
+    > 44 |     eexpect(fruitBasket).toEqual(originalFruitBasketContents);
+         |     ^
+      45 |
+      46 |   });
+      47 |
+
+      at Object.eexpect (1-JavaScript/Week3/assignment/ex3-lemonAllergy.test.js:44:5)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 2 passed, 3 total
+Snapshots:   0 total
+Time:        5.282 s
+Ran all test suites matching /ex3-lemonAllergy.test.js/i.
+2024-02-13 05:34:48 info: Disclaimer turned off
+2024-02-13 05:35:11 info: -------------------------------------------------
+2024-02-13 05:35:11 info: >>> Running Unit Test `ex3-lemonAllergy.test` <<<
+2024-02-13 05:35:11 info: -------------------------------------------------
