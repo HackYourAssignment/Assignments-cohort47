@@ -20,6 +20,6 @@ observable.subscribe(consoleLowerCase);
 
 // Send a message to all current subscribers
 observable.notify("Let's see what happens here!");
-(console.log subscriber)
+// Let's see what happens here! (console.log subscriber)
 // LET'S SEE WHAT HAPPENS HERE! (consoleUpperCase subscriber)
 // let's see what happens here! (consoleLowerCase subscriber)
