@@ -19,15 +19,16 @@ function addToShoppingCart(shoppingCart, groceryItem) {
    
     const newCart = [...shoppingCart];
   
-    newCart.push(groceryItem);
+function addToShoppingCart(shoppingCart, groceryItem) {
+  const newCart = [...shoppingCart, groceryItem];
   
-    if (newCart.length > 3) {
-      newCart.shift();
-    }
-  
-
-    return newCart;
+  if (newCart.length > 3) {
+    return newCart.slice(1); // Extracts elements from index 1 to the end
   }
+
+  return newCart;
+}
+
 // ! Test functions (plain vanilla JavaScript)
 function test1() {
   console.log('Test 1: addToShoppingCart should take two parameters');
