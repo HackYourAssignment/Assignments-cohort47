@@ -34,5 +34,19 @@
         "typeof",
         "usingapis",
         "Woww"
+    ],
+    "ignoreWords": [
+        "Aigul",
+        "Alsu",
+        "Gydan",
+        "Leisan",
+        "Novy",
+        "Primorye",
+        "Rustam",
+        "Sabetta",
+        "Tambov",
+        "Urengoy",
+        "Vika",
+        "xrustik"
     ]
 }
