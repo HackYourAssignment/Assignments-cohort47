@@ -19,7 +19,7 @@ const employeeRecords = [
     gender: 'M',
     email: 'john.doe@somewhere.net',
     salary: 50000,
-  },
+  }, 
   {
     name: 'Jane',
     occupation: 'manager',
@@ -30,9 +30,14 @@ const employeeRecords = [
 ];
 
 // ! Function under test
-function filterPrivateData(/* TODO parameter(s) go here */) {
-  // TODO complete this function
-}
+function filterPrivateData(arr) {
+      return arr.map(employee => {
+        const { name, occupation, email } = employee;
+        return { name, occupation, email };
+      });
+    }
+
+
 
 // ! Test functions (plain vanilla JavaScript)
 function test1() {
