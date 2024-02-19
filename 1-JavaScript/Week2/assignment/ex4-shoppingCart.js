@@ -31,7 +31,7 @@ function addToShoppingCart(groceryItem) {
     const result = `You bought ${shoppingCart[0]}, ${shoppingCart[1]}!`;
     return result;
   } else {
-    if (groceryItem !== null) {
+    if (groceryItem) {
       if (shoppingCart.length >= 3) {
         shoppingCart.shift();
         shoppingCart.push(groceryItem);

@@ -1,7 +1,5 @@
 'use strict';
 
-const { forIn, forEach } = require('lodash');
-
 /*------------------------------------------------------------------------------
 Full description at: https://github.com/HackYourFuture/Assignments/tree/main/1-JavaScript/Week3#exercise-6-total-cost-is
 
@@ -54,10 +52,6 @@ function test1() {
 
 function test2() {
   console.log('\nTest 2: return correct output when passed cartForParty');
-
-  const calculatedTotalPrice = calculateTotalPrice(cartForParty);
-
-  console.log(calculatedTotalPrice);
 
   const result1 = calculateTotalPrice(cartForParty);
 

@@ -1,7 +1,5 @@
 'use strict';
 
-const { assign } = require('lodash');
-
 /*------------------------------------------------------------------------------
 Full description at: https://github.com/HackYourFuture/Assignments/tree/main/1-JavaScript/Week3#exercise-5-improved-shopping-at-the-supermarket
 
@@ -20,8 +18,8 @@ it pure. Do the following:
 ------------------------------------------------------------------------------*/
 
 function addToShoppingCart(newArrCart, groceryItem) {
-  if ((newArrCart !== null) & (groceryItem !== null)) {
-    if (newArrCart.length >= 3) {
+  if (newArrCart && groceryItem) {
+    if (newArrCart.length > 2) {
       newArrCart.shift();
       newArrCart.push(groceryItem);
       return newArrCart;
@@ -45,9 +43,9 @@ function test2() {
   console.log('Test 2: addToShoppingCart should be a pure function');
   // A pure function should return the same result when called with
   // identical arguments. It should also have no side effects (not tested here).
-  const initialCart = ['bananas', 'milk'];
+  let initialCart = ['bananas', 'milk'];
 
-  let newArrCart = [].concat(initialCart);
+  const newArrCart = [].concat(initialCart);
 
   const result1 = addToShoppingCart(newArrCart, 'chocolate');
 
