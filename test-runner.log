@@ -301,3 +301,65 @@ d:/HYF/Assignments-cohort47/1-JavaScript/Week3/assignment/ex3-lemonAllergy.test.
 d:/HYF/Assignments-cohort47/1-JavaScript/Week3/assignment/ex3-lemonAllergy.test.js:51:11 - Unknown word (alergic)
 d:/HYF/Assignments-cohort47/1-JavaScript/Week3/assignment/ex3-lemonAllergy.test.js:52:53 - Unknown word (alergic)
 
+2024-02-11 01:59:08 info: -------------------------------------------------
+2024-02-11 01:59:08 info: >>> Running Unit Test `ex3-lemonAllergy.test` <<<
+2024-02-11 01:59:08 info: -------------------------------------------------
+2024-02-11 01:59:11 info: All unit tests passed.
+2024-02-11 01:59:18 error: *** Spell Checker Report ***
+
+d:/HYF/Assignments-cohort47/1-JavaScript/Week3/assignment/ex3-lemonAllergy.test.js:51:11 - Unknown word (alergic)
+d:/HYF/Assignments-cohort47/1-JavaScript/Week3/assignment/ex3-lemonAllergy.test.js:52:53 - Unknown word (alergic)
+
+2024-02-19 07:21:06 info: ------------------------------------------------------
+2024-02-19 07:21:06 info: >>> Running Unit Test `ex1-doubleEvenNumbers.test` <<<
+2024-02-19 07:21:06 info: ------------------------------------------------------
+2024-02-19 07:21:11 info: All unit tests passed.
+2024-02-19 07:21:19 info: All steps were completed successfully
+2024-02-19 07:35:23 info: -------------------------------------------------
+2024-02-19 07:35:23 info: >>> Running Unit Test `ex2-mondaysWorth.test` <<<
+2024-02-19 07:35:23 info: -------------------------------------------------
+2024-02-19 07:35:27 info: All unit tests passed.
+2024-02-19 07:35:35 info: All steps were completed successfully
+2024-02-19 07:50:01 info: -------------------------------------------------
+2024-02-19 07:50:01 info: >>> Running Unit Test `ex3-lemonAllergy.test` <<<
+2024-02-19 07:50:01 info: -------------------------------------------------
+2024-02-19 07:50:04 info: All unit tests passed.
+2024-02-19 07:50:11 error: *** Spell Checker Report ***
+
+d:/HYF/Assignments-cohort47/1-JavaScript/Week3/assignment/ex3-lemonAllergy.test.js:32:11 - Unknown word (alergic)
+d:/HYF/Assignments-cohort47/1-JavaScript/Week3/assignment/ex3-lemonAllergy.test.js:33:53 - Unknown word (alergic)
+d:/HYF/Assignments-cohort47/1-JavaScript/Week3/assignment/ex3-lemonAllergy.test.js:35:43 - Unknown word (alergic)
+
+2024-02-19 08:49:34 info: --------------------------------------
+2024-02-19 08:49:34 info: >>> Running Unit Test `ex5-wallet` <<<
+2024-02-19 08:49:34 info: --------------------------------------
+2024-02-19 08:49:38 error: *** Unit Test Error Report ***
+
+✕ wallet q2: What is in the Call Stack, from top to bottom?
+✕ wallet q4: What is displayed in the console?
+
+
+Command failed: npx jest ex5-wallet.test.js --colors --reporters="D:\HYF\Assignments-cohort47\test-runner\CustomReporter.js"
+2024-02-19 08:49:42 error: *** ESLint Report ***
+
+ex5-wallet/index.js
+  10:29  error    'cash' is assigned a value but never used                                                  no-unused-vars
+  11:12  warning  Function 'deposit' looks like a constructor function. If so, please use a PascalCase name  hyf/camelcase
+  66:7   error    'quiz' is assigned a value but never used                                                  no-unused-vars
+
+✖ 3 problems (2 errors, 1 warning)
+
+
+2024-02-19 08:54:05 info: --------------------------------------
+2024-02-19 08:54:05 info: >>> Running Unit Test `ex5-wallet` <<<
+2024-02-19 08:54:05 info: --------------------------------------
+2024-02-19 08:54:08 info: All unit tests passed.
+2024-02-19 08:54:11 error: *** ESLint Report ***
+
+ex5-wallet/index.js
+  11:12  warning  Function 'deposit' looks like a constructor function. If so, please use a PascalCase name  hyf/camelcase
+  68:7   error    'quiz' is assigned a value but never used                                                  no-unused-vars
+
+✖ 2 problems (1 error, 1 warning)
+
+

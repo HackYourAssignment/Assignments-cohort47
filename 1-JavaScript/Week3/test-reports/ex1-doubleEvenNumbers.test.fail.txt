@@ -1,9 +1,0 @@
-
-*** ESLint Report ***
-
-ex1-doubleEvenNumbers.test.js
-  14:7  warning  'evenNumbers' is never reassigned. Use 'const' instead  no-autofix/prefer-const
-  16:3  error    Unreachable code                                        no-unreachable
-
-✖ 2 problems (1 error, 1 warning)
-
