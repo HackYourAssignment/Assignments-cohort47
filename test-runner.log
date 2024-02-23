@@ -1,0 +1,105 @@
+2024-02-21 10:28:13 info: ------------------------------------------
+2024-02-21 10:28:13 info: >>> Running Unit Test `ex3-hijackLogo` <<<
+2024-02-21 10:28:13 info: ------------------------------------------
+2024-02-21 10:28:16 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-hijackLogo.test.js --colors
+ FAIL  2-Browsers/Week1/unit-tests/ex3-hijackLogo.test.js
+  hijackLogo
+    × should have all TODO comments removed (2 ms)
+    √ should set the `src` property (1 ms)
+    √ should set the `srcset` property
+
+  ● hijackLogo › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.toBeFalsy (test-runner/unit-test-helpers.js:105:42)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 2 passed, 3 total
+Snapshots:   0 total
+Time:        0.526 s
+Ran all test suites matching /ex3-hijackLogo.test.js/i.
+2024-02-21 10:28:19 error: *** Spell Checker Report ***
+
+
+2024-02-21 10:28:47 info: ------------------------------------------
+2024-02-21 10:28:47 info: >>> Running Unit Test `ex3-hijackLogo` <<<
+2024-02-21 10:28:47 info: ------------------------------------------
+2024-02-21 10:28:49 info: All unit tests passed.
+2024-02-21 10:28:52 error: *** Spell Checker Report ***
+
+
+2024-02-21 10:29:16 info: Disclaimer turned off
+2024-02-21 10:29:23 info: ----------------------------------------
+2024-02-21 10:29:23 info: >>> Running Unit Test `ex1-bookList` <<<
+2024-02-21 10:29:23 info: ----------------------------------------
+2024-02-21 10:29:27 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex1-bookList.test.js --colors
+ FAIL  2-Browsers/Week1/unit-tests/ex1-bookList.test.js
+  Generated HTML
+    × HTML should be syntactically valid (78 ms)
+    √ should have all TODO comments removed
+    √ should contain a <ul> that is a child of <div id="bookList"> (1 ms)
+    √ should contain a <ul> with 3 <li> elements (1 ms)
+    √ should contain an <li> with title and author for each book of the `myBooks` array (1 ms)
+    √ should contain an <img> element for each book (1 ms)
+
+  ● Generated HTML › HTML should be syntactically valid
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: ""
+    Received: "
+    inline
+      12:113  error  <img> is missing required \"alt\" attribute  wcag/h37
+      12:254  error  <img> is missing required \"alt\" attribute  wcag/h37
+      12:386  error  <img> is missing required \"alt\" attribute  wcag/h37·
+    ✖ 3 problems (3 errors, 0 warnings)
+    "
+
+      44 |   const { results } = htmlValidate.validateString(htmlText);
+      45 |   const validationReport = stylish(results);
+    > 46 |   expect(validationReport).toBe('');
+         |                            ^
+      47 | }
+      48 |
+      49 | module.exports = {
+
+      at toBe (test-runner/jsdom-helpers.js:46:28)
+      at Object.validateHTML (2-Browsers/Week1/unit-tests/ex1-bookList.test.js:42:5)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 5 passed, 6 total
+Snapshots:   0 total
+Time:        2.715 s
+Ran all test suites matching /ex1-bookList.test.js/i.
+2024-02-21 10:29:30 error: *** Spell Checker Report ***
+
+
+2024-02-21 10:31:06 info: ----------------------------------------
+2024-02-21 10:31:06 info: >>> Running Unit Test `ex1-bookList` <<<
+2024-02-21 10:31:06 info: ----------------------------------------
+2024-02-21 10:31:11 info: All unit tests passed.
+2024-02-21 10:31:14 error: *** Spell Checker Report ***
+
+
+2024-02-21 10:31:49 info: ---------------------------------------
+2024-02-21 10:31:49 info: >>> Running Unit Test `ex2-aboutMe` <<<
+2024-02-21 10:31:49 info: ---------------------------------------
+2024-02-21 10:31:54 info: All unit tests passed.
+2024-02-21 10:31:57 error: *** Spell Checker Report ***
+
+
