@@ -103,3 +103,24 @@ Ran all test suites matching /ex1-bookList.test.js/i.
 2024-02-21 10:31:57 error: *** Spell Checker Report ***
 
 
+2024-02-23 01:19:48 info: ----------------------------------------
+2024-02-23 01:19:48 info: >>> Running Unit Test `ex1-bookList` <<<
+2024-02-23 01:19:48 info: ----------------------------------------
+2024-02-23 01:19:53 info: All unit tests passed.
+2024-02-23 01:19:56 error: *** Spell Checker Report ***
+
+
+2024-02-23 01:20:05 info: ---------------------------------------
+2024-02-23 01:20:05 info: >>> Running Unit Test `ex2-aboutMe` <<<
+2024-02-23 01:20:05 info: ---------------------------------------
+2024-02-23 01:20:09 info: All unit tests passed.
+2024-02-23 01:20:12 error: *** Spell Checker Report ***
+
+
+2024-02-23 01:20:26 info: ------------------------------------------
+2024-02-23 01:20:26 info: >>> Running Unit Test `ex3-hijackLogo` <<<
+2024-02-23 01:20:26 info: ------------------------------------------
+2024-02-23 01:20:28 info: All unit tests passed.
+2024-02-23 01:20:31 error: *** Spell Checker Report ***
+
+
