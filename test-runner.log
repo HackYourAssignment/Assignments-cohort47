@@ -363,3 +363,8 @@ ex5-wallet/index.js
 ✖ 2 problems (1 error, 1 warning)
 
 
+2024-02-21 10:47:04 info: -------------------------------------------------
+2024-02-21 10:47:04 info: >>> Running Unit Test `ex2-mondaysWorth.test` <<<
+2024-02-21 10:47:04 info: -------------------------------------------------
+2024-02-21 10:47:07 info: All unit tests passed.
+2024-02-21 10:47:13 info: All steps were completed successfully
