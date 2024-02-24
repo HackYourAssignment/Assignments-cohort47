@@ -1,6 +1,7 @@
 {
   "name": "assignments",
   "version": "1.0.0",
+  "type": "module",
   "description": "> If you are following the HackYourFuture curriculum we recommend you to start with module 1: [HTML/CSS/GIT](https://github.com/HackYourFuture/HTML-CSS). To get a complete overview of the HackYourFuture curriculum first, click [here](https://github.com/HackYourFuture/curriculum).",
   "main": "index.js",
   "scripts": {
@@ -16,6 +17,9 @@
     "decrypt": "node ./test-runner/decrypt",
     "precommit": "npm run reset-reports && npm run cleanup"
   },
+
+  
+
   "repository": {
     "type": "git",
     "url": "git+https://github.com/HackYourFuture/Assignments.git"
@@ -68,3 +72,4 @@
     "winston": "^3.8.2"
   }
 }
+
