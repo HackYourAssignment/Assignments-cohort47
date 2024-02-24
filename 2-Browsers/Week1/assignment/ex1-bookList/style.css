@@ -1,1 +1,31 @@
 /* Write your style here */
+
+
+
+h1 {position:absolute;
+margin-bottom: 10px;
+font-size: 28px;}
+
+body {display: flex;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding-left:15px;
+    gap:15px;
+    margin-top: 80px;
+    
+}
+
+li { padding: 0 20px;
+
+}
+
+p {padding-top: 10px;}
+
+/* Write your style here */
+
+
+
