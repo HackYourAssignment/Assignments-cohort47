@@ -37,7 +37,7 @@ function catWalk() {
     const walkingCatImage = document.getElementById('walkingCat');
     walkingCatImage.style.left = '0px';
     
-    const middleOfScreen = window.innerWidth / 2; // Define middleOfScreen here
+    const middleOfScreen = window.innerWidth / 2; // 
 
     function moveCat() {
       let currentLeft = parseInt(walkingCatImage.style.left);
@@ -49,7 +49,7 @@ function catWalk() {
         walkingCatImage.style.left = '0px';
       }
 
-      if (Math.abs(currentLeft - middleOfScreen) <= 5) {
+      if (Math.abs(currentLeft - middleOfScreen) <= 5) {   /*to be edited*/
         const originalSrc = walkingCatImage.src;
         walkingCatImage.src = 'https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif';
      
