@@ -1,1 +1,30 @@
-/* Write your style here */
+div {
+  width: fit-content;
+  max-height: 1500px;
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  flex: 1 1 450px;
+}
+
+li {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 580px;
+}
+
+p {
+  margin-top: 15px;
+  height: 60px;
+}
+
+img {
+  display: block;
+  width: 320px;
+  padding: 20px 5px 10px 10px;
+  height: 500px;
+}

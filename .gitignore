@@ -1,7 +1,7 @@
 .idea
 sysinfo.json
 .DS_Store
-
+.vscode/
 # Logs
 logs
 npm-debug.log*
