@@ -13,7 +13,7 @@ Full description at: https://github.com/HackYourFuture/Assignments/tree/main/2-B
 document.getElementById('nickname').textContent = 'Altay';
 document.getElementById('fav-food').textContent = 'Hamburger';
 document.getElementById('hometown').textContent = 'Ankara';
-//
+
 // 2. In JavaScript, iterate through each `<li>` and change the class to `list-item`.
 const listItems = document.querySelectorAll('li');
 for (let i = 0; i < listItems.length; i++) {

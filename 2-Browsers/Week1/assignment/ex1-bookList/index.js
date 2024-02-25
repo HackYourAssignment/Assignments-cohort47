@@ -14,6 +14,7 @@ element with the book title and author.
 The end result should look something like this:
 https://hackyourfuture.github.io/example-pages/Browsers/Week1/1-booklist/
 
+//
 -----------------------------------------------------------------------------*/
 //cspell: enable
 
