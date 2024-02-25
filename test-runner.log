@@ -368,3 +368,192 @@ ex5-wallet/index.js
 2024-02-21 10:47:04 info: -------------------------------------------------
 2024-02-21 10:47:07 info: All unit tests passed.
 2024-02-21 10:47:13 info: All steps were completed successfully
+2024-02-25 09:08:38 info: ---------------------------------------
+2024-02-25 09:08:38 info: >>> Running Unit Test `ex5-catWalk` <<<
+2024-02-25 09:08:38 info: ---------------------------------------
+2024-02-25 09:08:47 info: All unit tests passed.
+2024-02-25 09:08:50 error: *** ESLint Report ***
+
+ex5-catWalk/index.js
+   3:9   error  'initial' is assigned a value but never used  no-unused-vars
+  42:10  error  'dancingCat' is defined but never used        no-unused-vars
+
+✖ 2 problems (2 errors, 0 warnings)
+
+
+2024-02-25 09:50:34 info: --------------------------------------------
+2024-02-25 09:50:34 info: >>> Running Unit Test `ex4-whatsTheTime` <<<
+2024-02-25 09:50:34 info: --------------------------------------------
+2024-02-25 09:50:43 info: All unit tests passed.
+2024-02-25 09:50:47 error: *** ESLint Report ***
+
+ex4-whatsTheTime/index.js
+  12:7  warning  'currentTime' is never reassigned. Use 'const' instead  no-autofix/prefer-const
+  13:7  warning  'hour' is never reassigned. Use 'const' instead         no-autofix/prefer-const
+  14:7  warning  'minutes' is never reassigned. Use 'const' instead      no-autofix/prefer-const
+  15:7  warning  'seconds' is never reassigned. Use 'const' instead      no-autofix/prefer-const
+  16:7  warning  'time' is never reassigned. Use 'const' instead         no-autofix/prefer-const
+
+✖ 5 problems (0 errors, 5 warnings)
+
+
+2024-02-25 09:56:06 info: --------------------------------------------
+2024-02-25 09:56:06 info: >>> Running Unit Test `ex4-whatsTheTime` <<<
+2024-02-25 09:56:06 info: --------------------------------------------
+2024-02-25 09:56:15 info: All unit tests passed.
+2024-02-25 09:56:21 info: All steps were completed successfully
+2024-02-25 09:56:32 info: ----------------------------------------
+2024-02-25 09:56:32 info: >>> Running Unit Test `ex1-bookList` <<<
+2024-02-25 09:56:32 info: ----------------------------------------
+2024-02-25 09:56:39 info: All unit tests passed.
+2024-02-25 09:56:45 info: All steps were completed successfully
+2024-02-25 09:57:18 info: ---------------------------------------
+2024-02-25 09:57:18 info: >>> Running Unit Test `ex2-aboutMe` <<<
+2024-02-25 09:57:18 info: ---------------------------------------
+2024-02-25 09:57:25 info: All unit tests passed.
+2024-02-25 09:57:31 error: *** Spell Checker Report ***
+
+d:/HYF/Assignments-cohort47/2-Browsers/Week1/assignment/ex2-aboutMe/index.js:17:56 - Unknown word (Hailu)
+d:/HYF/Assignments-cohort47/2-Browsers/Week1/assignment/ex2-aboutMe/index.js:19:56 - Unknown word (shiro)
+d:/HYF/Assignments-cohort47/2-Browsers/Week1/assignment/ex2-aboutMe/index.js:19:66 - Unknown word (entatie)
+d:/HYF/Assignments-cohort47/2-Browsers/Week1/assignment/ex2-aboutMe/index.js:21:56 - Unknown word (Mekelle)
+
+2024-02-25 10:00:24 info: ------------------------------------------
+2024-02-25 10:00:24 info: >>> Running Unit Test `ex3-hijackLogo` <<<
+2024-02-25 10:00:24 info: ------------------------------------------
+2024-02-25 10:00:27 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-hijackLogo.test.js --colors
+ FAIL  2-Browsers/Week1/unit-tests/ex3-hijackLogo.test.js
+  hijackLogo
+    √ should have all TODO comments removed (3 ms)
+    × should set the `src` property (1 ms)
+    × should set the `srcset` property
+
+  ● hijackLogo › should set the `src` property
+
+    expect(received).toBeDefined()
+
+    Received: undefined
+
+      29 |
+      30 |   test('should set the `src` property', () => {
+    > 31 |     expect(state.src).toBeDefined();
+         |                       ^
+      32 |   });
+      33 |
+      34 |   test('should set the `srcset` property', () => {
+
+      at Object.toBeDefined (2-Browsers/Week1/unit-tests/ex3-hijackLogo.test.js:31:23)
+
+  ● hijackLogo › should set the `srcset` property
+
+    expect(received).toBeDefined()
+
+    Received: undefined
+
+      33 |
+      34 |   test('should set the `srcset` property', () => {
+    > 35 |     expect(state.srcset).toBeDefined();
+         |                          ^
+      36 |   });
+      37 | });
+      38 |
+
+      at Object.toBeDefined (2-Browsers/Week1/unit-tests/ex3-hijackLogo.test.js:35:26)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 1 passed, 3 total
+Snapshots:   0 total
+Time:        0.779 s
+Ran all test suites matching /ex3-hijackLogo.test.js/i.
+2024-02-25 10:00:30 error: *** ESLint Report ***
+
+ex3-hijackLogo.js
+  12:3  warning  Please do not use `innerHTML` in the assignment. Use `textContent` and/or `document.createElement()` instead  no-restricted-syntax
+
+✖ 1 problem (0 errors, 1 warning)
+
+
+2024-02-25 10:00:34 error: *** Spell Checker Report ***
+
+d:/HYF/Assignments-cohort47/2-Browsers/Week1/assignment/ex3-hijackLogo.js:12:28 - Unknown word (hplogoo)
+
+2024-02-25 10:04:30 info: ---------------------------------------
+2024-02-25 10:04:30 info: >>> Running Unit Test `ex5-catWalk` <<<
+2024-02-25 10:04:30 info: ---------------------------------------
+2024-02-25 10:04:37 info: All unit tests passed.
+2024-02-25 10:04:43 info: All steps were completed successfully
+2024-02-25 10:05:06 info: ------------------------------------------
+2024-02-25 10:05:06 info: >>> Running Unit Test `ex6-gameOfLife` <<<
+2024-02-25 10:05:06 info: ------------------------------------------
+2024-02-25 10:05:10 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex6-gameOfLife.test.js --colors
+ FAIL  2-Browsers/Week1/unit-tests/ex6-gameOfLife.test.js
+  Game Of Life:
+    √ should exist and be executable (3 ms)
+    √ a living cell with zero living neighbors should die and have its life time reset to zero (2 ms)
+    √ a living cell with one living neighbor should die and have its life time reset to zero (1 ms)
+    √ a living cell with two living neighbors should survive and have its life time incremented by one (1 ms)
+    × a living cell with three living neighbors should survive and have its life time incremented by one (3 ms)
+    √ a living cell with four living neighbors should die and have its life time reset to zero (1 ms)
+    √ a dead cell with zero living neighbors should remain dead and have a life time of zero
+    √ a dead cell with one living neighbor should remain dead and have a life time of zero
+    × a dead cell with two living neighbors should remain dead and have a life time of zero (1 ms)
+    √ a dead cell with three living neighbors should come alive and have its lifeTime reset to one (1 ms)
+    √ a dead cell with four living neighbors should remain dead and have a life time of zero (1 ms)
+
+  ● Game Of Life: › a living cell with three living neighbors should survive and have its life time incremented by one
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 2
+    Received: 1
+
+      115 |
+      116 |     expect(midCell.alive).toBe(true);
+    > 117 |     expect(midCell.lifeTime).toBe(2);
+          |                              ^
+      118 |   });
+      119 |
+      120 |   test('a living cell with four living neighbors should die and have its life time reset to zero', () => {
+
+      at Object.toBe (2-Browsers/Week1/unit-tests/ex6-gameOfLife.test.js:117:30)
+
+  ● Game Of Life: › a dead cell with two living neighbors should remain dead and have a life time of zero
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 0
+    Received: 1
+
+      202 |
+      203 |     expect(midCell.alive).toBe(false);
+    > 204 |     expect(midCell.lifeTime).toBe(0);
+          |                              ^
+      205 |   });
+      206 |
+      207 |   test('a dead cell with three living neighbors should come alive and have its lifeTime reset to one', () => {
+
+      at Object.toBe (2-Browsers/Week1/unit-tests/ex6-gameOfLife.test.js:204:30)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 9 passed, 11 total
+Snapshots:   0 total
+Time:        1.074 s
+Ran all test suites matching /ex6-gameOfLife.test.js/i.
+2024-02-25 10:38:36 info: ------------------------------------------
+2024-02-25 10:38:36 info: >>> Running Unit Test `ex3-hijackLogo` <<<
+2024-02-25 10:38:36 info: ------------------------------------------
+2024-02-25 10:38:40 info: All unit tests passed.
+2024-02-25 10:38:47 error: *** Spell Checker Report ***
+
+d:/HYF/Assignments-cohort47/2-Browsers/Week1/assignment/ex3-hijackLogo.js:12:30 - Unknown word (Xdpd)
+d:/HYF/Assignments-cohort47/2-Browsers/Week1/assignment/ex3-hijackLogo.js:14:30 - Unknown word (Xdpd)
+
+2024-02-25 10:39:00 info: --------------------------------------------
+2024-02-25 10:39:00 info: >>> Running Unit Test `ex4-whatsTheTime` <<<
+2024-02-25 10:39:00 info: --------------------------------------------
+2024-02-25 10:39:09 info: All unit tests passed.
+2024-02-25 10:39:17 info: All steps were completed successfully

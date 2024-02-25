@@ -1,0 +1,5 @@
+
+*** Spell Checker Report ***
+
+d:/HYF/Assignments-cohort47/2-Browsers/Week1/assignment/ex3-hijackLogo.js:12:30 - Unknown word (Xdpd)
+d:/HYF/Assignments-cohort47/2-Browsers/Week1/assignment/ex3-hijackLogo.js:14:30 - Unknown word (Xdpd)
