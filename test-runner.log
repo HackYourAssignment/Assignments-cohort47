@@ -124,3 +124,11 @@ Ran all test suites matching /ex1-bookList.test.js/i.
 2024-02-23 01:20:31 error: *** Spell Checker Report ***
 
 
+2024-02-25 02:55:58 info: ---------------------------------------
+2024-02-25 02:55:58 info: >>> Running Unit Test `ex5-catWalk` <<<
+2024-02-25 02:55:58 info: ---------------------------------------
+2024-02-25 02:56:12 info: All unit tests passed.
+2024-02-25 02:56:17 error: *** Spell Checker Report ***
+
+
+2024-02-25 02:56:23 info: Disclaimer turned off

@@ -21,22 +21,47 @@ Full description at: https://github.com/HackYourFuture/Assignments/tree/main/2-B
 
    https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif
 -----------------------------------------------------------------------------*/
-function catWalk() {
-  // TODO complete this function
+const moveSpeed = 10;
+
+function catWalk(moveSpeed, isDancing) {
   const catImg = document.querySelector('img');
-  console.log(parseInt(catImg.style.left.split('px')[0]));
+
   if (
-    parseInt(catImg.style.left.split('px')[0]) >=
-    document.body.getBoundingClientRect().right
+    //TODO change this part.
+    document.body.getBoundingClientRect().width / 2 + moveSpeed / 2 >
+      catImg.getBoundingClientRect().right &&
+    catImg.getBoundingClientRect().right >
+      document.body.getBoundingClientRect().width / 2 - moveSpeed / 2 &&
+    isDancing === false
   ) {
-    //slighlty better than setting it to the 0. I guess
-    catImg.style.left = -catImg.clientWidth / 2 + 'px';
-  } else {
-    catImg.style.left = parseInt(catImg.style.left.split('px')[0]) + 10 + 'px';
+    catWalk(moveSpeed, true);
+    return;
   }
-  // catImg.style.left = '50px';
-  //  =    === 'red' ? 'green' : 'red';
+
+  if (isDancing) {
+    catImg.src =
+      'https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif';
+    setTimeout(() => {
+      catWalk(moveSpeed, false);
+      catImg.src = 'http://www.anniemation.com/clip_art/images/cat-walk.gif';
+      return;
+    }, 5000);
+  } else {
+    if (
+      parseInt(catImg.style.left.split('px')[0]) >=
+      document.body.getBoundingClientRect().right
+    ) {
+      //slightly better than setting it to the 0. I guess
+      catImg.style.left = -catImg.clientWidth / 2 + 'px';
+    } else {
+      catImg.style.left =
+        parseInt(catImg.style.left.split('px')[0]) + moveSpeed + 'px';
+    }
+    setTimeout(() => {
+      catWalk(moveSpeed, false);
+      return;
+    }, 50);
+  }
 }
 
-// TODO execute `catWalk` when the browser has completed loading the page
-window.addEventListener('load', setInterval(catWalk, 50));
+window.addEventListener('load', () => catWalk(moveSpeed, false));
