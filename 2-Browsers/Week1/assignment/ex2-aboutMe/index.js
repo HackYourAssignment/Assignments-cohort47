@@ -8,5 +8,16 @@ Full description at: https://github.com/HackYourFuture/Assignments/tree/main/2-B
    `list-item`.
 3. Look in the css file!
 ------------------------------------------------------------------------------*/
+const nickname = document.querySelector('#nickname');
+const food = document.querySelector('#fav-food');
+const hometown = document.querySelector('#hometown');
 
-// TODO add your JavaScript code here.
+const list = document.querySelectorAll('li');
+
+nickname.textContent = 'Rustam';
+food.textContent = 'pastila';
+hometown.textContent = 'Aktau';
+
+for (let i = 0; i < list.length; i++) {
+  list[i].classList.add('list-item');
+}

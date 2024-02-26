@@ -1,1 +1,13 @@
 /* Write your style here */
+
+li {
+  width: 50%;
+}
+
+img {
+  cursor: pointer;
+}
+
+.read {
+  opacity: 0.2;
+}
