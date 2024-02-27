@@ -132,3 +132,207 @@ Ran all test suites matching /ex1-bookList.test.js/i.
 
 
 2024-02-25 02:56:23 info: Disclaimer turned off
+2024-02-27 08:35:32 info: ---------------------------------------
+2024-02-27 08:35:32 info: >>> Running Unit Test `ex5-catWalk` <<<
+2024-02-27 08:35:32 info: ---------------------------------------
+2024-02-27 08:35:38 info: All unit tests passed.
+2024-02-27 08:35:42 info: All steps were completed successfully
+2024-02-27 08:35:51 info: --------------------------------------------
+2024-02-27 08:35:51 info: >>> Running Unit Test `ex4-whatsTheTime` <<<
+2024-02-27 08:35:51 info: --------------------------------------------
+2024-02-27 08:35:58 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex4-whatsTheTime.test.js --colors
+ FAIL  2-Browsers/Week1/unit-tests/ex4-whatsTheTime.test.js
+  whatsTheTime
+    × HTML should be syntactically valid (96 ms)
+    √ should have all TODO comments removed (1 ms)
+    √ should use `setInterval()`
+    √ should not call `setInterval()` more than once (2002 ms)
+    × should use `window.onload` or `window.addEventListener()` for the `load` or `DOMContentLoaded` event
+    √ `window.onload` or `window.addEventListener` should not call its event handler function
+
+  ● whatsTheTime › HTML should be syntactically valid
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: ""
+    Received: "
+    inline
+      6:19  error  <h2> cannot be empty, must have text content  empty-heading·
+    ✖ 1 problem (1 error, 0 warnings)
+    "
+
+      44 |   const { results } = htmlValidate.validateString(htmlText);
+      45 |   const validationReport = stylish(results);
+    > 46 |   expect(validationReport).toBe('');
+         |                            ^
+      47 | }
+      48 |
+      49 | module.exports = {
+
+      at toBe (test-runner/jsdom-helpers.js:46:28)
+      at Object.validateHTML (2-Browsers/Week1/unit-tests/ex4-whatsTheTime.test.js:47:5)
+
+  ● whatsTheTime › should use `window.onload` or `window.addEventListener()` for the `load` or `DOMContentLoaded` event
+
+    expect(received).toBeDefined()
+
+    Received: undefined
+
+      63 |
+      64 |   test('should use `window.onload` or `window.addEventListener()` for the `load` or `DOMContentLoaded` event', () => {
+    > 65 |     expect(state.onload).toBeDefined();
+         |                          ^
+      66 |   });
+      67 |
+      68 |   test('`window.onload` or `window.addEventListener` should not call its event handler function', () => {
+
+      at Object.toBeDefined (2-Browsers/Week1/unit-tests/ex4-whatsTheTime.test.js:65:26)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 4 passed, 6 total
+Snapshots:   0 total
+Time:        4.793 s
+Ran all test suites matching /ex4-whatsTheTime.test.js/i.
+2024-02-27 08:35:59 error: *** ESLint Report ***
+
+ex4-whatsTheTime/index.js
+  27:1  warning  Remove commented-out code  hyf/no-commented-out-code
+
+✖ 1 problem (0 errors, 1 warning)
+
+
+2024-02-27 08:36:55 info: Disclaimer turned off
+2024-02-27 08:36:59 info: --------------------------------------------
+2024-02-27 08:36:59 info: >>> Running Unit Test `ex4-whatsTheTime` <<<
+2024-02-27 08:36:59 info: --------------------------------------------
+2024-02-27 08:37:06 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex4-whatsTheTime.test.js --colors
+ FAIL  2-Browsers/Week1/unit-tests/ex4-whatsTheTime.test.js
+  whatsTheTime
+    × HTML should be syntactically valid (115 ms)
+    √ should have all TODO comments removed (1 ms)
+    √ should use `setInterval()`
+    √ should not call `setInterval()` more than once (2006 ms)
+    √ should use `window.onload` or `window.addEventListener()` for the `load` or `DOMContentLoaded` event (1 ms)
+    × `window.onload` or `window.addEventListener` should not call its event handler function
+
+  ● whatsTheTime › HTML should be syntactically valid
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: ""
+    Received: "
+    inline
+      6:19  error  <h2> cannot be empty, must have text content  empty-heading·
+    ✖ 1 problem (1 error, 0 warnings)
+    "
+
+      44 |   const { results } = htmlValidate.validateString(htmlText);
+      45 |   const validationReport = stylish(results);
+    > 46 |   expect(validationReport).toBe('');
+         |                            ^
+      47 | }
+      48 |
+      49 | module.exports = {
+
+      at toBe (test-runner/jsdom-helpers.js:46:28)
+      at Object.validateHTML (2-Browsers/Week1/unit-tests/ex4-whatsTheTime.test.js:47:5)
+
+  ● whatsTheTime › `window.onload` or `window.addEventListener` should not call its event handler function
+
+    expect(received).not.toBeDefined()
+
+    Received: true
+
+      67 |
+      68 |   test('`window.onload` or `window.addEventListener` should not call its event handler function', () => {
+    > 69 |     expect(state.callError).not.toBeDefined();
+         |                                 ^
+      70 |   });
+      71 | });
+      72 |
+
+      at Object.toBeDefined (2-Browsers/Week1/unit-tests/ex4-whatsTheTime.test.js:69:33)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 4 passed, 6 total
+Snapshots:   0 total
+Time:        4.801 s, estimated 5 s
+Ran all test suites matching /ex4-whatsTheTime.test.js/i.
+2024-02-27 08:46:19 info: --------------------------------------------
+2024-02-27 08:46:19 info: >>> Running Unit Test `ex4-whatsTheTime` <<<
+2024-02-27 08:46:19 info: --------------------------------------------
+2024-02-27 08:46:26 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex4-whatsTheTime.test.js --colors
+ FAIL  2-Browsers/Week1/unit-tests/ex4-whatsTheTime.test.js
+  whatsTheTime
+    √ HTML should be syntactically valid (75 ms)
+    √ should have all TODO comments removed
+    √ should use `setInterval()`
+    √ should not call `setInterval()` more than once (2009 ms)
+    √ should use `window.onload` or `window.addEventListener()` for the `load` or `DOMContentLoaded` event
+    × `window.onload` or `window.addEventListener` should not call its event handler function (1 ms)
+
+  ● whatsTheTime › `window.onload` or `window.addEventListener` should not call its event handler function
+
+    expect(received).not.toBeDefined()
+
+    Received: true
+
+      67 |
+      68 |   test('`window.onload` or `window.addEventListener` should not call its event handler function', () => {
+    > 69 |     expect(state.callError).not.toBeDefined();
+         |                                 ^
+      70 |   });
+      71 | });
+      72 |
+
+      at Object.toBeDefined (2-Browsers/Week1/unit-tests/ex4-whatsTheTime.test.js:69:33)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 5 passed, 6 total
+Snapshots:   0 total
+Time:        4.631 s, estimated 5 s
+Ran all test suites matching /ex4-whatsTheTime.test.js/i.
+2024-02-27 08:49:32 info: --------------------------------------------
+2024-02-27 08:49:32 info: >>> Running Unit Test `ex4-whatsTheTime` <<<
+2024-02-27 08:49:32 info: --------------------------------------------
+2024-02-27 08:49:39 info: All unit tests passed.
+2024-02-27 08:49:43 info: All steps were completed successfully
+2024-02-27 08:50:12 info: --------------------------------------------
+2024-02-27 08:50:12 info: >>> Running Unit Test `ex4-whatsTheTime` <<<
+2024-02-27 08:50:12 info: --------------------------------------------
+2024-02-27 08:50:18 info: All unit tests passed.
+2024-02-27 08:50:22 info: All steps were completed successfully
+2024-02-27 08:50:30 info: ------------------------------------------
+2024-02-27 08:50:30 info: >>> Running Unit Test `ex3-hijackLogo` <<<
+2024-02-27 08:50:30 info: ------------------------------------------
+2024-02-27 08:50:33 info: All unit tests passed.
+2024-02-27 08:50:36 info: All steps were completed successfully
+2024-02-27 08:53:19 info: ---------------------------------------
+2024-02-27 08:53:19 info: >>> Running Unit Test `ex2-aboutMe` <<<
+2024-02-27 08:53:19 info: ---------------------------------------
+2024-02-27 08:53:24 info: All unit tests passed.
+2024-02-27 08:53:28 error: *** Spell Checker Report ***
+
+c:/Users/Bilma/Desktop/27febAssignment/Assignments-cohort47/2-Browsers/Week1/assignment/ex2-aboutMe/index.js:13:52 - Unknown word (Altay)
+
+2024-02-27 08:54:34 info: ---------------------------------------
+2024-02-27 08:54:34 info: >>> Running Unit Test `ex2-aboutMe` <<<
+2024-02-27 08:54:34 info: ---------------------------------------
+2024-02-27 08:54:39 info: All unit tests passed.
+2024-02-27 08:54:43 info: All steps were completed successfully
+2024-02-27 08:54:51 info: ---------------------------------------
+2024-02-27 08:54:51 info: >>> Running Unit Test `ex2-aboutMe` <<<
+2024-02-27 08:54:51 info: ---------------------------------------
+2024-02-27 08:54:55 info: All unit tests passed.
+2024-02-27 08:54:59 info: All steps were completed successfully
+2024-02-27 08:55:09 info: ----------------------------------------
+2024-02-27 08:55:09 info: >>> Running Unit Test `ex1-bookList` <<<
+2024-02-27 08:55:09 info: ----------------------------------------
+2024-02-27 08:55:13 info: All unit tests passed.
+2024-02-27 08:55:17 info: All steps were completed successfully

@@ -39,7 +39,6 @@ function createBookList(books) {
       liElement.style.backgroundColor = 'red';
     }
     ulElement.appendChild(liElement);
-    //
   });
 
   return ulElement;

@@ -23,5 +23,4 @@ function addCurrentTime() {
   console.log('Time is ' + hours + ':' + minutes + ':' + seconds);
 }
 
-setInterval(addCurrentTime, 1000);
-// window.addEventListener('load', setInterval(addCurrentTime, 1000));
+window.addEventListener('load', () => setInterval(addCurrentTime, 1000));

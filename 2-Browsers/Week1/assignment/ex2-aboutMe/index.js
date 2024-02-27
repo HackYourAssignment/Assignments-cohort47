@@ -10,9 +10,9 @@ Full description at: https://github.com/HackYourFuture/Assignments/tree/main/2-B
 ------------------------------------------------------------------------------*/
 
 // 1. Using JavaScript, replace each of the spans (`nickname`, fav-food`, `hometown`) with your own information.
-document.getElementById('nickname').textContent = 'Altay';
+document.getElementById('nickname').textContent = 'John Doe';
 document.getElementById('fav-food').textContent = 'Hamburger';
-document.getElementById('hometown').textContent = 'Ankara';
+document.getElementById('hometown').textContent = 'Beijing';
 
 // 2. In JavaScript, iterate through each `<li>` and change the class to `list-item`.
 const listItems = document.querySelectorAll('li');
