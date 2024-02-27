@@ -122,3 +122,6 @@ dist
 .recent.json
 .disclaimer
 @assignment*
+
+# Browser Assigment week-1 ex6-gameOfLife
+ex6-gameOfLife/
