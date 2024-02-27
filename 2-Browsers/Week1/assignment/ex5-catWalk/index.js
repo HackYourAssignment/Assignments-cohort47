@@ -37,7 +37,7 @@ function catWalk() {
     const walkingCatImage = document.getElementById('walkingCat');
     walkingCatImage.style.left = '0px';
     
-    const middleOfScreen = window.innerWidth / 2; // Define middleOfScreen here
+    const middleOfScreen = window.innerWidth / 2; 
 
     function moveCat() {
       let currentLeft = parseInt(walkingCatImage.style.left);
