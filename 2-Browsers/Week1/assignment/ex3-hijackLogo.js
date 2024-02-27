@@ -7,8 +7,6 @@ Full description at: https://github.com/HackYourFuture/Assignments/tree/main/2-B
 2. Modify the `src` and `srcset` of the logo so that it's replaced by the 
    HackYourFuture logo instead.
 
-   // I found this from stackoverflow it select the logo but can not assign hyf as logo to the google web site.
-
 ------------------------------------------------------------------------------*/
 function hijackGoogleLogo() {
   const logo = document.querySelector('img[alt="Google"]');
