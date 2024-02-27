@@ -21,8 +21,54 @@ Full description at: https://github.com/HackYourFuture/Assignments/tree/main/2-B
 
    https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif
 -----------------------------------------------------------------------------*/
-function catWalk() {
-  // TODO complete this function
+function catWalk(moveSpeed, isDancing) {
+  const catImg = document.querySelector('img');
+
+  if (isDancing) {
+    // If cat is supposed to dance,
+    // change the gif to dancing cat
+    // wait 5 seconds and call the catWalking() again
+    catImg.src =
+      'https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif';
+    setTimeout(() => {
+      catWalk(moveSpeed, false);
+      catImg.src = 'http://www.anniemation.com/clip_art/images/cat-walk.gif';
+      return;
+    }, 5000);
+  } else {
+    if (
+      //if cat leaves document.body
+      parseInt(catImg.style.left.split('px')[0]) >=
+      document.body.getBoundingClientRect().right
+    ) {
+      //slightly better than setting it to the 0 I guess.
+      catImg.style.left = `${-catImg.clientWidth}px`;
+    } else {
+      // if the cat is inside the body
+      // move 10px
+      catImg.style.left = `${
+        parseInt(catImg.style.left.split('px')[0]) + moveSpeed
+      }px`;
+    }
+
+    // if the cat is in the middle of the screen
+    if (
+      document.body.getBoundingClientRect().width / 2 + moveSpeed / 2 >
+        catImg.getBoundingClientRect().left + catImg.clientWidth &&
+      catImg.getBoundingClientRect().left + catImg.clientWidth >
+        document.body.getBoundingClientRect().width / 2 - moveSpeed / 2 &&
+      isDancing === false
+    ) {
+      catWalk(moveSpeed, true);
+      return;
+    }
+
+    // after the if statements call the catWalk in 50ms
+    setTimeout(() => {
+      catWalk(moveSpeed, false);
+      return;
+    }, 50);
+  }
 }
 
-// TODO execute `catWalk` when the browser has completed loading the page
+window.addEventListener('load', () => catWalk(10, false));

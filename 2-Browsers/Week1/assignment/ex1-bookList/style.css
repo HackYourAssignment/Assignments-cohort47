@@ -1,1 +1,29 @@
 /* Write your style here */
+h1{
+    text-align: center;
+}
+ul{
+    text-align: center;
+    justify-content: center;
+    list-style-type: none;
+    padding: auto;
+    margin: auto;  
+    display: flex;
+}
+
+li{
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 240px;
+    height: 480px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+img{
+    width: 100%;
+    height: 400px;
+    
+}

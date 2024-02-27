@@ -8,7 +8,19 @@ Full description at: https://github.com/HackYourFuture/Assignments/tree/main/2-B
 2. Have the function execute when it's loading in the browser.
 ------------------------------------------------------------------------------*/
 function addCurrentTime() {
-  // TODO complete this function
+  const timer = document.querySelector('.timer');
+  const currentDate = new Date();
+  const hours = currentDate.getHours();
+  let minutes = currentDate.getMinutes();
+  if (parseInt(minutes) < 10) {
+    minutes = '0' + minutes;
+  }
+  let seconds = currentDate.getSeconds();
+  if (seconds < 10) {
+    seconds = '0' + seconds;
+  }
+  timer.textContent = 'Time is ' + hours + ':' + minutes + ':' + seconds;
+  console.log('Time is ' + hours + ':' + minutes + ':' + seconds);
 }
 
-// TODO execute `addCurrentTime` when the browser has completed loading the page
+window.addEventListener('load', () => setInterval(addCurrentTime, 1000));
