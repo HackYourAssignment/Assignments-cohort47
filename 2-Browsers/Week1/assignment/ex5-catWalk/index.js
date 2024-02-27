@@ -23,6 +23,37 @@ Full description at: https://github.com/HackYourFuture/Assignments/tree/main/2-B
 -----------------------------------------------------------------------------*/
 function catWalk() {
   // TODO complete this function
+  let currentPosition = 0;
+
+function catWalk() {
+  const img = document.querySelector('img');
+if (currentPosition < 750) {
+    currentPosition += 10;
+    img.style.left = currentPosition + "px";
+  } else if (currentPosition === 750) {
+   
+    img.src = "https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif";
+    setTimeout(function() {
+     
+      currentPosition += 10;
+      img.src = 'http://www.anniemation.com/clip_art/images/cat-walk.gif';
+      img.style.left = currentPosition + "px";
+    }, 5000);
+  } else if (currentPosition < 1500) {
+    
+    currentPosition += 10;
+    img.src = 'http://www.anniemation.com/clip_art/images/cat-walk.gif';
+    img.style.left = currentPosition + "px";
+  } else {
+    
+    currentPosition = 0;
+    img.style.left = currentPosition + "px";
+  }
+}
+
 }
 
 // TODO execute `catWalk` when the browser has completed loading the page
+document.addEventListener('DOMContentLoaded', function() {
+  setInterval(catWalk, 50);
+});
