@@ -52,6 +52,6 @@ describe('sanitizeFruitBasket', () => {
   test('should return a new array that does not include the unwanted `lemon`', () => {
     // TODO replace next line with your code
     const sanitizedBasket = sanitizeFruitBasket(fruitBasket, 'lemon');
-    expect(sanitizedBasket).not.toBe('lemon');
+    expect(sanitizedBasket).not.toContain('lemon');
   });
 });
