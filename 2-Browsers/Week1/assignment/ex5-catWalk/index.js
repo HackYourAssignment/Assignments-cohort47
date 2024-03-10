@@ -40,15 +40,13 @@ function setDanceImage() {
 }
 
 function catWalk() {
-  // TODO complete this function
-
   imgElement.style.left = `${(counter = counter + 10)}px`;
 
   if (counter <= window.screen.width) {
-    if (counter === 810) {
+    if (counter === window.screen.width / 2 - 160) {
       setDanceImage();
       setTimeout(catWalk, 5000);
-    } else if (counter === 820) {
+    } else if (counter === window.screen.width / 2 - 150) {
       reSetWalkImg();
       setTimeout(catWalk, 50);
     } else {
@@ -61,5 +59,3 @@ function catWalk() {
 }
 
 window.onload = catWalk;
-
-// TODO execute `catWalk` when the browser has completed loading the page

@@ -9,8 +9,6 @@ Full description at: https://github.com/HackYourFuture/Assignments/tree/main/2-B
 3. Look in the css file!
 ------------------------------------------------------------------------------*/
 
-// TODO add your JavaScript code here.
-
 function setMyInfos() {
   const nickname = document.getElementById('nickname');
   nickname.textContent = 'Ahmet';

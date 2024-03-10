@@ -18,8 +18,6 @@ https://hackyourfuture.github.io/example-pages/Browsers/Week1/1-booklist/
 //cspell: enable
 
 function createBookList(books) {
-  // TODO your code goes in here, return the ul element
-
   const bookListUl = document.createElement('ul');
   books.forEach((element) => {
     element.imgUrl;
@@ -32,6 +30,8 @@ function createBookList(books) {
     bookImg.src = `assets/${element.title
       .toLowerCase()
       .replaceAll(' ', '_')}.jpg`;
+
+    bookImg.alt = 'Book List of Some Authors';
     const book = document.createElement('li');
 
     book.appendChild(bookTitleAuthor);

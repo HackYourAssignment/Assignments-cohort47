@@ -197,7 +197,6 @@ function main() {
   start();
 }
 
-// ! Do not change or remove any code below
 try {
   window.addEventListener('load', main);
 } catch {
