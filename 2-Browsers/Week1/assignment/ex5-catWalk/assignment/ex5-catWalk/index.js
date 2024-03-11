@@ -1,6 +1,6 @@
 'use strict';
 /*------------------------------------------------------------------------------
-Full description at:    
+Full description at: https://github.com/HackYourFuture/Assignments/tree/main/2-Browsers/Week1#exercise-5-the-cat-walk
 
 1. Create a variable to store a reference to the `<img>` element.
 2. Change the style of the `<img>` to have a `left` of `0px`, so that it starts 
@@ -21,44 +21,8 @@ Full description at:
 
    https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif
 -----------------------------------------------------------------------------*/
-const imgElement = document.querySelector('img');
-imgElement.style.left = '0px';
-let counter = 0;
-
-function reStart() {
-    imgElement.style.left = '0px';
-    imgElement.src = 'http://www.anniemation.com/clip_art/images/cat-walk.gif';
-    counter = 0;
-}
-
-function reSetWalkImg() {
-    imgElement.src = 'http://www.anniemation.com/clip_art/images/cat-walk.gif';
-}
-
-function setDanceImage() {
-    imgElement.src = 'https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif';
-    imgElement.style.left = `${(window.innerWidth - imgElement.width) / 2}px`; // Adjust left position
-}
-
-const targetPosition = window.innerWidth / 2;
-
 function catWalk() {
-    imgElement.style.left = `${(counter += 10)}px`;
-
-    if (counter <= window.innerWidth) {
-        if (counter === targetPosition) {
-            setDanceImage();
-            setTimeout(function () {
-                reSetWalkImg();
-                catWalk();
-            }, 5000);
-        } else {
-            setTimeout(catWalk, 50);
-        }
-    } else {
-        reStart();
-        setTimeout(catWalk, 50);
-    }
+  // TODO complete this function
 }
 
-window.onload = catWalk;
+// TODO execute `catWalk` when the browser has completed loading the page

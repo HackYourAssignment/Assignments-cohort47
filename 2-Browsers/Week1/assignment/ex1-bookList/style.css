@@ -1,1 +1,34 @@
-/* Write your style here */
+.book-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex; /* Display the list items horizontally */
+  flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
+}
+
+.book-item {
+  margin-right: 20px; /* Add some space between each book item */
+  padding: 5px; /* Decrease the padding to reduce height */
+  border: 1px solid #ccc;
+  flex: 1 0 30%; /* Distribute available space evenly among items */
+  box-sizing: border-box; /* Include padding and border in item's total width */
+}
+
+.book-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 5px; /* Add space between image and text */
+}
+
+.book-item p {
+  margin: 0;
+  font-size: 14px; /* Decrease the font size to reduce height */
+}
+
+.book-item.read {
+  background-color: lightgreen;
+}
+
+.book-item.not-read {
+  background-color: salmon;
+}
