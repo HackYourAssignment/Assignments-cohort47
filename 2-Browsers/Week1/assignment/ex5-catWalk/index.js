@@ -37,9 +37,10 @@ function reSetWalkImg() {
 
 function setDanceImage() {
     imgElement.src = 'https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif';
+    imgElement.style.left = `${(window.innerWidth - imgElement.width) / 2}px`; // Adjust left position
 }
 
-const targetPosition = 500; // Set your desired target position here
+const targetPosition = window.innerWidth / 2;
 
 function catWalk() {
     imgElement.style.left = `${(counter += 10)}px`;
