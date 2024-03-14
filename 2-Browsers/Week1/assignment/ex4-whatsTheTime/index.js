@@ -7,8 +7,21 @@ Full description at: https://github.com/HackYourFuture/Assignments/tree/main/2-B
   second). Use `setInterval()` to make sure the time stays current.
 2. Have the function execute when it's loading in the browser.
 ------------------------------------------------------------------------------*/
+
 function addCurrentTime() {
-  // TODO complete this function
+  const time =  document.querySelector('.timeView');
+  const currentTime = new Date();
+  const hours = currentTime.getHours();
+  let minutes = currentTime.getMinutes();
+  if (parseInt(minutes) < 10) {
+    minutes = '0' + minutes;
+  }
+  let seconds = currentTime.getSeconds();
+  if (seconds < 10) {
+    seconds = '0' + seconds;
+  }
+    time.textContent ='Time is ' + hours + ':' + minutes + ':' + seconds;
+  console.log('Time is ' + hours + ':' + minutes + ':' + seconds);
 }
 
-// TODO execute `addCurrentTime` when the browser has completed loading the page
+window.addEventListener('load', () => setInterval(addCurrentTime, 1000));
