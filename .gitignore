@@ -1,6 +1,7 @@
 .idea
 sysinfo.json
 .DS_Store
+.vscode/settings.json
 
 # Logs
 logs

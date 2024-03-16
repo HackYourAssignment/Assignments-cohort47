@@ -27,6 +27,7 @@ const PIXELS_TO_MOVE = 10;
 const DELAY_TIME_IN_MS = 50;
 const img = document.getElementsByTagName('img')[0];
 const endOfScreen = window.innerWidth - img.width;
+const centerOfScreen = (window.innerWidth - img.width) / 2;
 let motionTimer = null;
 img.style.left = '0px';
 
@@ -35,7 +36,7 @@ function catWalk() {
   
   img.style.left = `${currentLeft + PIXELS_TO_MOVE}px`;
 
-  if (currentLeft === 500 ) {
+  if (currentLeft === centerOfScreen) {
     clearInterval(motionTimer);
     img.src = dancingCatUlr;
     setTimeout(() => {
