@@ -29,7 +29,7 @@ function createBookList(books) {
     p.textContent = `${book.title} by ${book.author}`;
     list.appendChild(p);
     list.appendChild(image);
-    list.style.background = (book.alreadyRead ? 'green' : 'red');
+    (book.alreadyRead ? list.classList.add('bg-green') : list.classList.remove('bg-green'));
     listsContainer.appendChild(list);
   });
 

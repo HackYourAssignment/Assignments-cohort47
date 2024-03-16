@@ -32,7 +32,7 @@ let motionTimer = null;
 img.style.left = '0px';
 
 function catWalk() {
-  let currentLeft = parseInt(img.style.left);
+  let currentLeft = parseInt(img.style.left, 10);
   
   img.style.left = `${currentLeft + PIXELS_TO_MOVE}px`;
 

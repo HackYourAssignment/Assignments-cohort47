@@ -12,9 +12,9 @@ function addCurrentTime() {
   document.body.appendChild(h1);
 
   setInterval(() => {
-    const currentTime = new Date().toLocaleTimeString();
+    const currentTime = new Date().toLocaleTimeString('en-US', { hour12: false });
     h1.textContent = currentTime;
-  });
+  }, 1000);
 }
 
 // TODO execute `addCurrentTime` when the browser has completed loading the page
