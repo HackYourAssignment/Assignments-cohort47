@@ -9,4 +9,11 @@ Full description at: https://github.com/HackYourFuture/Assignments/tree/main/2-B
 3. Look in the css file!
 ------------------------------------------------------------------------------*/
 
-// TODO add your JavaScript code here.
+const allLists = document.querySelectorAll('ul li');
+
+allLists.forEach(li => {
+   li.classList.add('list-item');
+   if (li.firstElementChild.id === 'nickname') li.firstElementChild.textContent = 'Gumaan';
+   else if (li.firstElementChild.id === 'fav-food') li.firstElementChild.textContent = 'Honey';
+   else if (li.firstElementChild.id === 'hometown') li.firstElementChild.textContent = 'Yemen';
+});

@@ -21,8 +21,34 @@ Full description at: https://github.com/HackYourFuture/Assignments/tree/main/2-B
 
    https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif
 -----------------------------------------------------------------------------*/
+const walkingCatUlr = 'http://www.anniemation.com/clip_art/images/cat-walk.gif';
+const dancingCatUlr = 'https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif';
+const PIXELS_TO_MOVE = 10;
+const DELAY_TIME_IN_MS = 50;
+const img = document.getElementsByTagName('img')[0];
+const endOfScreen = window.innerWidth - img.width;
+const centerOfScreen = (window.innerWidth - img.width) / 2;
+let motionTimer = null;
+img.style.left = '0px';
+
 function catWalk() {
-  // TODO complete this function
+  let currentLeft = parseInt(img.style.left, 10);
+  
+  img.style.left = `${currentLeft + PIXELS_TO_MOVE}px`;
+
+  if (currentLeft === centerOfScreen) {
+    clearInterval(motionTimer);
+    img.src = dancingCatUlr;
+    setTimeout(() => {
+      img.src = walkingCatUlr;
+      motionTimer = setInterval(catWalk, DELAY_TIME_IN_MS);
+    }, 5000);
+  } else if (currentLeft > endOfScreen) {
+    img.style.left = '0px';
+  }
 }
 
 // TODO execute `catWalk` when the browser has completed loading the page
+window.onload = () => {
+  motionTimer = setInterval(catWalk, DELAY_TIME_IN_MS);
+}
