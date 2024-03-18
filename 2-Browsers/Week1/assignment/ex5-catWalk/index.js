@@ -21,39 +21,30 @@ Full description at: https://github.com/HackYourFuture/Assignments/tree/main/2-B
 
    https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif
 -----------------------------------------------------------------------------*/
-function catWalk() {
-  // TODO complete this function
-  let currentPosition = 0;
+const img = document.querySelector('img');
+img.style.left = '0px';
+const walkingURL = 'http://www.anniemation.com/clip_art/images/cat-walk.gif';
+const dancingURL =
+  'https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif';
+let currentLeft = parseInt(img.style.left);
+let interval;
 
 function catWalk() {
-  const img = document.querySelector('img');
-if (currentPosition < 750) {
-    currentPosition += 10;
-    img.style.left = currentPosition + "px";
-  } else if (currentPosition === 750) {
-   
-    img.src = "https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif";
-    setTimeout(function() {
-     
-      currentPosition += 10;
-      img.src = 'http://www.anniemation.com/clip_art/images/cat-walk.gif';
-      img.style.left = currentPosition + "px";
-    }, 5000);
-  } else if (currentPosition < 1500) {
-    
-    currentPosition += 10;
-    img.src = 'http://www.anniemation.com/clip_art/images/cat-walk.gif';
-    img.style.left = currentPosition + "px";
-  } else {
-    
-    currentPosition = 0;
-    img.style.left = currentPosition + "px";
+  img.style.left = (currentLeft + 10) + 'px';
+  currentLeft += 10
+  if (currentLeft === (window.innerWidth - img.width) / 2){
+    clearInterval(interval)
+   img.src = dancingURL;
+   setTimeout(()=>{img.src = walkingURL
+     interval= setInterval(catWalk, 50);}
+    ,5000) 
+  }
+  if(currentLeft>(window.innerWidth+img.width)){
+    currentLeft = 0
+     img.style.left = currentLeft + 'px';
   }
 }
 
-}
+interval= setInterval(catWalk, 50);
 
-// TODO execute `catWalk` when the browser has completed loading the page
-document.addEventListener('DOMContentLoaded', function() {
-  setInterval(catWalk, 50);
-});
+window.addEventListener('load', catWalk);

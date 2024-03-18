@@ -18,56 +18,45 @@ https://hackyourfuture.github.io/example-pages/Browsers/Week1/1-booklist/
 //cspell: enable
 
 function createBookList(books) {
-  // TODO your code goes in here, return the ul element
-  let ul = document.createElement('ul');
-  books.forEach(book => { 
-    let title = book.title;
-    let author = book.author;
-  let li = document.createElement('li');
-  let titleElement = document.createElement('p');
-  titleElement.textContent = `${title} by ${author}`;
-  li.appendChild(titleElement);
-  let img = document.createElement('img');
-  img.src = book.imgSrc;
-  img.alt = title;
-  li.appendChild(img);
-  if (book.alreadyRead) {
-      li.style.backgroundColor = "green";
-    } else {
-      li.style.backgroundColor = "red";
-    }
-    ul.appendChild(li);
+    const listsContainer = document.createElement('ul');
+  books.forEach(book => {
+    const p = document.createElement('p');
+    const list = document.createElement('li');
+    const image = document.createElement('img');
+    const imageUrl = `${book.title.replaceAll(' ', '_').toLowerCase()}.jpg`;
+    image.src = `assets/${imageUrl}`;
+    image.alt = `An image of the book '${book.title}'`;
+    p.textContent = `${book.title} by ${book.author}`;
+    list.appendChild(p);
+    list.appendChild(image);
+    (book.alreadyRead ? list.classList.add('bg-green') : list.classList.remove('bg-green'));
+    listsContainer.appendChild(list);
   });
-  return ul;
-}
 
+  return listsContainer;
+}
 function main() {
-  const myBooks = [
+   const myBooks = [
     {
       title: 'The Design of Everyday Things',
       author: 'Don Norman',
       isbn: '978-0465050659',
       alreadyRead: false,
-      imgSrc: "./assets/the_design_of_everyday_things.jpg",
     },
     {
       title: 'The Most Human Human',
       author: 'Brian Christian',
       isbn: '978-1617933431',
       alreadyRead: true,
-      imgSrc: "./assets/the_most_human_human.jpg",
     },
     {
       title: 'The Pragmatic Programmer',
       author: 'Andrew Hunt',
       isbn: '978-0201616224',
       alreadyRead: true,
-      imgSrc:"./assets/the_pragmatic_programmer.jpg",
     },
   ];
-
   const ulElement = createBookList(myBooks);
   document.querySelector('#bookList').appendChild(ulElement);
 }
-
 window.addEventListener('load', main);
