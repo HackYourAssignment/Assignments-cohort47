@@ -1,0 +1,78 @@
+2024-03-19 04:09:47 info: ---------------------------------------
+2024-03-19 04:09:47 info: >>> Running Unit Test `ex1-johnWho` <<<
+2024-03-19 04:09:47 info: ---------------------------------------
+2024-03-19 04:09:51 info: All unit tests passed.
+2024-03-19 04:09:58 info: All steps were completed successfully
+2024-03-19 04:10:21 info: -------------------------------------------------
+2024-03-19 04:10:21 info: >>> Running Unit Test `ex2-checkDoubleDigits` <<<
+2024-03-19 04:10:21 info: -------------------------------------------------
+2024-03-19 04:10:24 info: All unit tests passed.
+2024-03-19 04:10:27 info: All steps were completed successfully
+2024-03-19 04:10:49 info: ---------------------------------------
+2024-03-19 04:10:49 info: >>> Running Unit Test `ex3-rollDie` <<<
+2024-03-19 04:10:49 info: ---------------------------------------
+2024-03-19 04:10:51 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-rollDie.test.js --colors
+C:\Users\PC\Desktop\Assignments-cohort47\3-UsingAPIs\Week1\assignment\ex3-rollDie.js:24
+      if (roll === randomRollsToDo) {
+                   ^
+
+ReferenceError: randomRollsToDo is not defined
+    at rollOnce (C:\Users\PC\Desktop\Assignments-cohort47\3-UsingAPIs\Week1\assignment\ex3-rollDie.js:24:20)
+    at C:\Users\PC\Desktop\Assignments-cohort47\3-UsingAPIs\Week1\assignment\ex3-rollDie.js:33:5
+    at new Promise (<anonymous>)
+    at rollDie (C:\Users\PC\Desktop\Assignments-cohort47\3-UsingAPIs\Week1\assignment\ex3-rollDie.js:15:10)
+    at Object.rollDie (C:\Users\PC\Desktop\Assignments-cohort47\3-UsingAPIs\Week1\unit-tests\ex3-rollDie.test.js:61:21)
+    at Promise.then.completed (C:\Users\PC\Desktop\Assignments-cohort47\node_modules\jest-circus\build\utils.js:333:28)
+    at new Promise (<anonymous>)
+    at callAsyncCircusFn (C:\Users\PC\Desktop\Assignments-cohort47\node_modules\jest-circus\build\utils.js:259:10)
+    at _callCircusTest (C:\Users\PC\Desktop\Assignments-cohort47\node_modules\jest-circus\build\run.js:277:40)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at _runTest (C:\Users\PC\Desktop\Assignments-cohort47\node_modules\jest-circus\build\run.js:209:3)
+    at _runTestsForDescribeBlock (C:\Users\PC\Desktop\Assignments-cohort47\node_modules\jest-circus\build\run.js:97:9)
+    at _runTestsForDescribeBlock (C:\Users\PC\Desktop\Assignments-cohort47\node_modules\jest-circus\build\run.js:91:9)
+    at run (C:\Users\PC\Desktop\Assignments-cohort47\node_modules\jest-circus\build\run.js:31:3)
+    at runAndTransformResultsToJestFormat (C:\Users\PC\Desktop\Assignments-cohort47\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:136:21)
+    at jestAdapter (C:\Users\PC\Desktop\Assignments-cohort47\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:92:19)
+    at runTestInternal (C:\Users\PC\Desktop\Assignments-cohort47\node_modules\jest-runner\build\runTest.js:407:16)
+    at runTest (C:\Users\PC\Desktop\Assignments-cohort47\node_modules\jest-runner\build\runTest.js:491:34)
+
+Node.js v21.6.2
+2024-03-19 04:10:53 error: *** ESLint Report ***
+
+ex3-rollDie.js
+  24:20  error  'randomRollsToDo' is not defined  no-undef
+  27:18  error  'randomRollsToDo' is not defined  no-undef
+
+✖ 2 problems (2 errors, 0 warnings)
+
+
+2024-03-19 04:13:23 info: Disclaimer turned off
+2024-03-19 04:13:34 info: ---------------------------------------
+2024-03-19 04:13:34 info: >>> Running Unit Test `ex3-rollDie` <<<
+2024-03-19 04:13:34 info: ---------------------------------------
+2024-03-19 04:13:37 info: All unit tests passed.
+2024-03-19 04:13:40 info: All steps were completed successfully
+2024-03-19 04:14:03 info: --------------------------------------------
+2024-03-19 04:14:03 info: >>> Running Unit Test `ex4-pokerDiceAll` <<<
+2024-03-19 04:14:03 info: --------------------------------------------
+2024-03-19 04:14:05 info: All unit tests passed.
+2024-03-19 04:14:07 error: *** ESLint Report ***
+
+ex4-pokerDiceAll.js
+  32:29  warning  Identifier 'roll_Die' is not in camelCase  hyf/camelcase
+
+✖ 1 problem (0 errors, 1 warning)
+
+
+2024-03-19 04:15:19 info: --------------------------------------------
+2024-03-19 04:15:19 info: >>> Running Unit Test `ex4-pokerDiceAll` <<<
+2024-03-19 04:15:19 info: --------------------------------------------
+2024-03-19 04:15:21 info: All unit tests passed.
+2024-03-19 04:15:25 info: All steps were completed successfully
+2024-03-19 04:15:45 info: ----------------------------------------------
+2024-03-19 04:15:45 info: >>> Running Unit Test `ex5-pokerDiceChain` <<<
+2024-03-19 04:15:45 info: ----------------------------------------------
+2024-03-19 04:15:48 info: All unit tests passed.
+2024-03-19 04:15:51 info: All steps were completed successfully
