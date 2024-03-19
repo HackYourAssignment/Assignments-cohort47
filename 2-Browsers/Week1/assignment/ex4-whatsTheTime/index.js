@@ -10,7 +10,7 @@ Full description at: https://github.com/HackYourFuture/Assignments/tree/main/2-B
 ------------------------------------------------------------------------------*/
 
 function addCurrentTime() {
-  // Format the string with leading zeroes
+
   const date = new Date();
 
   document.querySelector('body').textContent = date.toLocaleTimeString();
@@ -18,5 +18,4 @@ function addCurrentTime() {
 
 setInterval(addCurrentTime, 1000);
 
-// TODO execute `addCurrentTime` when the browser has completed loading the page
 window.onload = addCurrentTime;
