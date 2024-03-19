@@ -36,3 +36,5 @@ if (process.env.NODE_ENV !== 'test') {
   main();
 }
 module.exports = rollDie;
+
+//The problem is gone. It is because, if 'roll' is greater than 6 then we are returning a rejected promise and since they are exclusive the resolve, i.e, setting of the rolled value, is never executed.

@@ -1725,3 +1725,941 @@ Ran all test suites matching /ex3-rollDie.test.js/i.
 2024-03-18 09:24:46 info: ---------------------------------------
 2024-03-18 09:24:51 info: All unit tests passed.
 2024-03-18 09:25:00 info: All steps were completed successfully
+2024-03-18 11:59:45 info: --------------------------------------------
+2024-03-18 11:59:45 info: >>> Running Unit Test `ex4-pokerDiceAll` <<<
+2024-03-18 11:59:45 info: --------------------------------------------
+2024-03-18 11:59:49 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex4-pokerDiceAll.test.js --colors
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex4-pokerDiceAll.test.js
+  ex4-pokerDiceAll
+    √ should exist and be executable (3 ms)
+    √ should have all TODO comments removed
+    √ `rollDice` should not contain unneeded console.log calls (1 ms)
+    √ should use `dice.map()`
+    √ should use `Promise.all()` (1 ms)
+    × should resolve when all dice settle successfully (2 ms)
+    √ should reject with an Error when a die rolls off the table (1 ms)
+
+  ● ex4-pokerDiceAll › should resolve when all dice settle successfully
+
+    expect(received).toBeInstanceOf(expected)
+
+    Expected constructor: Promise
+    Received constructor: Array
+
+      52 |
+      53 |     const promise = rollDice();
+    > 54 |     expect(promise).toBeInstanceOf(Promise);
+         |                     ^
+      55 |     const result = await promise;
+      56 |     expect(Array.isArray(result)).toBe(true);
+      57 |     expect(result).toHaveLength(5);
+
+      at Object.toBeInstanceOf (3-UsingAPIs/Week1/unit-tests/ex4-pokerDiceAll.test.js:54:21)
+
+  ● ex4-pokerDiceAll › should resolve when all dice settle successfully
+
+    expect.assertions(4)
+
+    Expected four assertions to be called but received two assertion calls.
+
+      46 |
+      47 |   test('should resolve when all dice settle successfully', async () => {
+    > 48 |     expect.assertions(4);
+         |            ^
+      49 |     expect(exported).toBeDefined();
+      50 |
+      51 |     const randomSpy = jest.spyOn(Math, 'random').mockReturnValue(0);
+
+      at Object.assertions (3-UsingAPIs/Week1/unit-tests/ex4-pokerDiceAll.test.js:48:12)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 6 passed, 7 total
+Snapshots:   0 total
+Time:        0.914 s
+Ran all test suites matching /ex4-pokerDiceAll.test.js/i.
+D:\HYF\Assignments-cohort47\3-UsingAPIs\helpers\pokerDiceRoller.js:64
+        reject(new Error(`Die ${die} rolled off the table.\n`));
+               ^
+
+Error: Die 1 rolled off the table.
+
+    at rollOnce (D:\HYF\Assignments-cohort47\3-UsingAPIs\helpers\pokerDiceRoller.js:64:16)
+    at Timeout._onTimeout (D:\HYF\Assignments-cohort47\3-UsingAPIs\helpers\pokerDiceRoller.js:77:26)
+    at listOnTimeout (node:internal/timers:573:17)
+    at processTimers (node:internal/timers:514:7)
+
+Node.js v20.10.0
+2024-03-19 12:03:41 info: --------------------------------------------
+2024-03-19 12:03:41 info: >>> Running Unit Test `ex4-pokerDiceAll` <<<
+2024-03-19 12:03:41 info: --------------------------------------------
+2024-03-19 12:03:44 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex4-pokerDiceAll.test.js --colors
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex4-pokerDiceAll.test.js
+  ex4-pokerDiceAll
+    √ should exist and be executable (3 ms)
+    √ should have all TODO comments removed
+    √ `rollDice` should not contain unneeded console.log calls (1 ms)
+    √ should use `dice.map()`
+    √ should use `Promise.all()` (1 ms)
+    × should resolve when all dice settle successfully (2 ms)
+    √ should reject with an Error when a die rolls off the table (1 ms)
+
+  ● ex4-pokerDiceAll › should resolve when all dice settle successfully
+
+    expect(received).toBeInstanceOf(expected)
+
+    Expected constructor: Promise
+    Received constructor: Array
+
+      52 |
+      53 |     const promise = rollDice();
+    > 54 |     expect(promise).toBeInstanceOf(Promise);
+         |                     ^
+      55 |     const result = await promise;
+      56 |     expect(Array.isArray(result)).toBe(true);
+      57 |     expect(result).toHaveLength(5);
+
+      at Object.toBeInstanceOf (3-UsingAPIs/Week1/unit-tests/ex4-pokerDiceAll.test.js:54:21)
+
+  ● ex4-pokerDiceAll › should resolve when all dice settle successfully
+
+    expect.assertions(4)
+
+    Expected four assertions to be called but received two assertion calls.
+
+      46 |
+      47 |   test('should resolve when all dice settle successfully', async () => {
+    > 48 |     expect.assertions(4);
+         |            ^
+      49 |     expect(exported).toBeDefined();
+      50 |
+      51 |     const randomSpy = jest.spyOn(Math, 'random').mockReturnValue(0);
+
+      at Object.assertions (3-UsingAPIs/Week1/unit-tests/ex4-pokerDiceAll.test.js:48:12)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 6 passed, 7 total
+Snapshots:   0 total
+Time:        0.764 s, estimated 1 s
+Ran all test suites matching /ex4-pokerDiceAll.test.js/i.
+D:\HYF\Assignments-cohort47\3-UsingAPIs\helpers\pokerDiceRoller.js:64
+        reject(new Error(`Die ${die} rolled off the table.\n`));
+               ^
+
+Error: Die 1 rolled off the table.
+
+    at rollOnce (D:\HYF\Assignments-cohort47\3-UsingAPIs\helpers\pokerDiceRoller.js:64:16)
+    at Timeout._onTimeout (D:\HYF\Assignments-cohort47\3-UsingAPIs\helpers\pokerDiceRoller.js:77:26)
+    at listOnTimeout (node:internal/timers:573:17)
+    at processTimers (node:internal/timers:514:7)
+
+Node.js v20.10.0
+2024-03-19 12:05:32 info: --------------------------------------------
+2024-03-19 12:05:32 info: >>> Running Unit Test `ex4-pokerDiceAll` <<<
+2024-03-19 12:05:32 info: --------------------------------------------
+2024-03-19 12:05:35 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex4-pokerDiceAll.test.js --colors
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex4-pokerDiceAll.test.js
+  ex4-pokerDiceAll
+    √ should exist and be executable (2 ms)
+    √ should have all TODO comments removed (1 ms)
+    √ `rollDice` should not contain unneeded console.log calls (1 ms)
+    √ should use `dice.map()` (1 ms)
+    √ should use `Promise.all()`
+    × should resolve when all dice settle successfully (2 ms)
+    √ should reject with an Error when a die rolls off the table (1 ms)
+
+  ● ex4-pokerDiceAll › should resolve when all dice settle successfully
+
+    expect(received).toBeInstanceOf(expected)
+
+    Expected constructor: Promise
+    Received constructor: Array
+
+      52 |
+      53 |     const promise = rollDice();
+    > 54 |     expect(promise).toBeInstanceOf(Promise);
+         |                     ^
+      55 |     const result = await promise;
+      56 |     expect(Array.isArray(result)).toBe(true);
+      57 |     expect(result).toHaveLength(5);
+
+      at Object.toBeInstanceOf (3-UsingAPIs/Week1/unit-tests/ex4-pokerDiceAll.test.js:54:21)
+
+  ● ex4-pokerDiceAll › should resolve when all dice settle successfully
+
+    expect.assertions(4)
+
+    Expected four assertions to be called but received two assertion calls.
+
+      46 |
+      47 |   test('should resolve when all dice settle successfully', async () => {
+    > 48 |     expect.assertions(4);
+         |            ^
+      49 |     expect(exported).toBeDefined();
+      50 |
+      51 |     const randomSpy = jest.spyOn(Math, 'random').mockReturnValue(0);
+
+      at Object.assertions (3-UsingAPIs/Week1/unit-tests/ex4-pokerDiceAll.test.js:48:12)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 6 passed, 7 total
+Snapshots:   0 total
+Time:        0.555 s, estimated 1 s
+Ran all test suites matching /ex4-pokerDiceAll.test.js/i.
+D:\HYF\Assignments-cohort47\3-UsingAPIs\helpers\pokerDiceRoller.js:64
+        reject(new Error(`Die ${die} rolled off the table.\n`));
+               ^
+
+Error: Die 1 rolled off the table.
+
+    at rollOnce (D:\HYF\Assignments-cohort47\3-UsingAPIs\helpers\pokerDiceRoller.js:64:16)
+    at Timeout._onTimeout (D:\HYF\Assignments-cohort47\3-UsingAPIs\helpers\pokerDiceRoller.js:77:26)
+    at listOnTimeout (node:internal/timers:573:17)
+    at processTimers (node:internal/timers:514:7)
+
+Node.js v20.10.0
+2024-03-19 12:05:58 info: --------------------------------------------
+2024-03-19 12:05:58 info: >>> Running Unit Test `ex4-pokerDiceAll` <<<
+2024-03-19 12:05:58 info: --------------------------------------------
+2024-03-19 12:06:01 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex4-pokerDiceAll.test.js --colors
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex4-pokerDiceAll.test.js
+  ex4-pokerDiceAll
+    √ should exist and be executable (3 ms)
+    √ should have all TODO comments removed (1 ms)
+    √ `rollDice` should not contain unneeded console.log calls (1 ms)
+    √ should use `dice.map()` (1 ms)
+    √ should use `Promise.all()`
+    × should resolve when all dice settle successfully (2 ms)
+    √ should reject with an Error when a die rolls off the table
+
+  ● ex4-pokerDiceAll › should resolve when all dice settle successfully
+
+    expect(received).toBeInstanceOf(expected)
+
+    Expected constructor: Promise
+    Received constructor: Array
+
+      52 |
+      53 |     const promise = rollDice();
+    > 54 |     expect(promise).toBeInstanceOf(Promise);
+         |                     ^
+      55 |     const result = await promise;
+      56 |     expect(Array.isArray(result)).toBe(true);
+      57 |     expect(result).toHaveLength(5);
+
+      at Object.toBeInstanceOf (3-UsingAPIs/Week1/unit-tests/ex4-pokerDiceAll.test.js:54:21)
+
+  ● ex4-pokerDiceAll › should resolve when all dice settle successfully
+
+    expect.assertions(4)
+
+    Expected four assertions to be called but received two assertion calls.
+
+      46 |
+      47 |   test('should resolve when all dice settle successfully', async () => {
+    > 48 |     expect.assertions(4);
+         |            ^
+      49 |     expect(exported).toBeDefined();
+      50 |
+      51 |     const randomSpy = jest.spyOn(Math, 'random').mockReturnValue(0);
+
+      at Object.assertions (3-UsingAPIs/Week1/unit-tests/ex4-pokerDiceAll.test.js:48:12)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 6 passed, 7 total
+Snapshots:   0 total
+Time:        0.54 s, estimated 1 s
+Ran all test suites matching /ex4-pokerDiceAll.test.js/i.
+D:\HYF\Assignments-cohort47\3-UsingAPIs\helpers\pokerDiceRoller.js:64
+        reject(new Error(`Die ${die} rolled off the table.\n`));
+               ^
+
+Error: Die 1 rolled off the table.
+
+    at rollOnce (D:\HYF\Assignments-cohort47\3-UsingAPIs\helpers\pokerDiceRoller.js:64:16)
+    at Timeout._onTimeout (D:\HYF\Assignments-cohort47\3-UsingAPIs\helpers\pokerDiceRoller.js:77:26)
+    at listOnTimeout (node:internal/timers:573:17)
+    at processTimers (node:internal/timers:514:7)
+
+Node.js v20.10.0
+2024-03-19 12:07:24 info: --------------------------------------------
+2024-03-19 12:07:24 info: >>> Running Unit Test `ex4-pokerDiceAll` <<<
+2024-03-19 12:07:24 info: --------------------------------------------
+2024-03-19 12:07:27 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex4-pokerDiceAll.test.js --colors
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex4-pokerDiceAll.test.js
+  ex4-pokerDiceAll
+    √ should exist and be executable (2 ms)
+    √ should have all TODO comments removed
+    √ `rollDice` should not contain unneeded console.log calls (1 ms)
+    √ should use `dice.map()`
+    √ should use `Promise.all()` (1 ms)
+    × should resolve when all dice settle successfully (2 ms)
+    √ should reject with an Error when a die rolls off the table (1 ms)
+
+  ● ex4-pokerDiceAll › should resolve when all dice settle successfully
+
+    expect(received).toBeInstanceOf(expected)
+
+    Expected constructor: Promise
+    Received constructor: Array
+
+      52 |
+      53 |     const promise = rollDice();
+    > 54 |     expect(promise).toBeInstanceOf(Promise);
+         |                     ^
+      55 |     const result = await promise;
+      56 |     expect(Array.isArray(result)).toBe(true);
+      57 |     expect(result).toHaveLength(5);
+
+      at Object.toBeInstanceOf (3-UsingAPIs/Week1/unit-tests/ex4-pokerDiceAll.test.js:54:21)
+
+  ● ex4-pokerDiceAll › should resolve when all dice settle successfully
+
+    expect.assertions(4)
+
+    Expected four assertions to be called but received two assertion calls.
+
+      46 |
+      47 |   test('should resolve when all dice settle successfully', async () => {
+    > 48 |     expect.assertions(4);
+         |            ^
+      49 |     expect(exported).toBeDefined();
+      50 |
+      51 |     const randomSpy = jest.spyOn(Math, 'random').mockReturnValue(0);
+
+      at Object.assertions (3-UsingAPIs/Week1/unit-tests/ex4-pokerDiceAll.test.js:48:12)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 6 passed, 7 total
+Snapshots:   0 total
+Time:        0.579 s, estimated 1 s
+Ran all test suites matching /ex4-pokerDiceAll.test.js/i.
+D:\HYF\Assignments-cohort47\3-UsingAPIs\helpers\pokerDiceRoller.js:64
+        reject(new Error(`Die ${die} rolled off the table.\n`));
+               ^
+
+Error: Die 1 rolled off the table.
+
+    at rollOnce (D:\HYF\Assignments-cohort47\3-UsingAPIs\helpers\pokerDiceRoller.js:64:16)
+    at Timeout._onTimeout (D:\HYF\Assignments-cohort47\3-UsingAPIs\helpers\pokerDiceRoller.js:77:26)
+    at listOnTimeout (node:internal/timers:573:17)
+    at processTimers (node:internal/timers:514:7)
+
+Node.js v20.10.0
+2024-03-19 12:27:48 info: --------------------------------------------
+2024-03-19 12:27:48 info: >>> Running Unit Test `ex4-pokerDiceAll` <<<
+2024-03-19 12:27:48 info: --------------------------------------------
+2024-03-19 12:27:51 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex4-pokerDiceAll.test.js --colors
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex4-pokerDiceAll.test.js
+  ex4-pokerDiceAll
+    √ should exist and be executable (3 ms)
+    √ should have all TODO comments removed
+    √ `rollDice` should not contain unneeded console.log calls
+    √ should use `dice.map()`
+    √ should use `Promise.all()` (1 ms)
+    × should resolve when all dice settle successfully (2 ms)
+    √ should reject with an Error when a die rolls off the table (1 ms)
+
+  ● ex4-pokerDiceAll › should resolve when all dice settle successfully
+
+    expect(received).toBeInstanceOf(expected)
+
+    Expected constructor: Promise
+    Received constructor: Array
+
+      52 |
+      53 |     const promise = rollDice();
+    > 54 |     expect(promise).toBeInstanceOf(Promise);
+         |                     ^
+      55 |     const result = await promise;
+      56 |     expect(Array.isArray(result)).toBe(true);
+      57 |     expect(result).toHaveLength(5);
+
+      at Object.toBeInstanceOf (3-UsingAPIs/Week1/unit-tests/ex4-pokerDiceAll.test.js:54:21)
+
+  ● ex4-pokerDiceAll › should resolve when all dice settle successfully
+
+    expect.assertions(4)
+
+    Expected four assertions to be called but received two assertion calls.
+
+      46 |
+      47 |   test('should resolve when all dice settle successfully', async () => {
+    > 48 |     expect.assertions(4);
+         |            ^
+      49 |     expect(exported).toBeDefined();
+      50 |
+      51 |     const randomSpy = jest.spyOn(Math, 'random').mockReturnValue(0);
+
+      at Object.assertions (3-UsingAPIs/Week1/unit-tests/ex4-pokerDiceAll.test.js:48:12)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 6 passed, 7 total
+Snapshots:   0 total
+Time:        0.559 s, estimated 1 s
+Ran all test suites matching /ex4-pokerDiceAll.test.js/i.
+D:\HYF\Assignments-cohort47\3-UsingAPIs\helpers\pokerDiceRoller.js:64
+        reject(new Error(`Die ${die} rolled off the table.\n`));
+               ^
+
+Error: Die 1 rolled off the table.
+
+    at rollOnce (D:\HYF\Assignments-cohort47\3-UsingAPIs\helpers\pokerDiceRoller.js:64:16)
+    at Timeout._onTimeout (D:\HYF\Assignments-cohort47\3-UsingAPIs\helpers\pokerDiceRoller.js:77:26)
+    at listOnTimeout (node:internal/timers:573:17)
+    at processTimers (node:internal/timers:514:7)
+
+Node.js v20.10.0
+2024-03-19 12:32:03 info: --------------------------------------------
+2024-03-19 12:32:03 info: >>> Running Unit Test `ex4-pokerDiceAll` <<<
+2024-03-19 12:32:03 info: --------------------------------------------
+2024-03-19 12:32:07 info: All unit tests passed.
+2024-03-19 12:32:13 info: All steps were completed successfully
+2024-03-19 12:42:04 info: ----------------------------------------------
+2024-03-19 12:42:04 info: >>> Running Unit Test `ex5-pokerDiceChain` <<<
+2024-03-19 12:42:04 info: ----------------------------------------------
+2024-03-19 12:42:08 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex5-pokerDiceChain.test.js --colors
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex5-pokerDiceChain.test.js
+  ex5-pokerDiceChain
+    √ should exist and be executable (2 ms)
+    × should have all TODO comments removed (2 ms)
+    √ `rollDice` should not contain unneeded console.log calls (1 ms)
+    × should resolve when all dice settle successfully (1 ms)
+    √ should reject with an Error when a die rolls off the table (1 ms)
+
+  ● ex5-pokerDiceChain › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.toBeFalsy (test-runner/unit-test-helpers.js:105:42)
+
+  ● ex5-pokerDiceChain › should resolve when all dice settle successfully
+
+    expect(received).toBeInstanceOf(expected)
+
+    Expected constructor: Promise
+    Received constructor: Array
+
+      30 |
+      31 |     const promise = rollDice();
+    > 32 |     expect(promise).toBeInstanceOf(Promise);
+         |                     ^
+      33 |     const result = await promise;
+      34 |     expect(Array.isArray(result)).toBe(true);
+      35 |     expect(result).toHaveLength(5);
+
+      at Object.toBeInstanceOf (3-UsingAPIs/Week1/unit-tests/ex5-pokerDiceChain.test.js:32:21)
+
+  ● ex5-pokerDiceChain › should resolve when all dice settle successfully
+
+    expect.assertions(4)
+
+    Expected four assertions to be called but received two assertion calls.
+
+      24 |
+      25 |   test('should resolve when all dice settle successfully', async () => {
+    > 26 |     expect.assertions(4);
+         |            ^
+      27 |     expect(exported).toBeDefined();
+      28 |
+      29 |     const randomSpy = jest.spyOn(Math, 'random').mockReturnValue(0);
+
+      at Object.assertions (3-UsingAPIs/Week1/unit-tests/ex5-pokerDiceChain.test.js:26:12)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 3 passed, 5 total
+Snapshots:   0 total
+Time:        0.922 s
+Ran all test suites matching /ex5-pokerDiceChain.test.js/i.
+D:\HYF\Assignments-cohort47\3-UsingAPIs\helpers\pokerDiceRoller.js:64
+        reject(new Error(`Die ${die} rolled off the table.\n`));
+               ^
+
+Error: Die 1 rolled off the table.
+
+    at rollOnce (D:\HYF\Assignments-cohort47\3-UsingAPIs\helpers\pokerDiceRoller.js:64:16)
+    at Timeout._onTimeout (D:\HYF\Assignments-cohort47\3-UsingAPIs\helpers\pokerDiceRoller.js:77:26)
+    at listOnTimeout (node:internal/timers:573:17)
+    at processTimers (node:internal/timers:514:7)
+
+Node.js v20.10.0
+2024-03-19 12:44:34 info: ----------------------------------------------
+2024-03-19 12:44:34 info: >>> Running Unit Test `ex5-pokerDiceChain` <<<
+2024-03-19 12:44:34 info: ----------------------------------------------
+2024-03-19 12:44:37 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex5-pokerDiceChain.test.js --colors
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex5-pokerDiceChain.test.js
+  ex5-pokerDiceChain
+    √ should exist and be executable (3 ms)
+    √ should have all TODO comments removed (1 ms)
+    √ `rollDice` should not contain unneeded console.log calls (2 ms)
+    × should resolve when all dice settle successfully (3 ms)
+    × should reject with an Error when a die rolls off the table (1 ms)
+
+  ● ex5-pokerDiceChain › should resolve when all dice settle successfully
+
+    expect(received).toHaveLength(expected)
+
+    Expected length: 5
+    Received length: 0
+    Received array:  []
+
+      33 |     const result = await promise;
+      34 |     expect(Array.isArray(result)).toBe(true);
+    > 35 |     expect(result).toHaveLength(5);
+         |                    ^
+      36 |
+      37 |     promise.finally(() => {
+      38 |       randomSpy.mockRestore();
+
+      at Object.toHaveLength (3-UsingAPIs/Week1/unit-tests/ex5-pokerDiceChain.test.js:35:20)
+
+  ● ex5-pokerDiceChain › should reject with an Error when a die rolls off the table
+
+    expect.assertions(3)
+
+    Expected three assertions to be called but received two assertion calls.
+
+      41 |
+      42 |   test('should reject with an Error when a die rolls off the table', async () => {
+    > 43 |     expect.assertions(3);
+         |            ^
+      44 |     expect(exported).toBeDefined();
+      45 |
+      46 |     const randomSpy = jest.spyOn(Math, 'random').mockReturnValue(0.999);
+
+      at Object.assertions (3-UsingAPIs/Week1/unit-tests/ex5-pokerDiceChain.test.js:43:12)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 3 passed, 5 total
+Snapshots:   0 total
+Time:        0.762 s, estimated 1 s
+Ran all test suites matching /ex5-pokerDiceChain.test.js/i.
+D:\HYF\Assignments-cohort47\3-UsingAPIs\helpers\pokerDiceRoller.js:64
+        reject(new Error(`Die ${die} rolled off the table.\n`));
+               ^
+
+Error: Die 1 rolled off the table.
+
+    at rollOnce (D:\HYF\Assignments-cohort47\3-UsingAPIs\helpers\pokerDiceRoller.js:64:16)
+    at Timeout._onTimeout (D:\HYF\Assignments-cohort47\3-UsingAPIs\helpers\pokerDiceRoller.js:77:26)
+    at listOnTimeout (node:internal/timers:573:17)
+    at processTimers (node:internal/timers:514:7)
+
+Node.js v20.10.0
+2024-03-19 12:45:40 info: ----------------------------------------------
+2024-03-19 12:45:40 info: >>> Running Unit Test `ex5-pokerDiceChain` <<<
+2024-03-19 12:45:40 info: ----------------------------------------------
+2024-03-19 12:45:43 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex5-pokerDiceChain.test.js --colors
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex5-pokerDiceChain.test.js
+  ex5-pokerDiceChain
+    √ should exist and be executable (3 ms)
+    √ should have all TODO comments removed
+    √ `rollDice` should not contain unneeded console.log calls (1 ms)
+    × should resolve when all dice settle successfully (2 ms)
+    √ should reject with an Error when a die rolls off the table (1 ms)
+
+  ● ex5-pokerDiceChain › should resolve when all dice settle successfully
+
+    expect(received).toBeInstanceOf(expected)
+
+    Expected constructor: Promise
+    Received constructor: Array
+
+      30 |
+      31 |     const promise = rollDice();
+    > 32 |     expect(promise).toBeInstanceOf(Promise);
+         |                     ^
+      33 |     const result = await promise;
+      34 |     expect(Array.isArray(result)).toBe(true);
+      35 |     expect(result).toHaveLength(5);
+
+      at Object.toBeInstanceOf (3-UsingAPIs/Week1/unit-tests/ex5-pokerDiceChain.test.js:32:21)
+
+  ● ex5-pokerDiceChain › should resolve when all dice settle successfully
+
+    expect.assertions(4)
+
+    Expected four assertions to be called but received two assertion calls.
+
+      24 |
+      25 |   test('should resolve when all dice settle successfully', async () => {
+    > 26 |     expect.assertions(4);
+         |            ^
+      27 |     expect(exported).toBeDefined();
+      28 |
+      29 |     const randomSpy = jest.spyOn(Math, 'random').mockReturnValue(0);
+
+      at Object.assertions (3-UsingAPIs/Week1/unit-tests/ex5-pokerDiceChain.test.js:26:12)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 passed, 5 total
+Snapshots:   0 total
+Time:        0.769 s, estimated 1 s
+Ran all test suites matching /ex5-pokerDiceChain.test.js/i.
+D:\HYF\Assignments-cohort47\3-UsingAPIs\helpers\pokerDiceRoller.js:64
+        reject(new Error(`Die ${die} rolled off the table.\n`));
+               ^
+
+Error: Die 1 rolled off the table.
+
+    at rollOnce (D:\HYF\Assignments-cohort47\3-UsingAPIs\helpers\pokerDiceRoller.js:64:16)
+    at Timeout._onTimeout (D:\HYF\Assignments-cohort47\3-UsingAPIs\helpers\pokerDiceRoller.js:77:26)
+    at listOnTimeout (node:internal/timers:573:17)
+    at processTimers (node:internal/timers:514:7)
+
+Node.js v20.10.0
+2024-03-19 12:47:21 info: ----------------------------------------------
+2024-03-19 12:47:21 info: >>> Running Unit Test `ex5-pokerDiceChain` <<<
+2024-03-19 12:47:21 info: ----------------------------------------------
+2024-03-19 12:47:24 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex5-pokerDiceChain.test.js --colors
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex5-pokerDiceChain.test.js
+  ex5-pokerDiceChain
+    √ should exist and be executable (2 ms)
+    √ should have all TODO comments removed (1 ms)
+    √ `rollDice` should not contain unneeded console.log calls (2 ms)
+    × should resolve when all dice settle successfully (2 ms)
+    √ should reject with an Error when a die rolls off the table (1 ms)
+
+  ● ex5-pokerDiceChain › should resolve when all dice settle successfully
+
+    expect(received).toBeInstanceOf(expected)
+
+    Expected constructor: Promise
+    Received constructor: Array
+
+      30 |
+      31 |     const promise = rollDice();
+    > 32 |     expect(promise).toBeInstanceOf(Promise);
+         |                     ^
+      33 |     const result = await promise;
+      34 |     expect(Array.isArray(result)).toBe(true);
+      35 |     expect(result).toHaveLength(5);
+
+      at Object.toBeInstanceOf (3-UsingAPIs/Week1/unit-tests/ex5-pokerDiceChain.test.js:32:21)
+
+  ● ex5-pokerDiceChain › should resolve when all dice settle successfully
+
+    expect.assertions(4)
+
+    Expected four assertions to be called but received two assertion calls.
+
+      24 |
+      25 |   test('should resolve when all dice settle successfully', async () => {
+    > 26 |     expect.assertions(4);
+         |            ^
+      27 |     expect(exported).toBeDefined();
+      28 |
+      29 |     const randomSpy = jest.spyOn(Math, 'random').mockReturnValue(0);
+
+      at Object.assertions (3-UsingAPIs/Week1/unit-tests/ex5-pokerDiceChain.test.js:26:12)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 passed, 5 total
+Snapshots:   0 total
+Time:        0.759 s, estimated 1 s
+Ran all test suites matching /ex5-pokerDiceChain.test.js/i.
+D:\HYF\Assignments-cohort47\3-UsingAPIs\helpers\pokerDiceRoller.js:64
+        reject(new Error(`Die ${die} rolled off the table.\n`));
+               ^
+
+Error: Die 1 rolled off the table.
+
+    at rollOnce (D:\HYF\Assignments-cohort47\3-UsingAPIs\helpers\pokerDiceRoller.js:64:16)
+    at Timeout._onTimeout (D:\HYF\Assignments-cohort47\3-UsingAPIs\helpers\pokerDiceRoller.js:77:26)
+    at listOnTimeout (node:internal/timers:573:17)
+    at processTimers (node:internal/timers:514:7)
+
+Node.js v20.10.0
+2024-03-19 12:48:43 info: ----------------------------------------------
+2024-03-19 12:48:43 info: >>> Running Unit Test `ex5-pokerDiceChain` <<<
+2024-03-19 12:48:43 info: ----------------------------------------------
+2024-03-19 12:48:47 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex5-pokerDiceChain.test.js --colors
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex5-pokerDiceChain.test.js
+  ex5-pokerDiceChain
+    √ should exist and be executable (3 ms)
+    √ should have all TODO comments removed (1 ms)
+    √ `rollDice` should not contain unneeded console.log calls (2 ms)
+    × should resolve when all dice settle successfully (4 ms)
+    × should reject with an Error when a die rolls off the table (1 ms)
+
+  ● ex5-pokerDiceChain › should resolve when all dice settle successfully
+
+    expect(received).toHaveLength(expected)
+
+    Expected length: 5
+    Received length: 0
+    Received array:  []
+
+      33 |     const result = await promise;
+      34 |     expect(Array.isArray(result)).toBe(true);
+    > 35 |     expect(result).toHaveLength(5);
+         |                    ^
+      36 |
+      37 |     promise.finally(() => {
+      38 |       randomSpy.mockRestore();
+
+      at Object.toHaveLength (3-UsingAPIs/Week1/unit-tests/ex5-pokerDiceChain.test.js:35:20)
+
+  ● ex5-pokerDiceChain › should reject with an Error when a die rolls off the table
+
+    expect.assertions(3)
+
+    Expected three assertions to be called but received two assertion calls.
+
+      41 |
+      42 |   test('should reject with an Error when a die rolls off the table', async () => {
+    > 43 |     expect.assertions(3);
+         |            ^
+      44 |     expect(exported).toBeDefined();
+      45 |
+      46 |     const randomSpy = jest.spyOn(Math, 'random').mockReturnValue(0.999);
+
+      at Object.assertions (3-UsingAPIs/Week1/unit-tests/ex5-pokerDiceChain.test.js:43:12)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 3 passed, 5 total
+Snapshots:   0 total
+Time:        0.812 s, estimated 1 s
+Ran all test suites matching /ex5-pokerDiceChain.test.js/i.
+D:\HYF\Assignments-cohort47\3-UsingAPIs\helpers\pokerDiceRoller.js:64
+        reject(new Error(`Die ${die} rolled off the table.\n`));
+               ^
+
+Error: Die 1 rolled off the table.
+
+    at rollOnce (D:\HYF\Assignments-cohort47\3-UsingAPIs\helpers\pokerDiceRoller.js:64:16)
+    at Timeout._onTimeout (D:\HYF\Assignments-cohort47\3-UsingAPIs\helpers\pokerDiceRoller.js:77:26)
+    at listOnTimeout (node:internal/timers:573:17)
+    at processTimers (node:internal/timers:514:7)
+
+Node.js v20.10.0
+2024-03-19 12:52:02 info: ----------------------------------------------
+2024-03-19 12:52:02 info: >>> Running Unit Test `ex5-pokerDiceChain` <<<
+2024-03-19 12:52:02 info: ----------------------------------------------
+2024-03-19 12:52:06 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex5-pokerDiceChain.test.js --colors
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex5-pokerDiceChain.test.js
+  ex5-pokerDiceChain
+    √ should exist and be executable (2 ms)
+    √ should have all TODO comments removed (1 ms)
+    √ `rollDice` should not contain unneeded console.log calls (2 ms)
+    × should resolve when all dice settle successfully (3 ms)
+    √ should reject with an Error when a die rolls off the table (2 ms)
+
+  ● ex5-pokerDiceChain › should resolve when all dice settle successfully
+
+    expect(received).toBeInstanceOf(expected)
+
+    Expected constructor: Promise
+
+    Received value has no prototype
+    Received value: undefined
+
+      30 |
+      31 |     const promise = rollDice();
+    > 32 |     expect(promise).toBeInstanceOf(Promise);
+         |                     ^
+      33 |     const result = await promise;
+      34 |     expect(Array.isArray(result)).toBe(true);
+      35 |     expect(result).toHaveLength(5);
+
+      at Object.toBeInstanceOf (3-UsingAPIs/Week1/unit-tests/ex5-pokerDiceChain.test.js:32:21)
+
+  ● ex5-pokerDiceChain › should resolve when all dice settle successfully
+
+    expect.assertions(4)
+
+    Expected four assertions to be called but received two assertion calls.
+
+      24 |
+      25 |   test('should resolve when all dice settle successfully', async () => {
+    > 26 |     expect.assertions(4);
+         |            ^
+      27 |     expect(exported).toBeDefined();
+      28 |
+      29 |     const randomSpy = jest.spyOn(Math, 'random').mockReturnValue(0);
+
+      at Object.assertions (3-UsingAPIs/Week1/unit-tests/ex5-pokerDiceChain.test.js:26:12)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 passed, 5 total
+Snapshots:   0 total
+Time:        0.919 s, estimated 1 s
+Ran all test suites matching /ex5-pokerDiceChain.test.js/i.
+D:\HYF\Assignments-cohort47\3-UsingAPIs\helpers\pokerDiceRoller.js:64
+        reject(new Error(`Die ${die} rolled off the table.\n`));
+               ^
+
+Error: Die 1 rolled off the table.
+
+    at rollOnce (D:\HYF\Assignments-cohort47\3-UsingAPIs\helpers\pokerDiceRoller.js:64:16)
+    at Timeout._onTimeout (D:\HYF\Assignments-cohort47\3-UsingAPIs\helpers\pokerDiceRoller.js:77:26)
+    at listOnTimeout (node:internal/timers:573:17)
+    at processTimers (node:internal/timers:514:7)
+
+Node.js v20.10.0
+2024-03-19 12:54:54 info: ----------------------------------------------
+2024-03-19 12:54:54 info: >>> Running Unit Test `ex5-pokerDiceChain` <<<
+2024-03-19 12:54:54 info: ----------------------------------------------
+2024-03-19 12:54:58 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex5-pokerDiceChain.test.js --colors
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex5-pokerDiceChain.test.js
+  ex5-pokerDiceChain
+    √ should exist and be executable (3 ms)
+    √ should have all TODO comments removed (1 ms)
+    √ `rollDice` should not contain unneeded console.log calls (1 ms)
+    × should resolve when all dice settle successfully (3 ms)
+    √ should reject with an Error when a die rolls off the table (1 ms)
+
+  ● ex5-pokerDiceChain › should resolve when all dice settle successfully
+
+    expect(received).toBeInstanceOf(expected)
+
+    Expected constructor: Promise
+
+    Received value has no prototype
+    Received value: undefined
+
+      30 |
+      31 |     const promise = rollDice();
+    > 32 |     expect(promise).toBeInstanceOf(Promise);
+         |                     ^
+      33 |     const result = await promise;
+      34 |     expect(Array.isArray(result)).toBe(true);
+      35 |     expect(result).toHaveLength(5);
+
+      at Object.toBeInstanceOf (3-UsingAPIs/Week1/unit-tests/ex5-pokerDiceChain.test.js:32:21)
+
+  ● ex5-pokerDiceChain › should resolve when all dice settle successfully
+
+    expect.assertions(4)
+
+    Expected four assertions to be called but received two assertion calls.
+
+      24 |
+      25 |   test('should resolve when all dice settle successfully', async () => {
+    > 26 |     expect.assertions(4);
+         |            ^
+      27 |     expect(exported).toBeDefined();
+      28 |
+      29 |     const randomSpy = jest.spyOn(Math, 'random').mockReturnValue(0);
+
+      at Object.assertions (3-UsingAPIs/Week1/unit-tests/ex5-pokerDiceChain.test.js:26:12)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 passed, 5 total
+Snapshots:   0 total
+Time:        0.832 s, estimated 1 s
+Ran all test suites matching /ex5-pokerDiceChain.test.js/i.
+D:\HYF\Assignments-cohort47\3-UsingAPIs\helpers\pokerDiceRoller.js:64
+        reject(new Error(`Die ${die} rolled off the table.\n`));
+               ^
+
+Error: Die 1 rolled off the table.
+
+    at rollOnce (D:\HYF\Assignments-cohort47\3-UsingAPIs\helpers\pokerDiceRoller.js:64:16)
+    at Timeout._onTimeout (D:\HYF\Assignments-cohort47\3-UsingAPIs\helpers\pokerDiceRoller.js:77:26)
+    at listOnTimeout (node:internal/timers:573:17)
+    at processTimers (node:internal/timers:514:7)
+
+Node.js v20.10.0
+2024-03-19 01:03:03 info: ----------------------------------------------
+2024-03-19 01:03:03 info: >>> Running Unit Test `ex5-pokerDiceChain` <<<
+2024-03-19 01:03:03 info: ----------------------------------------------
+2024-03-19 01:03:07 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex5-pokerDiceChain.test.js --colors
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex5-pokerDiceChain.test.js
+  ex5-pokerDiceChain
+    √ should exist and be executable (4 ms)
+    × should have all TODO comments removed (4 ms)
+    √ `rollDice` should not contain unneeded console.log calls (15 ms)
+    √ should resolve when all dice settle successfully (18 ms)
+    √ should reject with an Error when a die rolls off the table (90 ms)
+
+  ● ex5-pokerDiceChain › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.toBeFalsy (test-runner/unit-test-helpers.js:105:42)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 passed, 5 total
+Snapshots:   0 total
+Time:        1.142 s
+Ran all test suites matching /ex5-pokerDiceChain.test.js/i.
+2024-03-19 01:05:10 info: ----------------------------------------------
+2024-03-19 01:05:10 info: >>> Running Unit Test `ex5-pokerDiceChain` <<<
+2024-03-19 01:05:10 info: ----------------------------------------------
+2024-03-19 01:05:14 info: All unit tests passed.
+2024-03-19 01:05:20 info: All steps were completed successfully
+2024-03-19 01:05:41 info: --------------------------------------------
+2024-03-19 01:05:41 info: >>> Running Unit Test `ex4-pokerDiceAll` <<<
+2024-03-19 01:05:41 info: --------------------------------------------
+2024-03-19 01:05:44 info: All unit tests passed.
+2024-03-19 01:05:50 info: All steps were completed successfully
+2024-03-19 01:06:07 info: ---------------------------------------
+2024-03-19 01:06:07 info: >>> Running Unit Test `ex3-rollDie` <<<
+2024-03-19 01:06:07 info: ---------------------------------------
+2024-03-19 01:06:10 info: All unit tests passed.
+2024-03-19 01:06:16 info: All steps were completed successfully
+2024-03-19 01:06:26 info: -------------------------------------------------
+2024-03-19 01:06:26 info: >>> Running Unit Test `ex2-checkDoubleDigits` <<<
+2024-03-19 01:06:26 info: -------------------------------------------------
+2024-03-19 01:06:29 info: All unit tests passed.
+2024-03-19 01:06:35 info: All steps were completed successfully
+2024-03-19 01:06:45 info: ---------------------------------------
+2024-03-19 01:06:45 info: >>> Running Unit Test `ex1-johnWho` <<<
+2024-03-19 01:06:45 info: ---------------------------------------
+2024-03-19 01:06:49 info: All unit tests passed.
+2024-03-19 01:06:51 error: *** ESLint Report ***
+
+ex1-johnWho.js
+  3:9  error  'reject' is assigned a value but never used  no-unused-vars
+
+✖ 1 problem (1 error, 0 warnings)
+
+
