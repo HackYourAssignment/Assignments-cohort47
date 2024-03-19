@@ -32,6 +32,7 @@ function createBookList(books) {
     bookImg.src = `assets/${element.title
       .toLowerCase()
       .replaceAll(' ', '_')}.jpg`;
+    bookImg.alt = "Book Image"
     const book = document.createElement('li');
 
     book.appendChild(bookTitleAuthor);
