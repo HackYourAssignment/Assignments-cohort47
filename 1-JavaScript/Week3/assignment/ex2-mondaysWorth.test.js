@@ -31,8 +31,8 @@ const mondayTasks = [
 
 const hourlyRate = 25;
 
-function computeEarnings(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+function computeEarnings(mondayTasks, hourlyRate) {
+  
 }
 
 // ! Unit tests (using Jest)
@@ -49,3 +49,8 @@ describe('computeEarnings', () => {
     expect(result).toBe(expected);
   });
 });
+
+
+// Canary test 
+// expect(1).toBe(1);
+// expect(true).toBe(true);
