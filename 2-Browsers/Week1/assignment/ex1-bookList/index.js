@@ -15,10 +15,10 @@ The end result should look something like this:
 https://hackyourfuture.github.io/example-pages/Browsers/Week1/1-booklist/
 
 -----------------------------------------------------------------------------*/
-//cspell: enable
+
 
 function createBookList(books) {
-  // TODO your code goes in here, return the ul element
+
 
   const bookListUl = document.createElement('ul');
   books.forEach((element) => {
