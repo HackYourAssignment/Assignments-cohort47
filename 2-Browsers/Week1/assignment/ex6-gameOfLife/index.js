@@ -19,9 +19,9 @@ function createCell(x, y) {
     x,
     y,
     alive,
+    lifeTime: alive ? 1 : 0,
   };
 }
-
 // Create the game "engine" with a closure
 function createGame(context, numRows, numColumns) {
   const grid = [];
@@ -58,7 +58,7 @@ function createGame(context, numRows, numColumns) {
 
     if (cell.alive) {
       // Draw living cell inside background
-      context.fillStyle = `rgb(24, 215, 236)`;
+      context.fillStyle = `rgba(24, 215, 236, ${getOpacity(cell)})`;
       context.fillRect(
         cell.x * CELL_SIZE + 1,
         cell.y * CELL_SIZE + 1,
@@ -66,6 +66,22 @@ function createGame(context, numRows, numColumns) {
         CELL_SIZE - 2
       );
     }
+  }
+
+  function getOpacity(cell) {
+    let opacity;
+    if (cell.lifeTime === 1) {
+      opacity = 0.25;
+    } else if (cell.lifeTime === 2) {
+      opacity = 0.5;
+    } else if (cell.lifeTime === 3) {
+      opacity = 0.75;
+    } else if (cell.lifeTime >= 4) {
+      opacity = 1;
+    } else {
+      opacity = 0;
+    }
+    return opacity;
   }
 
   // Check the state of the cell at the given coordinates
@@ -103,13 +119,23 @@ function createGame(context, numRows, numColumns) {
 
       if (numAlive === 2) {
         // Living cell remains living, dead cell remains dead
+
         cell.nextAlive = cell.alive;
+        if (cell.nextAlive) {
+          cell.lifeTime++;
+        } else {
+          cell.lifeTime = 0;
+        }
       } else if (numAlive === 3) {
         // Dead cell becomes living, living cell remains living
+
         cell.nextAlive = true;
+        cell.lifeTime++;
       } else {
         // Living cell dies, dead cell remains dead
+
         cell.nextAlive = false;
+        cell.lifeTime = 0;
       }
     });
 

@@ -15,10 +15,38 @@ The end result should look something like this:
 https://hackyourfuture.github.io/example-pages/Browsers/Week1/1-booklist/
 
 -----------------------------------------------------------------------------*/
-//cspell: enable
+
 
 function createBookList(books) {
-  // TODO your code goes in here, return the ul element
+
+
+  const bookListUl = document.createElement('ul');
+  books.forEach((element) => {
+    element.imgUrl;
+    const bookTitleAuthor = document.createElement('p');
+    const text = `${element.title} by ${element.author}`;
+    const newtext = document.createTextNode(text);
+    bookTitleAuthor.appendChild(newtext);
+
+    const bookImg = document.createElement('img');
+    bookImg.src = `assets/${element.title
+      .toLowerCase()
+      .replaceAll(' ', '_')}.jpg`;
+    bookImg.alt = "Book Image"
+    const book = document.createElement('li');
+
+    book.appendChild(bookTitleAuthor);
+    book.appendChild(bookImg);
+
+    bookListUl.appendChild(book);
+
+    if (element.alreadyRead) {
+      book.style.backgroundColor = 'green';
+    } else {
+      book.style.backgroundColor = 'red';
+    }
+  });
+  return bookListUl;
 }
 
 function main() {

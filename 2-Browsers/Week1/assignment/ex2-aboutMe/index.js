@@ -9,4 +9,26 @@ Full description at: https://github.com/HackYourFuture/Assignments/tree/main/2-B
 3. Look in the css file!
 ------------------------------------------------------------------------------*/
 
-// TODO add your JavaScript code here.
+
+
+function setMyInfos() {
+  const nickname = document.getElementById('nickname');
+  nickname.textContent = 'Ahmet';
+  const favFood = document.getElementById('fav-food');
+  favFood.textContent = 'Hamburger';
+
+  const homeTown = document.getElementById('hometown');
+  homeTown.textContent = 'Kayseri';
+}
+
+function setListColors() {
+  const list = document.querySelectorAll('li');
+
+  list.forEach((el) => {
+    el.className = 'list-item';
+  });
+}
+
+setListColors();
+
+setMyInfos();
