@@ -14,13 +14,13 @@ function doubleEvenNumbers(numbers) {
   const evenNumbers = numbers.filter(number => number % 2 === 0);
   const doubledEvenNumbers = evenNumbers.map(number => number * 2);
 
-  const newNumbers = [];
-  for (let i = 0; i < numbers.length; i++) {
-    if (numbers[i] % 2 === 0) {
-      newNumbers.push(numbers[i] * 2);
-    }
-  }
-  return newNumbers;
+  //const newNumbers = [];
+  //for (let i = 0; i < numbers.length; i++) {
+   // if (numbers[i] % 2 === 0) {
+    //  newNumbers.push(numbers[i] * 2);
+   // }
+  //}
+  //return newNumbers;
 }
 // ! Unit test (using Jest)
 test('doubleEvenNumbers should take the even numbers and double them', () => {
