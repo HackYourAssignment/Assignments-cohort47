@@ -62,4 +62,3 @@ function catWalk() {
 
 window.onload = catWalk;
 
-// TODO execute `catWalk` when the browser has completed loading the page
