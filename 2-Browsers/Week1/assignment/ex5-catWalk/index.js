@@ -40,7 +40,7 @@ function setDanceImage() {
 }
 
 function catWalk() {
-  // TODO complete this function
+
 
   imgElement.style.left = `${(counter = counter + 10)}px`;
 
