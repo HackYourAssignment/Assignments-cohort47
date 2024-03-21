@@ -14,33 +14,26 @@ to expand the given promise chain to include five dice.
 // Do not change or remove it.
 const rollDie = require('../../helpers/pokerDiceRoller');
 
-function rollDice() {
+function rollDice(timesToRoll = 5) {
   const results = [];
-  return rollDie(1)
-    .then((value) => {
-      results.push(value);
-      return rollDie(2);
-    })
-    .then((value) => {
-      results.push(value);
-      return rollDie(3);
-    })
-    .then((value) => {
-      results.push(value);
-      return rollDie(4);
-    })
-    .then((value) => {
-      results.push(value);
-      return rollDie(5);
-    })
-    .then((value) => {
-      results.push(value);
+
+  const rollNext = (value, index) => {
+    results.push(value);
+    if (index > timesToRoll) {
       return results;
-    });
+    }
+    return rollDie(index);
+  };
+
+  let result = rollDie(1);
+  for (let i = 0; i < timesToRoll; i++) {
+    result = result.then((value) => rollNext(value, i + 2));
+  }
+  return result;
 }
 
 function main() {
-  rollDice()
+  rollDice() // you can call it with param
     .then((results) => console.log('Resolved!', results))
     .catch((error) => console.log('Rejected!', error.message));
 }
