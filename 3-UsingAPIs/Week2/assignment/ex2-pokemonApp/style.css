@@ -1,1 +1,34 @@
 /* add your styling here */
+* {
+  margin: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  font-size: medium;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  align-items: flex-start;
+  margin: 20px;
+}
+button {
+  cursor: pointer;
+  border: 1px solid rgb(255, 165, 0);
+  padding: 0.5rem;
+  background-color: transparent;
+  border-radius: 5%;
+}
+button:hover {
+  background-color: rgb(255, 165, 0);
+}
+select {
+  display: flex;
+  border: 1px solid rgb(255, 165, 0);
+  padding: 5px;
+  border-radius: 5%;
+  cursor: pointer;
+}
