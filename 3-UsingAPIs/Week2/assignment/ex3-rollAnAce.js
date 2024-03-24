@@ -12,21 +12,25 @@ Full description at: https://github.com/HackYourFuture/Assignments/blob/main/3-U
 // ! Do not change or remove the next two lines
 const rollDie = require('../../helpers/pokerDiceRoller');
 
-function rollDieUntil(wantedValue) {
-  // TODO: rewrite this function using async/await
-  return rollDie().then((value) => {
-    if (value !== wantedValue) {
-      return rollDieUntil(wantedValue);
+async function rollDieUntil(wantedValue) {
+  let value;
+
+  // eslint-disable-next-line no-constant-condition
+  while (true) {
+    value = await rollDie();
+    if (value === wantedValue) {
+      return value;
     }
-    return value;
-  });
+  }
 }
 
-// TODO refactor this function to use try/catch
-function main() {
-  rollDieUntil('ACE')
-    .then((results) => console.log('Resolved!', results))
-    .catch((error) => console.log('Rejected!', error.message));
+async function main() {
+  try {
+    const results = await rollDieUntil('ACE');
+    console.log('Resolved!', results);
+  } catch (error) {
+    console.log('Rejected!', error.message);
+  }
 }
 
 // ! Do not change or remove the code below
