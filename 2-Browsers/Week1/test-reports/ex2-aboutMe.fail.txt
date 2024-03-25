@@ -1,0 +1,7 @@
+
+*** Spell Checker Report ***
+
+d:/HYF/Assignments-cohort47/2-Browsers/Week1/assignment/ex2-aboutMe/index.js:17:56 - Unknown word (Hailu)
+d:/HYF/Assignments-cohort47/2-Browsers/Week1/assignment/ex2-aboutMe/index.js:19:56 - Unknown word (shiro)
+d:/HYF/Assignments-cohort47/2-Browsers/Week1/assignment/ex2-aboutMe/index.js:19:66 - Unknown word (entatie)
+d:/HYF/Assignments-cohort47/2-Browsers/Week1/assignment/ex2-aboutMe/index.js:21:56 - Unknown word (Mekelle)

@@ -1,0 +1,6 @@
+
+*** Spell Checker Report ***
+
+d:/HYF/Assignments-cohort47/1-JavaScript/Week3/assignment/ex3-lemonAllergy.test.js:32:11 - Unknown word (alergic)
+d:/HYF/Assignments-cohort47/1-JavaScript/Week3/assignment/ex3-lemonAllergy.test.js:33:53 - Unknown word (alergic)
+d:/HYF/Assignments-cohort47/1-JavaScript/Week3/assignment/ex3-lemonAllergy.test.js:35:43 - Unknown word (alergic)

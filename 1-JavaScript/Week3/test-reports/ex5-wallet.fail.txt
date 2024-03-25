@@ -1,0 +1,9 @@
+
+*** ESLint Report ***
+
+ex5-wallet/index.js
+  11:12  warning  Function 'deposit' looks like a constructor function. If so, please use a PascalCase name  hyf/camelcase
+  68:7   error    'quiz' is assigned a value but never used                                                  no-unused-vars
+
+✖ 2 problems (1 error, 1 warning)
+
