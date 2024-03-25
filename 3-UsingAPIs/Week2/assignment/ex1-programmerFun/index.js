@@ -38,7 +38,6 @@ function renderError(error) {
   document.querySelector('body').appendChild(errorMessage);
 }
 
-// TODO refactor with async/await and try/catch
 async function main() {
   try {
     const data = await requestData('https://xkcd.now.sh/?comic=latest');
