@@ -1,0 +1,373 @@
+2024-03-24 11:44:29 info: ---------------------------------------------
+2024-03-24 11:44:29 info: >>> Running Unit Test `ex1-programmerFun` <<<
+2024-03-24 11:44:29 info: ---------------------------------------------
+2024-03-24 11:44:34 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex1-programmerFun.test.js --colors
+ FAIL  3-UsingAPIs/Week2/unit-tests/ex1-programmerFun.test.js
+  programmerFun
+    × HTML should be syntactically valid (76 ms)
+    × should have all TODO comments removed
+    √ should use `fetch()` (1 ms)
+    × should use async/wait
+    × should use try/catch (1 ms)
+
+  ● programmerFun › HTML should be syntactically valid
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: ""
+    Received: "
+    inline
+      11:2  error  <img> is missing required \"alt\" attribute  wcag/h37·
+    ✖ 1 problem (1 error, 0 warnings)
+    "
+
+      44 |   const { results } = htmlValidate.validateString(htmlText);
+      45 |   const validationReport = stylish(results);
+    > 46 |   expect(validationReport).toBe('');
+         |                            ^
+      47 | }
+      48 |
+      49 | module.exports = {
+
+      at toBe (test-runner/jsdom-helpers.js:46:28)
+      at Object.validateHTML (3-UsingAPIs/Week2/unit-tests/ex1-programmerFun.test.js:45:5)
+
+  ● programmerFun › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.toBeFalsy (test-runner/unit-test-helpers.js:105:42)
+
+  ● programmerFun › should use async/wait
+
+    expect(received).toBeDefined()
+
+    Received: undefined
+
+      53 |   test('should use async/wait', () => {
+      54 |     expect(state.async).toBeDefined();
+    > 55 |     expect(state.await).toBeDefined();
+         |                         ^
+      56 |   });
+      57 |
+      58 |   test('should use try/catch', () => {
+
+      at Object.toBeDefined (3-UsingAPIs/Week2/unit-tests/ex1-programmerFun.test.js:55:25)
+
+  ● programmerFun › should use try/catch
+
+    expect(received).toBeDefined()
+
+    Received: undefined
+
+      57 |
+      58 |   test('should use try/catch', () => {
+    > 59 |     expect(state.tryCatch).toBeDefined();
+         |                            ^
+      60 |   });
+      61 | });
+      62 |
+
+      at Object.toBeDefined (3-UsingAPIs/Week2/unit-tests/ex1-programmerFun.test.js:59:28)
+
+Test Suites: 1 failed, 1 total
+Tests:       4 failed, 1 passed, 5 total
+Snapshots:   0 total
+Time:        2.847 s
+Ran all test suites matching /ex1-programmerFun.test.js/i.
+2024-03-25 12:29:44 info: ---------------------------------------------
+2024-03-25 12:29:44 info: >>> Running Unit Test `ex1-programmerFun` <<<
+2024-03-25 12:29:44 info: ---------------------------------------------
+2024-03-25 12:29:48 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex1-programmerFun.test.js --colors
+ FAIL  3-UsingAPIs/Week2/unit-tests/ex1-programmerFun.test.js
+  programmerFun
+    × HTML should be syntactically valid (83 ms)
+    × should have all TODO comments removed (1 ms)
+    √ should use `fetch()`
+    √ should use async/wait
+    √ should use try/catch
+
+  ● programmerFun › HTML should be syntactically valid
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: ""
+    Received: "
+    inline
+      11:2  error  <img> is missing required \"alt\" attribute  wcag/h37·
+    ✖ 1 problem (1 error, 0 warnings)
+    "
+
+      44 |   const { results } = htmlValidate.validateString(htmlText);
+      45 |   const validationReport = stylish(results);
+    > 46 |   expect(validationReport).toBe('');
+         |                            ^
+      47 | }
+      48 |
+      49 | module.exports = {
+
+      at toBe (test-runner/jsdom-helpers.js:46:28)
+      at Object.validateHTML (3-UsingAPIs/Week2/unit-tests/ex1-programmerFun.test.js:45:5)
+
+  ● programmerFun › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.toBeFalsy (test-runner/unit-test-helpers.js:105:42)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 3 passed, 5 total
+Snapshots:   0 total
+Time:        2.626 s, estimated 3 s
+Ran all test suites matching /ex1-programmerFun.test.js/i.
+2024-03-25 12:30:22 info: ---------------------------------------------
+2024-03-25 12:30:22 info: >>> Running Unit Test `ex1-programmerFun` <<<
+2024-03-25 12:30:22 info: ---------------------------------------------
+2024-03-25 12:30:26 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex1-programmerFun.test.js --colors
+ FAIL  3-UsingAPIs/Week2/unit-tests/ex1-programmerFun.test.js
+  programmerFun
+    × HTML should be syntactically valid (81 ms)
+    √ should have all TODO comments removed
+    √ should use `fetch()`
+    √ should use async/wait
+    √ should use try/catch
+
+  ● programmerFun › HTML should be syntactically valid
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: ""
+    Received: "
+    inline
+      11:2  error  <img> is missing required \"alt\" attribute  wcag/h37·
+    ✖ 1 problem (1 error, 0 warnings)
+    "
+
+      44 |   const { results } = htmlValidate.validateString(htmlText);
+      45 |   const validationReport = stylish(results);
+    > 46 |   expect(validationReport).toBe('');
+         |                            ^
+      47 | }
+      48 |
+      49 | module.exports = {
+
+      at toBe (test-runner/jsdom-helpers.js:46:28)
+      at Object.validateHTML (3-UsingAPIs/Week2/unit-tests/ex1-programmerFun.test.js:45:5)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 passed, 5 total
+Snapshots:   0 total
+Time:        2.701 s, estimated 3 s
+Ran all test suites matching /ex1-programmerFun.test.js/i.
+2024-03-25 12:31:17 info: ---------------------------------------------
+2024-03-25 12:31:17 info: >>> Running Unit Test `ex1-programmerFun` <<<
+2024-03-25 12:31:17 info: ---------------------------------------------
+2024-03-25 12:31:21 info: All unit tests passed.
+2024-03-25 12:31:25 info: All steps were completed successfully
+2024-03-25 01:42:04 info: ------------------------------------------
+2024-03-25 01:42:04 info: >>> Running Unit Test `ex2-pokemonApp` <<<
+2024-03-25 01:42:04 info: ------------------------------------------
+2024-03-25 01:42:09 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex2-pokemonApp.test.js --colors
+ FAIL  3-UsingAPIs/Week2/unit-tests/ex2-pokemonApp.test.js
+  pokemonApp
+    × HTML should be syntactically valid (105 ms)
+    √ should have all TODO comments removed (1 ms)
+    √ should use `fetch()`
+    √ should use `await fetch()`
+    √ should use try/catch
+
+  ● pokemonApp › HTML should be syntactically valid
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: ""
+    Received: "
+    inline
+      12:6151  error  <img> is missing required \"src\" attribute  element-required-attributes
+      12:6151  error  <img> is missing required \"alt\" attribute  wcag/h37·
+    ✖ 2 problems (2 errors, 0 warnings)
+    "
+
+      44 |   const { results } = htmlValidate.validateString(htmlText);
+      45 |   const validationReport = stylish(results);
+    > 46 |   expect(validationReport).toBe('');
+         |                            ^
+      47 | }
+      48 |
+      49 | module.exports = {
+
+      at toBe (test-runner/jsdom-helpers.js:46:28)
+      at Object.validateHTML (3-UsingAPIs/Week2/unit-tests/ex2-pokemonApp.test.js:40:5)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 passed, 5 total
+Snapshots:   0 total
+Time:        2.693 s
+Ran all test suites matching /ex2-pokemonApp.test.js/i.
+2024-03-25 01:51:02 info: ------------------------------------------
+2024-03-25 01:51:02 info: >>> Running Unit Test `ex2-pokemonApp` <<<
+2024-03-25 01:51:02 info: ------------------------------------------
+2024-03-25 01:51:07 info: All unit tests passed.
+2024-03-25 01:51:11 info: All steps were completed successfully
+2024-03-25 02:07:12 info: ------------------------------------------
+2024-03-25 02:07:12 info: >>> Running Unit Test `ex2-pokemonApp` <<<
+2024-03-25 02:07:12 info: ------------------------------------------
+2024-03-25 02:07:16 info: All unit tests passed.
+2024-03-25 02:07:19 info: All steps were completed successfully
+2024-03-25 02:08:08 info: ------------------------------------------
+2024-03-25 02:08:08 info: >>> Running Unit Test `ex2-pokemonApp` <<<
+2024-03-25 02:08:08 info: ------------------------------------------
+2024-03-25 02:08:13 info: All unit tests passed.
+2024-03-25 02:08:16 info: All steps were completed successfully
+2024-03-25 02:47:02 info: -----------------------------------------
+2024-03-25 02:47:02 info: >>> Running Unit Test `ex3-rollAnAce` <<<
+2024-03-25 02:47:02 info: -----------------------------------------
+2024-03-25 02:47:05 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-rollAnAce.test.js --colors
+ FAIL  3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js
+  ex3-rollAnAce
+    √ should have all TODO comments removed (1 ms)
+    √ `rollDieUntil` should not contain unneeded console.log calls (1 ms)
+    √ should not include a recursive call
+    √ should use async/wait
+    √ should use try/catch
+    × should resolve as soon as a die settles on an ACE (181 ms)
+    √ should reject with an Error when a die rolls off the table (103 ms)
+
+  ● ex3-rollAnAce › should resolve as soon as a die settles on an ACE
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "ACE"
+    Received: undefined
+
+      90 |       expect(promise).toBeInstanceOf(Promise);
+      91 |       const result = await promise;
+    > 92 |       expect(result).toBe('ACE');
+         |                      ^
+      93 |     } finally {
+      94 |       randomSpy.mockRestore();
+      95 |     }
+
+      at Object.toBe (3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:92:22)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 6 passed, 7 total
+Snapshots:   0 total
+Time:        0.838 s
+Ran all test suites matching /ex3-rollAnAce.test.js/i.
+2024-03-25 02:47:06 error: *** ESLint Report ***
+
+ex3-rollAnAce.js
+  21:3  warning  Remove commented-out code  hyf/no-commented-out-code
+
+✖ 1 problem (0 errors, 1 warning)
+
+
+2024-03-25 02:50:10 info: -----------------------------------------
+2024-03-25 02:50:10 info: >>> Running Unit Test `ex3-rollAnAce` <<<
+2024-03-25 02:50:10 info: -----------------------------------------
+2024-03-25 02:50:12 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-rollAnAce.test.js --colors
+ FAIL  3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js
+  ex3-rollAnAce
+    √ should have all TODO comments removed (1 ms)
+    √ `rollDieUntil` should not contain unneeded console.log calls
+    √ should not include a recursive call
+    √ should use async/wait
+    √ should use try/catch
+    × should resolve as soon as a die settles on an ACE (172 ms)
+    √ should reject with an Error when a die rolls off the table (106 ms)
+
+  ● ex3-rollAnAce › should resolve as soon as a die settles on an ACE
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "ACE"
+    Received: undefined
+
+      90 |       expect(promise).toBeInstanceOf(Promise);
+      91 |       const result = await promise;
+    > 92 |       expect(result).toBe('ACE');
+         |                      ^
+      93 |     } finally {
+      94 |       randomSpy.mockRestore();
+      95 |     }
+
+      at Object.toBe (3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:92:22)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 6 passed, 7 total
+Snapshots:   0 total
+Time:        0.762 s, estimated 1 s
+Ran all test suites matching /ex3-rollAnAce.test.js/i.
+2024-03-25 02:50:14 error: *** ESLint Report ***
+
+ex3-rollAnAce.js
+  21:3  warning  Remove commented-out code  hyf/no-commented-out-code
+
+✖ 1 problem (0 errors, 1 warning)
+
+
+2024-03-25 02:51:55 info: -----------------------------------------
+2024-03-25 02:51:55 info: >>> Running Unit Test `ex3-rollAnAce` <<<
+2024-03-25 02:51:55 info: -----------------------------------------
+2024-03-25 02:51:57 info: All unit tests passed.
+2024-03-25 02:51:59 error: *** ESLint Report ***
+
+ex3-rollAnAce.js
+  24:3  warning  Remove commented-out code  hyf/no-commented-out-code
+
+✖ 1 problem (0 errors, 1 warning)
+
+
+2024-03-25 02:52:19 info: -----------------------------------------
+2024-03-25 02:52:19 info: >>> Running Unit Test `ex3-rollAnAce` <<<
+2024-03-25 02:52:19 info: -----------------------------------------
+2024-03-25 02:52:22 info: All unit tests passed.
+2024-03-25 02:52:25 info: All steps were completed successfully
+2024-03-25 02:56:19 info: --------------------------------------------
+2024-03-25 02:56:19 info: >>> Running Unit Test `ex6-browserDebug` <<<
+2024-03-25 02:56:19 info: --------------------------------------------
+2024-03-25 02:56:19 warn: A unit test file was not provided.
+2024-03-25 02:56:22 info: All steps were completed successfully
+2024-03-25 02:56:40 info: ----------------------------------------
+2024-03-25 02:56:40 info: >>> Running Unit Test `ex5-vscDebug` <<<
+2024-03-25 02:56:40 info: ----------------------------------------
+2024-03-25 02:56:40 warn: A unit test file was not provided.
+2024-03-25 02:56:44 info: All steps were completed successfully
+2024-03-25 02:57:21 info: ------------------------------------------
+2024-03-25 02:57:21 info: >>> Running Unit Test `ex2-pokemonApp` <<<
+2024-03-25 02:57:21 info: ------------------------------------------
+2024-03-25 02:57:25 info: All unit tests passed.
+2024-03-25 02:57:29 info: All steps were completed successfully
