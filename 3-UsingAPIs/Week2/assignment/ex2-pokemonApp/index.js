@@ -1,5 +1,17 @@
 'use strict';
 
+//let us create some elements globally
+const getPokemon = document.createElement('button');
+const dropDown = document.createElement('select');
+
+const container = document.createElement('article');
+const displayPokemons = document.createElement('section');
+
+container.appendChild(displayPokemons);
+document.body.appendChild(getPokemon);
+document.body.appendChild(dropDown);
+document.body.appendChild(container);
+
 function fetchData(url) {
   return fetch(url)
     .then((response) => {
@@ -16,9 +28,6 @@ function fetchData(url) {
 async function fetchAndPopulatePokemons() {
   try {
     const data = await fetchData('https://pokeapi.co/api/v2/pokemon?limit=151');
-    const dropDown = document.createElement('select');
-    dropDown.style.display = 'block';
-    document.body.appendChild(dropDown);
 
     data.results.forEach((element) => {
       const option = document.createElement('option');
@@ -29,11 +38,12 @@ async function fetchAndPopulatePokemons() {
 
     dropDown.addEventListener('change', (e) => {
       fetchImage(e, data);
+      // Reset the selected value of the dropdown
+      e.target.selectedIndex = -1; // Reset to no selection
     });
   } catch (error) {
     const displayError = document.createElement('h1');
     displayError.textContent = error.message;
-    document.body.appendChild(displayError);
   }
 }
 
@@ -41,19 +51,18 @@ async function fetchImage(event, data) {
   const pokemon = data.results.find((ele) => ele.name === event.target.value);
   const pokemonData = await fetchData(pokemon.url);
   const imgSrc = pokemonData.sprites.front_default;
+  displayImage(imgSrc);
+}
 
-  const displayImg = document.createElement('img');
-  displayImg.src = imgSrc;
-  displayImg.style.display = 'block';
-  document.body.appendChild(displayImg);
+function displayImage(imgSrc) {
+  const selectedPokemon = document.createElement('img');
+  selectedPokemon.src = imgSrc;
+  displayPokemons.appendChild(selectedPokemon);
 }
 
 function main() {
-  const getPokemon = document.createElement('button');
   getPokemon.type = 'button';
   getPokemon.textContent = 'GetPokemon!';
-
-  document.body.appendChild(getPokemon);
 
   getPokemon.addEventListener('click', fetchAndPopulatePokemons, {
     once: true,

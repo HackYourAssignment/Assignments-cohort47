@@ -1,1 +1,15 @@
-/* add your styling here */
+article {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+}
+section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+img {
+  width: fit-content;
+}

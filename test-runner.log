@@ -2902,3 +2902,22 @@ ex3-rollAnAce.js
 2024-03-22 11:37:46 info: -----------------------------------------
 2024-03-22 11:37:52 info: All unit tests passed.
 2024-03-22 11:38:02 info: All steps were completed successfully
+2024-03-22 11:39:55 info: ---------------------------------------------
+2024-03-22 11:39:55 info: >>> Running Unit Test `ex1-programmerFun` <<<
+2024-03-22 11:39:55 info: ---------------------------------------------
+2024-03-22 11:40:04 info: All unit tests passed.
+2024-03-22 11:40:11 info: All steps were completed successfully
+2024-03-22 11:40:22 info: ------------------------------------------
+2024-03-22 11:40:22 info: >>> Running Unit Test `ex2-pokemonApp` <<<
+2024-03-22 11:40:22 info: ------------------------------------------
+2024-03-22 11:40:30 info: All unit tests passed.
+2024-03-22 11:40:38 info: All steps were completed successfully
+2024-03-22 11:40:54 info: ----------------------------------------
+2024-03-22 11:40:54 info: >>> Running Unit Test `ex4-diceRace` <<<
+2024-03-22 11:40:54 info: ----------------------------------------
+2024-03-22 11:40:59 info: All unit tests passed.
+2024-03-22 11:41:07 info: All steps were completed successfully
+2024-03-22 11:41:20 info: ----------------------------------------
+2024-03-22 11:41:20 info: >>> Running Unit Test `ex5-vscDebug` <<<
+2024-03-22 11:41:20 info: ----------------------------------------
+2024-03-22 11:41:20 warn: A unit test file was not provided.
