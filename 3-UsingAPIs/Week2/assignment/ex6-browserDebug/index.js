@@ -46,7 +46,6 @@ function renderLaureate(ul, { knownName, birth, death }) {
 
 function renderLaureates({ laureates }) {
   const ul = createAndAppend('ul', document.body);
-  console.log('laureate', laureates[0]);
   laureates.forEach((laureate) => renderLaureate(ul, laureate));
 }
 
