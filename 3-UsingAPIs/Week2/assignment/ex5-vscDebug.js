@@ -11,7 +11,7 @@ async function getData(url) {
     const response = await fetch(url);
     return response.json();
   } catch (err) {
-    console.error(`Something went wrong: ${err.message}`);
+    throw new Error(`Something went wrong: ${err.message}`);
   }
 }
 
