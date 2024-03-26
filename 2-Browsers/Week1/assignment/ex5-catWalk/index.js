@@ -21,8 +21,46 @@ Full description at: https://github.com/HackYourFuture/Assignments/tree/main/2-B
 
    https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif
 -----------------------------------------------------------------------------*/
-function catWalk() {
+/**function catWalk() {
   // TODO complete this function
-}
+}**/
 
 // TODO execute `catWalk` when the browser has completed loading the page
+'use strict';
+
+function catWalk() {
+  window.addEventListener('load', function() {
+    const image1 = document.querySelector('img');
+    if (image1) {
+      image1.id = 'walkingCat';
+    }
+    const walkingCatImage = document.getElementById('walkingCat');
+    walkingCatImage.style.left = '0px';
+    
+    const middleOfScreen = window.innerWidth / 2; // 
+
+    function moveCat() {
+      let currentLeft = parseInt(walkingCatImage.style.left);
+      currentLeft += 10;
+      walkingCatImage.style.left = currentLeft + 'px';
+
+      const screenWidth = window.innerWidth;
+      if (currentLeft >= screenWidth) {
+        walkingCatImage.style.left = '0px';
+      }
+
+      if (Math.abs(currentLeft - middleOfScreen) <= 5) {   /*to be edited*/
+        const originalSrc = walkingCatImage.src;
+        walkingCatImage.src = 'https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif';
+     
+        setTimeout(function() {
+          walkingCatImage.src = originalSrc;
+        }, 5000);
+      }
+    }
+
+    setInterval(moveCat, 50);
+  });
+}
+
+catWalk();
