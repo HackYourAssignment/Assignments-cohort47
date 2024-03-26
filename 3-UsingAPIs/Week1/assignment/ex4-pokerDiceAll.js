@@ -31,7 +31,7 @@ function rollDice() {
   const dice = [1, 2, 3, 4, 5];
 
   const allPromises = dice.map((diceNum) => rollDie(diceNum));
-  
+
   return Promise.all(allPromises);
 }
 
@@ -46,3 +46,9 @@ if (process.env.NODE_ENV !== 'test') {
   main();
 }
 module.exports = rollDice;
+
+
+// Explanation:
+/* 
+  No, the problem has been resolved using the Promise object.
+*/

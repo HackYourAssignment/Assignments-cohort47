@@ -17,29 +17,51 @@ Full description at: https://github.com/HackYourFuture/Assignments/blob/main/3-U
    url with `.shx`. There is no server at the modified url, therefore this 
    should result in a network (DNS) error.
 ------------------------------------------------------------------------------*/
-function requestData(url) {
+async function requestData(url) {
   // TODO return a promise using `fetch()`
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error("Couldn't fetch.");
+    }
+    return await response.json();
+
+  } catch (error) {
+    throw new Error(error.message);
+  }
 }
 
 function renderImage(data) {
   // TODO render the image to the DOM
-  console.log(data);
+
+  const imgELement = document.createElement('img');
+  imgELement.classList.add('img');
+  imgELement.src = data.img;
+  imgELement.alt = data.alt;
+  document.body.appendChild(imgELement);
+
 }
 
 function renderError(error) {
   // TODO render the error to the DOM
+  
+  const errELement = document.createElement('h1');
+  errELement.classList.add('err');
+  errELement.innerHTML = error.message;
+  document.body.appendChild(errELement);
+
   console.log(error);
 }
 
 // TODO refactor with async/await and try/catch
-function main() {
-  requestData('https://xkcd.now.sh/?comic=latest')
-    .then((data) => {
-      renderImage(data);
-    })
-    .catch((error) => {
-      renderError(error);
-    });
+async function main() {
+
+  try {
+    const data = await requestData('https://xkcd.now.sh/?comic=latest');
+    renderImage(data);
+  } catch (error) {
+    renderError(error);
+  }
 }
 
 window.addEventListener('load', main);

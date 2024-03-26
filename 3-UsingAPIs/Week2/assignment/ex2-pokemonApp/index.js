@@ -22,18 +22,86 @@ Use async/await and try/catch to handle promises.
 Try and avoid using global variables. As much as possible, try and use function 
 parameters and return values to pass data back and forth.
 ------------------------------------------------------------------------------*/
-function fetchData(/* TODO parameter(s) go here */) {
+async function fetchData(url) {
   // TODO complete this function
+
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error("Couldn't fetch.");
+    }
+    return await response.json();
+
+  } catch (error) {
+    throw new Error(error.message);
+  }
 }
 
-function fetchAndPopulatePokemons(/* TODO parameter(s) go here */) {
+async function fetchAndPopulatePokemons() {
   // TODO complete this function
+
+  const divContainer = document.querySelector('.container');
+  const selectEl = document.querySelector('.select-element');
+  try {
+    const allPokemons = await fetchData('https://pokeapi.co/api/v2/pokemon?limit=151');
+
+    allPokemons.results.forEach((pokemon) => {
+      const option = document.createElement('option');
+      option.innerText = pokemon.name;
+      option.value = pokemon.url;
+      selectEl.appendChild(option);
+    });
+
+    divContainer.appendChild(selectEl);
+  } catch (error) {
+    console.error("Couldn't fetch the data:", error);
+  }
 }
 
-function fetchImage(/* TODO parameter(s) go here */) {
+async function fetchImage() {
   // TODO complete this function
+
+  const pokUrlSelectedOption = document.querySelector('.select-element').value;
+
+  try {
+    const responseData = await fetchData(pokUrlSelectedOption);
+    const data = responseData.sprites.front_default;
+
+    const curImg = document.getElementById('pokemonImg');
+
+    if (curImg) {
+      curImg.src = data;
+    } else {
+      const divContainer = document.querySelector('.container');
+      const img = document.createElement('img');
+      img.src = data;
+      img.setAttribute('id', 'pokemonImg');
+      divContainer.appendChild(img);
+    }
+  } catch (error) {
+    throw new Error(`Couldn't fetch the data: ${error.message}`);
+  }
 }
 
-function main() {
+async function main() {
   // TODO complete this function
+
+  const divContainer = document.createElement('div');
+  const button = document.createElement('button');
+  const selectEl = document.createElement('select');
+
+  button.innerText = 'Get Pokemon!';
+
+  divContainer.setAttribute('class', 'container');
+  button.addEventListener('click', fetchAndPopulatePokemons);
+  
+  selectEl.setAttribute('class', 'select-element');
+  selectEl.addEventListener('change', fetchImage);
+
+  divContainer.append(button);
+  divContainer.append(selectEl);
+
+  document.body.append(divContainer);
 }
+
+window.addEventListener('load', main);
