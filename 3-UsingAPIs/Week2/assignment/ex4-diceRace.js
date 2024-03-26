@@ -15,15 +15,24 @@ const rollDie = require('../../helpers/pokerDiceRoller');
 
 function rollDice() {
   const dice = [1, 2, 3, 4, 5];
-  // TODO complete this function; use Promise.race() and rollDie()
+  const promises = dice.map((e) => rollDie(e));
+  return Promise.race(promises).then((value) => {
+    return value;
+  });
 }
 
-// Refactor this function to use async/await and try/catch
-function main() {
-  rollDice()
-    .then((results) => console.log('Resolved!', results))
-    .catch((error) => console.log('Rejected!', error.message));
+async function main() {
+  try {
+    const result = await rollDice();
+    console.log('--------------------------------');
+    console.log('RACE ENDS HERE. First value settled is : ' + result);
+    console.log('--------------------------------');
+  } catch (error) {
+    console.log(error);
+  }
 }
+
+//ANSWER: Promise.race() resolves when one of the promises resolved. But this doesn't stop the rollDie() continue running for other values in the array
 
 // ! Do not change or remove the code below
 if (process.env.NODE_ENV !== 'test') {
