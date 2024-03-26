@@ -1,1 +1,26 @@
 /* add your styling here */
+body {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+
+}
+
+#selectPokemon {
+  margin-top: 3rem;
+  margin-left: 5rem;
+  max-width: 15vw;
+}
+
+#btn {
+  margin-top: 2.5rem;
+  max-width: 20vw;
+  margin-left: 5rem;
+  height: 3.5vh;
+}
+
+#pokemonImg {
+  max-width: 15rem;
+  max-height: 15rem;
+}
