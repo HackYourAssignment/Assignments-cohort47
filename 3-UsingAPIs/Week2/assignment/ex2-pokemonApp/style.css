@@ -1,1 +1,8 @@
-/* add your styling here */
+body {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+img {
+  width: 200px !important;
+}
