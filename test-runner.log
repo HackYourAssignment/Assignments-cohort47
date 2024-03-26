@@ -442,3 +442,8 @@ Ran all test suites matching /ex4-diceRace.test.js/i.
 2024-03-26 02:13:20 info: ----------------------------------------
 2024-03-26 02:13:20 warn: A unit test file was not provided.
 2024-03-26 02:13:24 info: All steps were completed successfully
+2024-03-26 02:15:25 info: --------------------------------------------
+2024-03-26 02:15:25 info: >>> Running Unit Test `ex6-browserDebug` <<<
+2024-03-26 02:15:25 info: --------------------------------------------
+2024-03-26 02:15:25 warn: A unit test file was not provided.
+2024-03-26 02:15:29 info: All steps were completed successfully
