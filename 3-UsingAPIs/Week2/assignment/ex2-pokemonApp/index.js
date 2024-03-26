@@ -22,18 +22,84 @@ Use async/await and try/catch to handle promises.
 Try and avoid using global variables. As much as possible, try and use function 
 parameters and return values to pass data back and forth.
 ------------------------------------------------------------------------------*/
-function fetchData(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+
+const url = 'https://pokeapi.co/api/v2/pokemon?limit=151';
+async function fetchData(url) {
+  try {
+    const response = await fetch(url);
+
+    if (!response.ok) {
+      throw new Error(`Failed to fetch ${response.status}`);
+    }
+    return await response.json();
+  } catch (error) {
+    console.error('Rejected!', error.message);
+    throw error;
+  }
 }
 
-function fetchAndPopulatePokemons(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+async function fetchAndPopulatePokemons() {
+  try {
+    const pokemonData = await fetchData(url);
+
+    const selectElement = document.createElement('select');
+    selectElement.id = 'pokemon-select';
+
+    pokemonData.results.forEach((pokemon) => {
+      const option = document.createElement('option');
+      option.value = pokemon.url;
+      option.textContent = pokemon.name;
+      selectElement.appendChild(option);
+    });
+
+    document.body.appendChild(selectElement);
+
+    selectElement.addEventListener('change', async (event) => {
+      const selectedPokemonUrl = event.target.value;
+      await fetchImage(selectedPokemonUrl);
+    });
+  } catch (error) {
+    console.error('Error fetching and populating pokemons:', error.message);
+  }
 }
 
-function fetchImage(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+async function fetchImage(url) {
+  try {
+    const existingImage = document.getElementById('pokemon-image');
+    if (existingImage) {
+      existingImage.remove();
+    }
+
+    const pokemonData = await fetchData(url);
+    const pokemonImage = pokemonData.sprites.front_default;
+
+    const imgElement = document.createElement('img');
+    imgElement.src = pokemonImage;
+    imgElement.alt = 'Pokemon Image';
+    imgElement.id = 'pokemon-image';
+
+    document.body.appendChild(imgElement);
+  } catch (error) {
+    console.error('Error fetching image:', error.message);
+  }
 }
 
 function main() {
-  // TODO complete this function
+  const button = document.createElement('button');
+  button.id = 'button';
+  button.innerText = 'Choose Pokemon';
+
+  document.body.appendChild(button);
+
+  button.addEventListener('click', async () => {
+    const selectElement = document.getElementById('pokemon-select');
+    if (!selectElement) {
+      await fetchAndPopulatePokemons();
+    } else {
+      const selectedPokemonUrl = selectElement.value;
+      await fetchImage(selectedPokemonUrl);
+    }
+  });
 }
+
+window.addEventListener('load', main);
