@@ -18,28 +18,40 @@ Full description at: https://github.com/HackYourFuture/Assignments/blob/main/3-U
    should result in a network (DNS) error.
 ------------------------------------------------------------------------------*/
 function requestData(url) {
-  // TODO return a promise using `fetch()`
+  return fetch(url)
+    .then((response) => {
+      if (!response.ok) {
+        throw `HTTP ERROR, ${response.status}`;
+      }
+      return response.json();
+    })
+    .catch((error) => {
+      throw new Error(error);
+    });
 }
 
 function renderImage(data) {
-  // TODO render the image to the DOM
-  console.log(data);
+  const img = document.createElement('img');
+  img.src = data.img;
+  img.alt = 'Alt to pass tests';
+  document.body.appendChild(img);
 }
 
 function renderError(error) {
-  // TODO render the error to the DOM
-  console.log(error);
+  const errorElement = document.createElement('h1');
+  errorElement.textContent = error;
+  document.body.appendChild(errorElement);
 }
 
-// TODO refactor with async/await and try/catch
-function main() {
-  requestData('https://xkcd.now.sh/?comic=latest')
-    .then((data) => {
+async function main() {
+  try {
+    const data = await requestData('https://xkcd.now.sh/?comic=latest');
+    if (data) {
       renderImage(data);
-    })
-    .catch((error) => {
-      renderError(error);
-    });
+    }
+  } catch (error) {
+    renderError(error);
+  }
 }
 
 window.addEventListener('load', main);
