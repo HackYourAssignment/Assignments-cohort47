@@ -8,28 +8,22 @@ Rewrite this function, but replace the callback syntax with the Promise syntax:
 - If the Promise `rejects`, pass an error as the argument to reject with: "You 
   didn't pass in a first name!"
 ------------------------------------------------------------------------------*/
-// TODO see above
+
 const getAnonName = (firstName) => {
-
-  return new Promise( (resolve,reject)=> {
-  setTimeout(() => {
-    if(firstName) {
-    const fullName = `${firstName} Doe`;
-      resolve(fullName)}
-
-    else {
-      reject( new Error(`You didn't pass in a first name!`));
-    }
-
-  })
-} , 1000);
-
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (firstName) {
+        const fullName = `${firstName} Doe`;
+        resolve(fullName);
+      } else {
+        reject(new Error(`You didn't pass in a first name!`));
+      }
+    });
+  }, 1000);
 };
 
 function main() {
-  getAnonName('John')
-  .then(console.log)
-  .catch(console.error);
+  getAnonName('John').then(console.log).catch(console.error);
 }
 
 // ! Do not change or remove the code below
