@@ -27,9 +27,10 @@ exercise file.
 const rollDie = require('../../helpers/pokerDiceRoller');
 
 function rollDice() {
-  // TODO Refactor this function
   const dice = [1, 2, 3, 4, 5];
-  return rollDie(1);
+   // Map over the dice array to create an array of promises
+   const rollPromises = dice.map(() => rollDie());
+   return Promise.all(rollPromises);
 }
 
 function main() {
@@ -43,3 +44,6 @@ if (process.env.NODE_ENV !== 'test') {
   main();
 }
 module.exports = rollDice;
+//The rejection of one promise does not interrupt the execution of other promises in the Promise.all() array.
+//As a result, even if one die encounters an error, the other dice will still resolve or reject based on 
+//their individual outcomes, without being affected by the rejected promise.
