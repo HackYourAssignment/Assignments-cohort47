@@ -25,7 +25,6 @@ function rollDie() {
 
     // Use callback to notify that the die rolled off the table after 6 rolls
     if (roll > 6) {
-      // TODO replace "error" callback
       reject(new Error('Oops... Die rolled off the table.'));
     }
 
@@ -47,7 +46,6 @@ function rollDie() {
 }
 
 function main() {
-  // TODO Refactor to use promise
   rollDie()
     .then((value) => {
       console.log(`Success! Die settled on ${value}.`);

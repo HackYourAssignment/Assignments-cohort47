@@ -27,10 +27,9 @@ exercise file.
 const rollDie = require('../../helpers/pokerDiceRoller');
 
 function rollDice() {
-  // TODO Refactor this function
   const dice = [1, 2, 3, 4, 5];
    // Map over the dice array to create an array of promises
-   const rollPromises = dice.map((die) => rollDie());
+   const rollPromises = dice.map(() => rollDie());
    return Promise.all(rollPromises);
 }
 
