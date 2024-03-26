@@ -13,20 +13,36 @@ Full description at: https://github.com/HackYourFuture/Assignments/blob/main/3-U
 // ! Do not remove this line
 const rollDie = require('../../helpers/pokerDiceRoller');
 
-function rollDice() {
-  const dice = [1, 2, 3, 4, 5];
-  // TODO complete this function; use Promise.race() and rollDie()
+async function rollDice() {
+    const dice = [1, 2, 3, 4, 5];
+
+    const promiseArrays = dice.map(async () => {
+        try {
+            return await rollDie();
+        } catch (err) {
+            throw new Error(`Failed to roll ${err.message}`);
+        }
+    });
+
+    const promise = await Promise.race(promiseArrays);
+    return promise;
 }
 
-// Refactor this function to use async/await and try/catch
-function main() {
-  rollDice()
-    .then((results) => console.log('Resolved!', results))
-    .catch((error) => console.log('Rejected!', error.message));
+async function main() {
+
+    try {
+        return await rollDice();
+    } catch (err) {
+        console.log('Error: ', err);
+    }
 }
 
 // ! Do not change or remove the code below
 if (process.env.NODE_ENV !== 'test') {
-  main();
+    main();
 }
 module.exports = rollDice;
+
+/*
+  the rest of promises keep  executing because Promise.race() does not effect the ongoing tasks after resolving
+ */
