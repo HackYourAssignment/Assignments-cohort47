@@ -22,18 +22,89 @@ Use async/await and try/catch to handle promises.
 Try and avoid using global variables. As much as possible, try and use function 
 parameters and return values to pass data back and forth.
 ------------------------------------------------------------------------------*/
-function fetchData(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+// Append select field to the document's body
+const select = document.createElement('select');
+document.querySelector('body').appendChild(select);
+
+// Gets all data aboout pokemons
+function fetchData(url) {
+  return fetch(url).then(function (response) {
+    if (response.ok) {
+      return response.json();
+    }
+
+    throw new Error('HTTP error, status = ' + response.status);
+  });
 }
 
-function fetchAndPopulatePokemons(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+// Gets every pokemon's name and appends it to the select list
+function fetchAndPopulatePokemons() {
+  fetchData('https://pokeapi.co/api/v2/pokemon?limit=151')
+    .then(function (data) {
+      for (let i = 0; i < data.results.length; i++) {
+        const option = document.createElement('option');
+        option.value = data.results[i].name;
+        option.textContent = data.results[i].name;
+        select.appendChild(option);
+      }
+    });
 }
 
-function fetchImage(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+fetchAndPopulatePokemons();
+
+// Gets every URL with characteristics about every pokemons
+const getUrls = fetchData('https://pokeapi.co/api/v2/pokemon?limit=151')
+  .then(function (data) {
+    const urls = data.results.map(result => result.url);
+    
+    return urls;
+  })
+  .catch(function (error) {
+    return error;
+  });
+
+// Looks for sprites in every characteristics URL
+getUrls
+  .then(function(data) {
+    let urlData = [];
+
+    for (let i = 0; i < data.length; i++) {
+      let urlElement = fetch(data[i]);
+      urlData.push(urlElement);
+    }
+
+    return urlData;
+  })
+  .then(function(data) {
+    console.log(data)
+  })
+  .then(function(data) {
+    console.log(data);
+  })
+
+  /*
+  .then(function(sprites) {
+    console.log(sprites.front_default);
+  })
+  */
+
+
+  /*
+  getUrls
+    .then(function(responses) {
+      responses.forEach(function(response) {
+        console.log(response.sprite)
+      });
+    });
+*/
+
+/*
+function fetchImage() {
+  
 }
+
 
 function main() {
   // TODO complete this function
 }
+*/
