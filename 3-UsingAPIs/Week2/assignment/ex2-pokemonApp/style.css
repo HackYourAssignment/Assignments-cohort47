@@ -1,1 +1,46 @@
-/* add your styling here */
+* {
+    margin: 0;
+    padding: 0;
+   
+  }
+  
+  body {
+    font-family: sans-serif;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to right, #ffefba, #ffffff);
+
+  }
+  
+  #pokemon-img {
+    width: 150px;
+    margin: 0;
+  }
+  
+  .hide {
+    display: none;
+  }
+  
+  .dropdown, button {
+    font-family: "Roboto" , sans-serif;
+    font-size: 16px;
+    border: none;
+    font-weight: bold;
+    background: #fff ;
+    width: 200px;
+    padding: 15px ;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0 , 0 ,0 , 0.1) ;
+    margin: 10px ;
+  }
+
+  button:hover , button:focus , button:active {
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  transform: scale(1.1);}
+  
