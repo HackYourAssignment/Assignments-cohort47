@@ -28,7 +28,7 @@ const rollDie = require('../../helpers/pokerDiceRoller');
 
 function rollDice() {
   const dice = [1, 2, 3, 4, 5];
-  const promises = dice.map(() => rollDie(1));
+  const promises = dice.map((el) => rollDie(el));
   return Promise.all(promises);
 }
 

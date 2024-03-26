@@ -45,8 +45,7 @@ function rollDie() {
 }
 
 function main() {
-  const promiseRoll = rollDie();
-  promiseRoll
+  rollDie()
     .then((value) => {
       console.log(`Success! Die settled on ${value}.`);
     })
