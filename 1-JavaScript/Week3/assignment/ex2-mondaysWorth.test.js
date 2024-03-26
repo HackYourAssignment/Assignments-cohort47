@@ -28,11 +28,36 @@ const mondayTasks = [
     duration: 60,
   },
 ];
+const listTaskDuration = [];
+
+mondayTasks.map((item) => {
+  listTaskDuration.push(item.duration);
+});
 
 const hourlyRate = 25;
 
-function computeEarnings(/* TODO parameter(s) go here */) {
+function computeEarnings(mondayTasks, hourlyRate) {
   // TODO complete this function
+
+  const listTaskDuration = [];
+
+  mondayTasks.map((item) => {
+    listTaskDuration.push(item.duration);
+  });
+
+  const earningsList = [];
+  let total = 0;
+
+  listTaskDuration.forEach((item) => {
+    earningsList.push((item / 60) * hourlyRate);
+  });
+  const initialValue = 0;
+  total = earningsList.reduce(
+    (accumulator, currentValue) => accumulator + currentValue,
+    initialValue
+  );
+
+  return `€${total.toFixed(2)}`;
 }
 
 // ! Unit tests (using Jest)

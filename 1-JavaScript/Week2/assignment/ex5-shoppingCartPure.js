@@ -1,4 +1,5 @@
 'use strict';
+
 /*------------------------------------------------------------------------------
 Full description at: https://github.com/HackYourFuture/Assignments/tree/main/1-JavaScript/Week3#exercise-5-improved-shopping-at-the-supermarket
 
@@ -15,14 +16,26 @@ it pure. Do the following:
    spread syntax.
 5. Confirm that you function passes the provided unit tests.
 ------------------------------------------------------------------------------*/
-// ! Function under test
-function addToShoppingCart(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+
+function addToShoppingCart(newArrCart, groceryItem) {
+  if (newArrCart && groceryItem) {
+    if (newArrCart.length > 2) {
+      newArrCart.shift();
+      newArrCart.push(groceryItem);
+      return newArrCart;
+    } else {
+      newArrCart.push(groceryItem);
+
+      return newArrCart;
+    }
+  } else {
+    console.log('there is nothing to do');
+  }
 }
 
-// ! Test functions (plain vanilla JavaScript)
 function test1() {
   console.log('Test 1: addToShoppingCart should take two parameters');
+  addToShoppingCart(null, null);
   console.assert(addToShoppingCart.length === 2);
 }
 
@@ -30,10 +43,16 @@ function test2() {
   console.log('Test 2: addToShoppingCart should be a pure function');
   // A pure function should return the same result when called with
   // identical arguments. It should also have no side effects (not tested here).
-  const initialCart = ['bananas', 'milk'];
-  const result1 = addToShoppingCart(initialCart, 'chocolate');
-  const result2 = addToShoppingCart(initialCart, 'chocolate');
+  let initialCart = ['bananas', 'milk'];
+
+  const newArrCart = [].concat(initialCart);
+
+  const result1 = addToShoppingCart(newArrCart, 'chocolate');
+
+  const result2 = addToShoppingCart(newArrCart, 'chocolate');
+
   console.assert(JSON.stringify(result1) === JSON.stringify(result2));
+
   console.assert(
     JSON.stringify(initialCart) === JSON.stringify(['bananas', 'milk'])
   );

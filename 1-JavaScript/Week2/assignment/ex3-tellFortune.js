@@ -1,4 +1,7 @@
 'use strict';
+
+const { concat, random } = require('lodash');
+
 /*------------------------------------------------------------------------------
 Full description at: https://github.com/HackYourFuture/Assignments/tree/main/1-JavaScript/Week3#exercise-3-be-your-own-fortune-teller
 
@@ -33,29 +36,41 @@ body, this code is now written once only in a separated function.
 
 // This function should take an array as its parameter and return
 // a randomly selected element as its return value.
-function selectRandomly(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+
+function selectRandomly(array) {
+  const randomIndex = Math.floor(Math.random() * 5);
+
+  const randomKidsNumber = array[randomIndex];
+  const randomPartnerName = array[randomIndex + 5];
+  const randomLacation = array[randomIndex + 10];
+  const randomTitle = array[randomIndex + 15];
+
+  const toldFortune = `You will be a ${randomTitle} in ${randomLacation}, 
+  married to ${randomPartnerName} with ${randomKidsNumber} kids.`;
+
+  return toldFortune;
 }
 
-function tellFortune(/* TODO add parameter(s) here */) {
-  // TODO complete this function
+function tellFortune(kids, partners, locations, titles) {
+  const arrayParam = concat(kids, partners, locations, titles);
+
+  const result = selectRandomly(arrayParam);
+
+  return result;
 }
 
 function main() {
-  const numKids = [
-    // TODO add elements here
-  ];
+  const numKids = [3, 3, 0, 1, 5];
+  const partnerNames = ['Kai', 'Eliana', 'Jaden', 'Ezra', 'Luca'];
 
-  const partnerNames = [
-    // TODO add elements here
-  ];
-
-  const locations = [
-    // TODO add elements here
-  ];
+  const locations = ['Istanbul', 'Amsterdam', 'Nijmegen', 'Arnhem', 'Madrid'];
 
   const jobTitles = [
-    // TODO add elements here
+    'Doctor',
+    'Software Developer',
+    'Teacher',
+    'Engineer',
+    'Astranout',
   ];
 
   console.log(tellFortune(numKids, partnerNames, locations, jobTitles));
@@ -63,7 +78,6 @@ function main() {
   console.log(tellFortune(numKids, partnerNames, locations, jobTitles));
 }
 
-// ! Do not change or remove the code below
 if (process.env.NODE_ENV !== 'test') {
   main();
 }
