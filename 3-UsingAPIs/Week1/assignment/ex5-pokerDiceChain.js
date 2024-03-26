@@ -25,6 +25,21 @@ function rollDice() {
     })
     .then((value) => {
       results.push(value);
+      // Third die
+      return rollDie(3);
+    })
+    .then((value) => {
+      results.push(value);
+      // Fourth die
+      return rollDie(4);
+    })
+    .then((value) => {
+      results.push(value);
+      // Fifth die
+      return rollDie(5);
+    })
+    .then((value) => {
+      results.push(value);
       return results;
     });
 }
