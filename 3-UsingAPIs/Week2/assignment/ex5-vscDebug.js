@@ -4,6 +4,7 @@ Full description at: https://github.com/HackYourFuture/Assignments/blob/main/3-U
 
 Use the VSCode Debugger to fix the bugs
 --------------------------------------------------------------- --------------*/
+
 const fetch = require('node-fetch');
 
 async function getData(url) {
@@ -11,10 +12,12 @@ async function getData(url) {
   return response.json();
 }
 
-function renderLaureate({ knownName, birth, death }) {
-  console.log(`\nName: ${knownName.en}`);
-  console.log(`Birth: ${birth.date}, ${birth.place.locationString}`);
-  console.log(`Death: ${death.date}, ${death.place.locationString}`);
+function renderLaureate(laureate) {
+  console.log(`\nName: ${laureate.knownName.en}`);
+  console.log(`Birth: ${laureate.birth.date}, ${laureate.birth.place.locationString}`);
+  if (laureate.death) {
+    console.log(`Death: ${laureate.death.date}, ${laureate.death.place.locationString}`);
+  }
 }
 
 function renderLaureates(laureates) {
@@ -23,12 +26,15 @@ function renderLaureates(laureates) {
 
 async function fetchAndRender() {
   try {
-    const laureates = getData(
+    const response = await getData(
       'http://api.nobelprize.org/2.0/laureates?birthCountry=Netherlands&format=json&csvLang=en'
     );
+    const laureates = response.laureates;
+    console.log('laureates:', laureates); 
     renderLaureates(laureates);
   } catch (err) {
     console.error(`Something went wrong: ${err.message}`);
+    console.error(err.stack); 
   }
 }
 
