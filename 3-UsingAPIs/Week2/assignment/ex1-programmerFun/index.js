@@ -42,7 +42,6 @@ function renderImage(data) {
   const image = document.createElement('img');
   image.src = data.img;
   document.body.appendChild(image);
-  console.log(data);
 }
 
 function renderError(error) {
