@@ -1,10 +1,10 @@
 {
   "editor.detectIndentation": false,
   "editor.formatOnSave": true,
-  "editor.minimap.enabled": false,
+  "editor.minimap.enabled": true,
   "editor.tabSize": 2,
   "editor.codeActionsOnSave": {
-    "source.fixAll": true
+    "source.fixAll": "explicit"
   },
   "files.autoSave": "onFocusChange",
   "prettier.trailingComma": "es5",
@@ -16,5 +16,6 @@
   "editor.bracketPairColorization.enabled": true,
   "editor.guides.bracketPairs": true,
   "editor.guides.highlightActiveIndentation": true,
-  "editor.guides.bracketPairsHorizontal": "active"
+  "editor.guides.bracketPairsHorizontal": "active",
+  "liveServer.settings.port": 5501
 }
