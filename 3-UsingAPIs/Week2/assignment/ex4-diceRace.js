@@ -36,8 +36,8 @@ if (process.env.NODE_ENV !== 'test') {
 module.exports = rollDice;
 
 /* 
-
-We are using Promise.race() because we are specifically looking for a particular result. 
-Once we obtain this result, the function should return. 
-Otherwise, we would have to wait for all results of the function to be available. 
+"Promise.race()" is like a race between promises. 
+It waits to see which promise finishes first, like a race where we see who crosses the finish line first.
+ So, when one promise wins the race by finishing first, 
+ the other promises are still running because they haven't finished yet.
 */

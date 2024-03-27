@@ -695,3 +695,8 @@ ex3-rollAnAce.js
 2024-03-24 05:29:03 info: ----------------------------------------
 2024-03-24 05:29:05 info: All unit tests passed.
 2024-03-24 05:29:07 info: All steps were completed successfully
+2024-03-27 04:49:07 info: -----------------------------------------
+2024-03-27 04:49:07 info: >>> Running Unit Test `ex3-rollAnAce` <<<
+2024-03-27 04:49:07 info: -----------------------------------------
+2024-03-27 04:49:10 info: All unit tests passed.
+2024-03-27 04:49:11 info: All steps were completed successfully

@@ -33,7 +33,7 @@ async function fetchData(url) {
 
 async function fetchAndPopulatePokemons() {
   const select = document.querySelector('.select-pokemon');
-  select.textContent = '';
+  select.innerHTML = '';
 
   try {
     const pokemons = await fetchData(
