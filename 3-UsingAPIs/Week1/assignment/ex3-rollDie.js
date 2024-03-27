@@ -11,47 +11,37 @@ Full description at: https://github.com/HackYourFuture/Assignments/tree/main/3-U
   explanation? Add your answer as a comment to be bottom of the file.
 ------------------------------------------------------------------------------*/
 
-// TODO Remove callback and return a promise
 function rollDie() {
+  return new Promise((resolve, reject) => {
+    const randomRollsToDo = Math.floor(Math.random() * 8) + 3;
 
-  return new Promise ((resolve, reject) => {
+    console.log(`Die scheduled for ${randomRollsToDo} rolls...`);
 
-  const randomRollsToDo = Math.floor(Math.random() * 8) + 3;
+    const rollOnce = (roll) => {
+      const value = Math.floor(Math.random() * 6) + 1;
+      console.log(`Die value is now: ${value}`);
 
-  console.log(`Die scheduled for ${randomRollsToDo} rolls...`);
-
-  const rollOnce = (roll) => {
-    // Compute a random die value for the current roll
-    const value = Math.floor(Math.random() * 6) + 1;
-    console.log(`Die value is now: ${value}`);
-
-    if (roll > 6) {
-      // TODO replace "error" callback
-      reject (new Error('Oops... Die rolled off the table.'));
-    }
+      if (roll > 6) {
+        reject(new Error('Oops... Die rolled off the table.'));
+      }
 
       if (roll === randomRollsToDo) {
-        
-          resolve (value);
+        resolve(value);
       }
 
       if (roll < randomRollsToDo) {
         setTimeout(() => rollOnce(roll + 1), 500);
       }
     };
-rollOnce(1)
-  })
+    rollOnce(1);
+  });
+}
 
-  };
+function main() {
+  rollDie()
+    .then((value) => console.log(`Success! Die settled on ${value}.`))
 
-
-
-
-function main () {
-  rollDie ()
-  .then ((value) => console.log( `Success! Die settled on ${value}.` ))
-  
-  .catch((error) => console.log(error.message)); 
+    .catch((error) => console.log(error.message));
 }
 
 // ! Do not change or remove the code below

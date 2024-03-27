@@ -1,6 +1,10 @@
 /* eslint-disable hyf/camelcase */
-import { simple } from 'acorn-walk';
-import { beforeAllHelper, testTodosRemoved, testNoConsoleLog } from '../../../test-runner/unit-test-helpers';
+const walk = require('acorn-walk');
+const {
+  beforeAllHelper,
+  testTodosRemoved,
+  testNoConsoleLog,
+} = require('../../../test-runner/unit-test-helpers');
 
 describe('ex4-pokerDiceAll', () => {
   const state = {};
@@ -13,7 +17,7 @@ describe('ex4-pokerDiceAll', () => {
     rollDice = exported;
 
     rootNode &&
-      simple(rootNode, {
+      walk.simple(rootNode, {
         MemberExpression({ object, property }) {
           if (object.name === 'Promise' && property.name === 'all') {
             state.promiseAll = true;
