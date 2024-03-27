@@ -15,8 +15,7 @@ const rollDie = require('../../helpers/pokerDiceRoller');
 async function rollDieUntil(wantedValue) {
   let value;
 
-  // eslint-disable-next-line no-constant-condition
-  while (true) {
+  while (value !== wantedValue) {
     value = await rollDie();
     if (value === wantedValue) {
       return value;

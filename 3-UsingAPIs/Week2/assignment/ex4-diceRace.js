@@ -15,7 +15,7 @@ const rollDie = require('../../helpers/pokerDiceRoller');
 
 function rollDice() {
   const dice = [1, 2, 3, 4, 5];
-  const promises = dice.map(() => rollDie());
+  const promises = dice.map((die) => rollDie(die));
   return Promise.race(promises);
 }
 
@@ -37,7 +37,7 @@ module.exports = rollDice;
 
 /* 
 
-we are using promise.race. Because =, we are only looking for specific result. 
-When we have this result function have to ve return. 
-Otherwise we have wait all of the result of the function.  
+We are using Promise.race() because we are specifically looking for a particular result. 
+Once we obtain this result, the function should return. 
+Otherwise, we would have to wait for all results of the function to be available. 
 */

@@ -18,15 +18,11 @@ Full description at: https://github.com/HackYourFuture/Assignments/blob/main/3-U
    should result in a network (DNS) error.
 ------------------------------------------------------------------------------*/
 async function requestData(url) {
-  try {
-    const response = await fetch(url);
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
-    }
-    return await response.json();
-  } catch (error) {
-    throw new Error('Error fetching data:', error);
+  const response = await fetch(url);
+  if (!response.ok) {
+    throw new Error('Network response was not ok');
   }
+  return await response.json();
 }
 
 function renderImage(data) {
