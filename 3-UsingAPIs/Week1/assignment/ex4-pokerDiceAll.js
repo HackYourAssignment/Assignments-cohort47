@@ -27,9 +27,12 @@ exercise file.
 const rollDie = require('../../helpers/pokerDiceRoller');
 
 function rollDice() {
-  // TODO Refactor this function
   const dice = [1, 2, 3, 4, 5];
-  return rollDie(1);
+
+  const diceMap = dice.map((die) => {
+    return rollDie(die);
+  });
+  return Promise.all(diceMap);
 }
 
 function main() {
@@ -43,3 +46,4 @@ if (process.env.NODE_ENV !== 'test') {
   main();
 }
 module.exports = rollDice;
+// even in the case of rejected promise, dice continues to roll because Promise.all executes everything and then solves it
