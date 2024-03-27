@@ -27,9 +27,11 @@ exercise file.
 const rollDie = require('../../helpers/pokerDiceRoller');
 
 function rollDice() {
-  // TODO Refactor this function
   const dice = [1, 2, 3, 4, 5];
-  return rollDie(1);
+  const promiseArray = dice.map((num) => {
+    return rollDie(num);
+  });
+  return Promise.all(promiseArray);
 }
 
 function main() {
@@ -43,3 +45,8 @@ if (process.env.NODE_ENV !== 'test') {
   main();
 }
 module.exports = rollDice;
+
+/*
+ due to the asynchronous nature of promises Once a promise is rejected, 
+ it does not prevent other promises in the array from continuing their execution.
+*/
