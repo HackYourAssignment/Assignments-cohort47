@@ -41,3 +41,7 @@ if (process.env.NODE_ENV !== 'test') {
   main();
 }
 module.exports = rollDice;
+
+/*
+The continuation of the rotation of the cubes, even if the promise is rejected, is due to the asynchronous nature of the rollDie functions. Since rollDie is executed asynchronously, it does not block further code execution
+*/

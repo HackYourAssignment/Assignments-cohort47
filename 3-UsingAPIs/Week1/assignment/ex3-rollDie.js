@@ -48,3 +48,9 @@ if (process.env.NODE_ENV !== 'test') {
   main();
 }
 module.exports = rollDie;
+
+/*
+In the original version, when the condition was reached when "Die rolled off the table", the function called both an "error" callback and a "success" callback. This was due to the lack of explicit verification to prevent the "success" callback from being called in case of an error.
+
+In the new version using promises, this problem does not occur, because when the promise goes to the rejected state, the execution of the promise chain ends
+*/
